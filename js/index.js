@@ -516,6 +516,15 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
-  images[slideIndex-1].src = images[slideIndex-1].getAttribute('data-src');
+
+  var imgToLoad = new Image();
+
+  imgToLoad.onload = function() {
+      images[slideIndex-1].src = imgToLoad.src;
+  };
+
+  imgToLoad.src = images[slideIndex-1].getAttribute('data-src');
+
+  slides[slideIndex-1].style.display = "flex";
+  // images[slideIndex-1].src = images[slideIndex-1].getAttribute('data-src');
 }
