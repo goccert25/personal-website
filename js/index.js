@@ -25,6 +25,12 @@ var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = 0;
 var currentNavState;
+var top_intro_heading;
+var rest_of_name_1;
+var rest_of_name_2;
+var intro_background;
+var intro_heading;
+var icons;
 
 const NAV_STATE = {
   MIDDLE: "MIDDLE",
@@ -132,11 +138,18 @@ function navAnimation (centerPointLeft,
 }
 
 $(document).ready(function(){
-  rest_of_name_1_width = $('#rest_of_name_1').width();
-  rest_of_name_2_width = $('#rest_of_name_2').width();
-  intro_font_size = ($('#intro_heading').css('font-size')).split('px');
+  rest_of_name_1 = $('#rest_of_name_1');
+  rest_of_name_2 = $('#rest_of_name_2');
+  intro_heading = $('#intro_heading');
+  top_intro_heading = $('#top_intro_heading');
+  intro_background = $('#intro_background');
+  icons = $('.icon');
+  rest_of_name_1_width = rest_of_name_1.width();
+  rest_of_name_2_width = rest_of_name_2.width();
+  intro_font_size = (intro_heading.css('font-size')).split('px');
   intro_font_size = parseInt(intro_font_size[0]);
   currentNavState = NAV_STATE.MIDDLE;
+
   adjustHeight();
   populateCaptions();
 
@@ -248,8 +261,8 @@ function adjustHeight(){
   // animationStoppingPoint = margin_top * 5/2;
   animationStoppingPoint = $(window).height() - initialNavSize;
   $('#intro_background_color').css('height', $(window).height());
-  $('#intro_background').css('height', $(window).height());
-  $("#top_intro_heading").css('height', wordHeight.toString() + "px");
+  intro_background.css('height', $(window).height());
+  top_intro_heading.height(wordHeight);
 
 }
 
@@ -260,7 +273,7 @@ $(window).on('scroll', function(){
   let top_intro_heading_height = margin_top - scrollTop;
   if (top_intro_heading_height < 0) top_intro_heading_height = 0;
 
-  $('#top_intro_heading').css('height', top_intro_heading_height);
+  top_intro_heading.height(top_intro_heading_height);
 
   if (scrollTop < midway_point){
 
@@ -270,9 +283,9 @@ $(window).on('scroll', function(){
 
     var calc = (midway_point - scrollTop)/midway_point;
     if (calc < 0) calc = 0;
-    $('#intro_background').css({ 'opacity': calc });
-    $('#rest_of_name_1').css({ 'opacity': calc });
-    $('#rest_of_name_2').css({ 'opacity': calc });
+    intro_background.css({ 'opacity': calc });
+    rest_of_name_1.css({ 'opacity': calc });
+    rest_of_name_2.css({ 'opacity': calc });
 
   }else if (scrollTop > midway_point && scrollTop < margin_top){
 
@@ -287,9 +300,9 @@ $(window).on('scroll', function(){
     if (font_size < final_navbar_fontsize) font_size = final_navbar_fontsize;
     if (calc_one < 0) calc_one = 0;
     if (calc_two < 0) calc_two = 0;
-    $('#rest_of_name_1').css({ 'width': calc_one, 'opacity': 0 });
-    $('#rest_of_name_2').css({ 'width': calc_two, 'opacity': 0 });
-    $('#intro_heading').css({'font-size': font_size});
+    rest_of_name_1.css({ 'width': calc_one, 'opacity': 0 });
+    rest_of_name_2.css({ 'width': calc_two, 'opacity': 0 });
+    intro_heading.css({'font-size': font_size});
 
   }else if (scrollTop > margin_top && scrollTop < animationStoppingPoint){
 
@@ -308,28 +321,31 @@ $(window).on('scroll', function(){
     let offset =  (lengthOfMainCircle/2) * (1 - ratio) + (lengthOfMainCircle/2) - 1;
 
     console.log(ratio);
-    $('.icon').css({'opacity': ratio});
+    icons.css({'opacity': ratio});
 
     rightPath.style.strokeDashoffset = offset;
     leftPath.style.strokeDashoffset = offset;
   }else if (scrollTop >= animationStoppingPoint){
     top_intro_heading_height = 0;
-    $('#top_intro_heading').css('height', top_intro_heading_height);
+    top_intro_heading.css('height', top_intro_heading_height);
 
-    adjustToState3();
+    if(currentState !== STATE.THREE){
+      adjustToState3();
+    }
 
     if (notSetUp){
       setUpNavbar();
     }
     rightPath.style.strokeDashoffset = 0;
     leftPath.style.strokeDashoffset = 0;
-    $('.icon').css({'opacity': 1});
+    icons.css({'opacity': 1});
     $(window).unbind("scroll");
-    $('#intro_background_color').css({'height': $('#intro_heading').outerHeight(true), 'background-color': "#F1F2F3"});
-    $('#intro_background').css({'height': $('#intro_heading').outerHeight(true)});
+    var lockedHeight = intro_heading.outerHeight(true);
+    intro_background.css({'height': lockedHeight});
+    $('#intro_background_color').css({'height': lockedHeight, 'background-color': "transparent"});
     $('#nav_sticky').addClass("bottom_border");
     $('#intro_background_color').removeClass('bottom_border');
-    window.scrollTo(0,0);
+    // window.scrollTo(0,0);
     $('.icon-right').click(animationFunction("clockwise"));
     $('.icon-left').click(animationFunction("counter-clockwise"));
 
@@ -343,16 +359,16 @@ $(window).on('scroll', function(){
 
 function setUpNavbar(){
 
-  animationStoppingPoint = animationStoppingPoint + initialNavSize - $('#intro_heading').outerHeight(true);
+  animationStoppingPoint = animationStoppingPoint + initialNavSize - intro_heading.outerHeight(true);
 
   notSetUp = false;
-  var constantSpaceBetweenCircleAndTop = parseInt((($('#intro_heading').css('margin-top')).split('px'))[0]);
+  var constantSpaceBetweenCircleAndTop = parseInt(((intro_heading.css('margin-top')).split('px'))[0]);
   console.log(constantSpaceBetweenCircleAndTop);
   var constantSpaceBetweenCircleAndContent = 20;
 
-  $('#intro_heading').css({'font-size': final_navbar_fontsize});
+  intro_heading.css({'font-size': final_navbar_fontsize});
 
-  navbar_height = $('#intro_heading').height() +
+  navbar_height = intro_heading.height() +
     padding_above_initials +
     padding_below_initials +
     constantSpaceBetweenCircleAndContent +
@@ -429,13 +445,13 @@ function hasScrolled(){
 function adjustToState1(midway_point, scrollTop){
   currentState = STATE.ONE;
 
-  $('#rest_of_name_1').css({ 'width': rest_of_name_1_width });
-  $('#rest_of_name_2').css({ 'width': rest_of_name_2_width });
-  $('#intro_heading').css({'font-size': intro_font_size});
+  rest_of_name_1.css({ 'width': rest_of_name_1_width });
+  rest_of_name_2.css({ 'width': rest_of_name_2_width });
+  intro_heading.css({'font-size': intro_font_size});
   $('#nav_sticky').css({'background-color':'transparent'});
 
   $('.icon-circle').css({'opacity': '0'});
-  $('.icon').css({'opacity': 0});
+  icons.css({'opacity': 0});
 
   if(!notSetUp){
     rightPath.style.strokeDashoffset = lengthOfMainCircle;
@@ -446,15 +462,15 @@ function adjustToState1(midway_point, scrollTop){
 function adjustToState2(){
   currentState = STATE.TWO;
 
-  $('#intro_background').css({ 'opacity': 0 });
-  $('#rest_of_name_1').css({ 'opacity': 0 });
-  $('#rest_of_name_2').css({ 'opacity': 0 });
+  intro_background.css({ 'opacity': 0 });
+  rest_of_name_1.css({ 'opacity': 0 });
+  rest_of_name_2.css({ 'opacity': 0 });
   // $('#nav_sticky').css({'background-color':'#8A432C'});
   $('#nav_sticky').css({'background-color':'#A2B6D8'});
   // $('#nav_sticky').css({'background-color':'#F1F2F3'});
 
   $('.icon-circle').css({'opacity': 0});
-  $('.icon').css({'opacity': 0});
+  icons.css({'opacity': 0});
 
   if(!notSetUp){
     rightPath.style.strokeDashoffset = lengthOfMainCircle;
@@ -465,10 +481,10 @@ function adjustToState2(){
 function adjustToState3(){
   currentState = STATE.THREE;
 
-  $('#intro_background').css({ 'opacity': 0 });
-  $('#rest_of_name_1').css({ 'width': 0, 'opacity': 0 });
-  $('#rest_of_name_2').css({ 'width': 0, 'opacity': 0 });
-  $('#intro_heading').css({'font-size': final_navbar_fontsize});
+  intro_background.css({ 'opacity': 0 });
+  rest_of_name_1.css({ 'width': 0, 'opacity': 0 });
+  rest_of_name_2.css({ 'width': 0, 'opacity': 0 });
+  intro_heading.css({'font-size': final_navbar_fontsize});
   // $('#nav_sticky').css({'background-color':'#8A432C'});
   $('#nav_sticky').css({'background-color':'#A2B6D8'});
   // $('#nav_sticky').css({'background-color':'#F1F2F3'});
