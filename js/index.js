@@ -32,13 +32,13 @@ var intro_background;
 var intro_heading;
 var icons;
 
-const NAV_STATE = {
+var NAV_STATE = {
   MIDDLE: "MIDDLE",
   LEFT: "LEFT",
   RIGHT: "RIGHT",
 }
 
-const STATE = {
+var STATE = {
   ONE: 'ONE',
   TWO: 'TWO',
   THREE: 'THREE'
@@ -62,14 +62,14 @@ function navAnimation (centerPointLeft,
       //do stuff to top and left
       if (progress < navAnimationDuration){
 
-      let leftIconLeftPosition = ((rightIconStart.left - leftIconStart.left) * progress/navAnimationDuration) + leftIconStart.left;
-      let leftIconTopPosition = -1 * Math.sqrt(Math.pow(radius,2) - Math.pow(leftIconLeftPosition - centerPointLeft,2)) + centerPointTop;
+      var leftIconLeftPosition = ((rightIconStart.left - leftIconStart.left) * progress/navAnimationDuration) + leftIconStart.left;
+      var leftIconTopPosition = -1 * Math.sqrt(Math.pow(radius,2) - Math.pow(leftIconLeftPosition - centerPointLeft,2)) + centerPointTop;
 
-      let rightIconLeftPosition = rightIconStart.left - ((rightIconStart.left - activeIconStart.left) * progress/navAnimationDuration);
-      let rightIconTopPosition = Math.sqrt(Math.pow(radius,2) - Math.pow(rightIconLeftPosition - centerPointLeft,2)) + centerPointTop;
+      var rightIconLeftPosition = rightIconStart.left - ((rightIconStart.left - activeIconStart.left) * progress/navAnimationDuration);
+      var rightIconTopPosition = Math.sqrt(Math.pow(radius,2) - Math.pow(rightIconLeftPosition - centerPointLeft,2)) + centerPointTop;
 
-      let activeIconLeftPosition = activeIconStart.left - ((activeIconStart.left - leftIconStart.left) * progress/navAnimationDuration);
-      let activeIconTopPosition = Math.sqrt(Math.pow(radius,2) - Math.pow(activeIconLeftPosition - centerPointLeft,2)) + centerPointTop;
+      var activeIconLeftPosition = activeIconStart.left - ((activeIconStart.left - leftIconStart.left) * progress/navAnimationDuration);
+      var activeIconTopPosition = Math.sqrt(Math.pow(radius,2) - Math.pow(activeIconLeftPosition - centerPointLeft,2)) + centerPointTop;
 
       $('.icon-left').css({'top':leftIconTopPosition, 'left': leftIconLeftPosition});
       $('.icon-right').css({'top':rightIconTopPosition, 'left': rightIconLeftPosition});
@@ -102,14 +102,14 @@ function navAnimation (centerPointLeft,
       //do stuff to top and left
       if (progress < navAnimationDuration){
 
-      let rightIconLeftPosition = rightIconStart.left - ((rightIconStart.left - leftIconStart.left) * progress/navAnimationDuration);
-      let rightIconTopPosition = -1 * Math.sqrt(Math.pow(radius,2) - Math.pow(rightIconLeftPosition - centerPointLeft,2)) + centerPointTop;
+      var rightIconLeftPosition = rightIconStart.left - ((rightIconStart.left - leftIconStart.left) * progress/navAnimationDuration);
+      var rightIconTopPosition = -1 * Math.sqrt(Math.pow(radius,2) - Math.pow(rightIconLeftPosition - centerPointLeft,2)) + centerPointTop;
 
-      let leftIconLeftPosition = leftIconStart.left + ((activeIconStart.left - leftIconStart.left) * progress/navAnimationDuration);
-      let leftIconTopPosition = Math.sqrt(Math.pow(radius,2) - Math.pow(leftIconLeftPosition - centerPointLeft,2)) + centerPointTop;
+      var leftIconLeftPosition = leftIconStart.left + ((activeIconStart.left - leftIconStart.left) * progress/navAnimationDuration);
+      var leftIconTopPosition = Math.sqrt(Math.pow(radius,2) - Math.pow(leftIconLeftPosition - centerPointLeft,2)) + centerPointTop;
 
-      let activeIconLeftPosition = activeIconStart.left + ((rightIconStart.left - activeIconStart.left) * progress/navAnimationDuration);
-      let activeIconTopPosition = Math.sqrt(Math.pow(radius,2) - Math.pow(activeIconLeftPosition - centerPointLeft,2)) + centerPointTop;
+      var activeIconLeftPosition = activeIconStart.left + ((rightIconStart.left - activeIconStart.left) * progress/navAnimationDuration);
+      var activeIconTopPosition = Math.sqrt(Math.pow(radius,2) - Math.pow(activeIconLeftPosition - centerPointLeft,2)) + centerPointTop;
 
       $('.icon-left').css({'top':leftIconTopPosition, 'left': leftIconLeftPosition});
       $('.icon-right').css({'top':rightIconTopPosition, 'left': rightIconLeftPosition});
@@ -163,9 +163,9 @@ function animationFunction(direction){
     $('.icon-left').unbind('click');
     $('.icon-active').unbind('click');
 
-    let r = $('#right_content');
-    let m = $('#middle_content');
-    let l = $('#left_content');
+    var r = $('#right_content');
+    var m = $('#middle_content');
+    var l = $('#left_content');
     if (direction === "clockwise"){
       if (currentNavState === NAV_STATE.MIDDLE){
         m.removeClass('active transform-100').addClass('inactive transform-200');
@@ -270,7 +270,7 @@ $(window).on('scroll', function(){
   var midway_point = margin_top/2;
   var scrollTop = $(this).scrollTop();
 
-  let top_intro_heading_height = margin_top - scrollTop;
+  var top_intro_heading_height = margin_top - scrollTop;
   if (top_intro_heading_height < 0) top_intro_heading_height = 0;
 
   top_intro_heading.height(top_intro_heading_height);
@@ -293,7 +293,7 @@ $(window).on('scroll', function(){
       adjustToState2();
     }
 
-    let scale = (1 - (scrollTop - midway_point)/midway_point);
+    var scale = (1 - (scrollTop - midway_point)/midway_point);
     var calc_one = scale * rest_of_name_1_width;
     var calc_two = scale * rest_of_name_2_width;
     var font_size = (scale * (intro_font_size - final_navbar_fontsize)) + final_navbar_fontsize;
@@ -310,7 +310,7 @@ $(window).on('scroll', function(){
       adjustToState3();
     }
 
-    let lengthTraveledSoFar = scrollTop-margin_top;
+    var lengthTraveledSoFar = scrollTop-margin_top;
 
     if (notSetUp){
       setUpNavbar();
@@ -318,7 +318,7 @@ $(window).on('scroll', function(){
 
     ratio = lengthTraveledSoFar/margin_top;
 
-    let offset =  (lengthOfMainCircle/2) * (1 - ratio) + (lengthOfMainCircle/2) - 1;
+    var offset =  (lengthOfMainCircle/2) * (1 - ratio) + (lengthOfMainCircle/2) - 1;
 
     console.log(ratio);
     icons.css({'opacity': ratio});
