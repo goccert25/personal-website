@@ -345,7 +345,7 @@ $(window).on('scroll', function(){
     $('#intro_background_color').css({'height': lockedHeight, 'background-color': "transparent"});
     $('#nav_sticky').addClass("bottom_border");
     $('#intro_background_color').removeClass('bottom_border');
-    // window.scrollTo(0,0);
+    window.scrollTo(0,0);
     $('.icon-right').click(animationFunction("clockwise"));
     $('.icon-left').click(animationFunction("counter-clockwise"));
 

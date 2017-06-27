@@ -114,7 +114,7 @@ h1{
 }
 
 #intro_background{
-  /*background-image: url('../img/IMG_7617.JPG');*/
+  background-image: url('../img/IMG_7617.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
