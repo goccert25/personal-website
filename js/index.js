@@ -300,9 +300,9 @@ $(window).on('scroll', function(){
     if (font_size < final_navbar_fontsize) font_size = final_navbar_fontsize;
     if (calc_one < 0) calc_one = 0;
     if (calc_two < 0) calc_two = 0;
-    rest_of_name_1.css({ 'width': calc_one, 'opacity': 0 });
-    rest_of_name_2.css({ 'width': calc_two, 'opacity': 0 });
-    intro_heading.css({'font-size': font_size});
+    rest_of_name_1.css({ 'width': calc_one });
+    rest_of_name_2.css({ 'width': calc_two });
+    intro_heading.css({ 'font-size': font_size });
 
   }else if (scrollTop > margin_top && scrollTop < animationStoppingPoint){
 

@@ -111,6 +111,7 @@ h1{
 }
 
 #intro_background_color{
+  /*transition: top 3s ease-in-out;*/
   /*background-color: #F1F2F3;*/
   /*background-color: #8A432C;*/
   background-color: #A2B6D8;
@@ -125,7 +126,7 @@ h1{
   background-size: cover;
   position: absolute;
   width:100%;
-  top:0;
+  top: 0;
   left: 0;
 }
 
@@ -209,6 +210,7 @@ h1{
 .photo{
   width:30%;
   margin:1%;
+  margin-bottom: 10px;
   cursor: pointer;
   position: relative;
 }
@@ -447,6 +449,8 @@ h1{
 }
 
 .icon-circle{
+  width:100%;
+  height:100%;
   opacity: 0;
   position: absolute;
   top: 50%;  /* position the top  edge of the element at the middle of the parent */
@@ -571,7 +575,7 @@ h1{
 }
 
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 650px) {
   .photo{
     width:48%;
   }
@@ -591,5 +595,24 @@ h1{
     float:left;
     width:100%;
     display: block;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .photo{
+    width:98%;
+    max-width: 300px;
+  }
+  .photo-content{
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  #rest_of_name_1{
+    display: none;
+  }
+  #rest_of_name_2{
+    display: none;
   }
 }
