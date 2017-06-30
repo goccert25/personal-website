@@ -427,7 +427,7 @@ function hasScrolled(){
   if (Math.abs(lastScrollTop - st) <= delta){
     return;
   }
-  if (st > lastScrollTop && st > navbarHeight){
+  if (st > lastScrollTop && st > (navbarHeight/2)){
     // Scroll Down
     console.log("hasscrolled", navbarHeight);
     $('#nav').css({'top': (-1 * navbarHeight)});
@@ -437,7 +437,8 @@ function hasScrolled(){
     // If did not scroll past the document (possible on mac)...
     if(st + $(window).height() < $(document).height()) {
       $('#nav').css({'top': 0});
-      $('#nav_sticky').css({'top': 0});    }
+      $('#nav_sticky').css({'top': 0});
+    }
   }
   lastScrollTop = st;
 }
