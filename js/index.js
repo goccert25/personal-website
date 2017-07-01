@@ -4,13 +4,10 @@ var rest_of_name_2_width = 0;
 var intro_font_size = 0;
 var final_navbar_fontsize = 18;
 var navbar_height = 0;
-var nav_stickied = false;
 var padding_above_initials = 0;
 var padding_below_initials = 0;
 var margin_above_initials = 0;
 var margin_below_initials = 0;
-var secondHalfScrollLength = 0;
-var secondHalfScrollLengthRemaining = 0;
 var animationStoppingPoint = 0;
 var notSetUp = true;
 var lengthOfMainCircle;
@@ -41,7 +38,8 @@ var NAV_STATE = {
 var STATE = {
   ONE: 'ONE',
   TWO: 'TWO',
-  THREE: 'THREE'
+  THREE: 'THREE',
+  FOUR: 'FOUR'
 };
 
 
@@ -77,18 +75,17 @@ function navAnimation (centerPointLeft,
 
         window.requestAnimationFrame(step);
       }else{
-        $('.icon-left').css({'top':rightIconStart.top, 'left': rightIconStart.left});
-        $('.icon-right').css({'top':activeIconStart.top, 'left': activeIconStart.left});
-        $('.icon-active').css({'top':leftIconStart.top, 'left': leftIconStart.left});
-        $('.icon-left').addClass('ir');
-        $('.icon-left').removeClass('icon-left');
-        $('.icon-active').addClass('il');
-        $('.icon-active').removeClass('icon-active');
-        $('.icon-right').addClass('ia');
-        $('.icon-right').removeClass('icon-right');
-        $('.ia').addClass('icon-active').removeClass('ia');
-        $('.il').addClass('icon-left').removeClass('il');
-        $('.ir').addClass('icon-right').removeClass('ir');
+        var icon_left = $('.icon-left');
+        var icon_right = $('.icon-right');
+        var icon_active = $('.icon-active');
+
+        icon_left.css({'top':rightIconStart.top, 'left': rightIconStart.left}).removeClass('icon-left').addClass('icon-right');
+        icon_right.css({'top':activeIconStart.top, 'left': activeIconStart.left}).removeClass('icon-right').addClass('icon-active');
+        icon_active.css({'top':leftIconStart.top, 'left': leftIconStart.left}).removeClass('icon-active').addClass('icon-left');
+
+        $('html, body').animate({
+                scrollTop: animationStoppingPoint
+              }, 500);
 
         $('.icon-right').click(animationFunction("clockwise"));
         $('.icon-left').click(animationFunction("counter-clockwise"));
@@ -117,18 +114,18 @@ function navAnimation (centerPointLeft,
 
         window.requestAnimationFrame(step);
       }else{
-        $('.icon-left').css({'top':activeIconStart.top, 'left': activeIconStart.left});
-        $('.icon-right').css({'top':leftIconStart.top, 'left': leftIconStart.left});
-        $('.icon-active').css({'top':rightIconStart.top, 'left': rightIconStart.left});
-        $('.icon-left').addClass('ia');
-        $('.icon-left').removeClass('icon-left');
-        $('.icon-active').addClass('ir');
-        $('.icon-active').removeClass('icon-active');
-        $('.icon-right').addClass('il');
-        $('.icon-right').removeClass('icon-right');
-        $('.ia').addClass('icon-active').removeClass('ia');
-        $('.il').addClass('icon-left').removeClass('il');
-        $('.ir').addClass('icon-right').removeClass('ir');
+
+        var icon_left = $('.icon-left');
+        var icon_right = $('.icon-right');
+        var icon_active = $('.icon-active');
+
+        icon_left.css({'top':activeIconStart.top, 'left': activeIconStart.left}).addClass('icon-active').removeClass('icon-left');
+        icon_right.css({'top':leftIconStart.top, 'left': leftIconStart.left}).addClass('icon-left').removeClass('icon-right');
+        icon_active.css({'top':rightIconStart.top, 'left': rightIconStart.left}).addClass('icon-right').removeClass('icon-active');
+
+        $('html, body').animate({
+                scrollTop: animationStoppingPoint
+              }, 500);
 
         $('.icon-right').click(animationFunction("clockwise"));
         $('.icon-left').click(animationFunction("counter-clockwise"));
@@ -258,7 +255,6 @@ function adjustHeight(){
 
   wordHeight = wordHeight/2;
   margin_top = wordHeight;
-  // animationStoppingPoint = margin_top * 5/2;
   animationStoppingPoint = $(window).height() - initialNavSize;
   $('#intro_background_color').css('height', $(window).height());
   intro_background.css('height', $(window).height());
@@ -325,31 +321,17 @@ $(window).on('scroll', function(){
 
     rightPath.style.strokeDashoffset = offset;
     leftPath.style.strokeDashoffset = offset;
-  }else if (scrollTop >= animationStoppingPoint){
-    top_intro_heading_height = 0;
-    top_intro_heading.css('height', top_intro_heading_height);
 
-    if(currentState !== STATE.THREE){
-      adjustToState3();
+  }else if (scrollTop >= animationStoppingPoint){
+
+
+    if(currentState !== STATE.FOUR){
+      adjustToState4();
     }
 
     if (notSetUp){
       setUpNavbar();
     }
-    rightPath.style.strokeDashoffset = 0;
-    leftPath.style.strokeDashoffset = 0;
-    icons.css({'opacity': 1});
-    $(window).unbind("scroll");
-    var lockedHeight = intro_heading.outerHeight(true);
-    intro_background.css({'height': lockedHeight});
-    $('#intro_background_color').css({'height': lockedHeight, 'background-color': "transparent"});
-    $('#nav_sticky').addClass("bottom_border");
-    $('#intro_background_color').removeClass('bottom_border');
-    window.scrollTo(0,0);
-    $('.icon-right').click(animationFunction("clockwise"));
-    $('.icon-left').click(animationFunction("counter-clockwise"));
-
-    navbarHeight = $('#nav_sticky').outerHeight();
 
     $(window).scroll(function(event){
       didScroll = true;
@@ -393,7 +375,6 @@ function setUpNavbar(){
   $('#nav').css({'display':'block', 'opacity':'0'});
 
   rightPath = document.querySelector('#right_half_circle');
-  // length;
   if (rightPath.getTotalLength){
     lengthOfMainCircle = rightPath.getTotalLength();
   }else{
@@ -427,7 +408,7 @@ function hasScrolled(){
   if (Math.abs(lastScrollTop - st) <= delta){
     return;
   }
-  if (st > lastScrollTop && st > (navbarHeight/2)){
+  if (st > lastScrollTop && st > (navbarHeight/2) && st > (animationStoppingPoint+75)){
     // Scroll Down
     console.log("hasscrolled", navbarHeight);
     $('#nav').css({'top': (-1 * navbarHeight)});
@@ -443,7 +424,7 @@ function hasScrolled(){
   lastScrollTop = st;
 }
 
-function adjustToState1(midway_point, scrollTop){
+function adjustToState1(){
   currentState = STATE.ONE;
 
   rest_of_name_1.css({ 'width': rest_of_name_1_width });
@@ -453,6 +434,11 @@ function adjustToState1(midway_point, scrollTop){
 
   $('.icon-circle').css({'opacity': '0'});
   icons.css({'opacity': 0});
+
+  $('.icon-right').unbind('click');
+  $('.icon-left').unbind('click');
+  $('#nav_sticky').removeClass("bottom_border");
+  $('#intro_background_color').addClass('bottom_border');
 
   if(!notSetUp){
     rightPath.style.strokeDashoffset = lengthOfMainCircle;
@@ -473,6 +459,12 @@ function adjustToState2(){
   $('.icon-circle').css({'opacity': 0});
   icons.css({'opacity': 0});
 
+
+  $('.icon-right').unbind('click');
+  $('.icon-left').unbind('click');
+  $('#nav_sticky').removeClass("bottom_border");
+  $('#intro_background_color').addClass('bottom_border');
+
   if(!notSetUp){
     rightPath.style.strokeDashoffset = lengthOfMainCircle;
     leftPath.style.strokeDashoffset = lengthOfMainCircle;
@@ -492,8 +484,29 @@ function adjustToState3(){
 
   $('.icon-circle').css({'opacity': '1'});
 
+  $('.icon-right').unbind('click');
+  $('.icon-left').unbind('click');
+
+  $('#nav_sticky').removeClass("bottom_border");
+  $('#intro_background_color').addClass('bottom_border');
+
 }
 
+function adjustToState4(){
+  currentState = STATE.FOUR;
+
+  top_intro_heading_height = 0;
+  top_intro_heading.css('height', top_intro_heading_height);
+  rightPath.style.strokeDashoffset = 0;
+  leftPath.style.strokeDashoffset = 0;
+  icons.css({'opacity': 1});
+  $('#nav_sticky').addClass("bottom_border");
+  $('#intro_background_color').removeClass('bottom_border');
+  $('.icon-right').click(animationFunction("clockwise"));
+  $('.icon-left').click(animationFunction("counter-clockwise"));
+
+  navbarHeight = $('#nav_sticky').outerHeight();
+}
 
 
 function openModal() {
