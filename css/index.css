@@ -117,7 +117,7 @@ h1{
   background-color: #A2B6D8;
   position:relative;
   width:100%;
-  float:left;
+  /*float:left;*/
 }
 
 #intro_background{
@@ -190,7 +190,8 @@ h1{
 }
 ._300{
   width:300%;
-  float:left;
+  padding-top: 50px;
+  /*float:left;*/
   overflow-x:hidden;
 
 }
