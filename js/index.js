@@ -84,7 +84,7 @@ function navAnimation (centerPointLeft,
         icon_active.css({'top':leftIconStart.top, 'left': leftIconStart.left}).removeClass('icon-active').addClass('icon-left');
 
         $('html, body').animate({
-                scrollTop: animationStoppingPoint
+                scrollTop: (animationStoppingPoint+50)
               }, 500);
 
         $('.icon-right').click(animationFunction("clockwise"));
@@ -124,7 +124,7 @@ function navAnimation (centerPointLeft,
         icon_active.css({'top':rightIconStart.top, 'left': rightIconStart.left}).addClass('icon-right').removeClass('icon-active');
 
         $('html, body').animate({
-                scrollTop: animationStoppingPoint
+                scrollTop: (animationStoppingPoint+50)
               }, 500);
 
         $('.icon-right').click(animationFunction("clockwise"));
@@ -314,7 +314,7 @@ $(window).on('scroll', function(){
 
     ratio = lengthTraveledSoFar/margin_top;
 
-    var offset =  (lengthOfMainCircle/2) * (1 - ratio) + (lengthOfMainCircle/2) - 1;
+    var offset = (lengthOfMainCircle/2) * (1 - ratio) + (lengthOfMainCircle/2) - 1;
 
     console.log(ratio);
     icons.css({'opacity': ratio});
@@ -510,12 +510,17 @@ function adjustToState4(){
 
 
 function openModal() {
+  $('body').css({'overflow-y':'hidden'});
+  $('.entireBodyWrapper').css({'overflow-y':'hidden'});
+
   document.getElementById('myModal').style.height = $(window).height() + "px";
   document.getElementById('myModal').style.display = "block";
 }
 
 function closeModal() {
   document.getElementById('myModal').style.display = "none";
+  $('body').css({'overflow-y':'scroll'});
+  $('.entireBodyWrapper').css({'overflow-y':'scroll'});
 }
 
 var slideIndex = 1;
