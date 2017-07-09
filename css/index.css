@@ -105,7 +105,7 @@ h1{
 }
 
 #intro_background{
-  background-image: url('../img/background.JPG');
+  background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 75% 0%;
