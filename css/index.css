@@ -165,13 +165,17 @@ h1{
 .active{
   visibility: visible;
 }
+.cutoff{
+  overflow-y: hidden;
+  height:900px;
+}
 .inactive{
   visibility: hidden;
 }
-._300{
-  width:300%;
+._300 {
+  width: 300%;
   padding-top: 50px;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 ._100{
@@ -544,16 +548,6 @@ h1{
     float:left;
     width:100%;
     display: block;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .photo{
-    width:98%;
-    max-width: 300px;
-  }
-  .photo-content{
-    justify-content: space-around;
   }
 }
 

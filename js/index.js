@@ -84,8 +84,10 @@ function navAnimation (centerPointLeft,
         icon_active.css({'top':leftIconStart.top, 'left': leftIconStart.left}).removeClass('icon-active').addClass('icon-left');
 
         $('html, body').animate({
-                scrollTop: (animationStoppingPoint+50)
-              }, 500);
+          scrollTop: (animationStoppingPoint+50)
+        }, 500, function () {
+          $(".inactive").addClass("cutoff");
+        });
 
         $('.icon-right').click(animationFunction("clockwise"));
         $('.icon-left').click(animationFunction("counter-clockwise"));
@@ -124,8 +126,10 @@ function navAnimation (centerPointLeft,
         icon_active.css({'top':rightIconStart.top, 'left': rightIconStart.left}).addClass('icon-right').removeClass('icon-active');
 
         $('html, body').animate({
-                scrollTop: (animationStoppingPoint+50)
-              }, 500);
+          scrollTop: (animationStoppingPoint+50)
+        }, 500, function () {
+          $(".inactive").addClass("cutoff");
+        });
 
         $('.icon-right').click(animationFunction("clockwise"));
         $('.icon-left').click(animationFunction("counter-clockwise"));
@@ -166,17 +170,17 @@ function animationFunction(direction){
     if (direction === "clockwise"){
       if (currentNavState === NAV_STATE.MIDDLE){
         m.removeClass('active transform-100').addClass('inactive transform-200');
-        r.removeClass('inactive transform-100').addClass('active transform-200');
+        r.removeClass('inactive transform-100 cutoff').addClass('active transform-200');
         l.removeClass('transform-100').addClass('transform100');
         currentNavState = NAV_STATE.RIGHT;
       }else if (currentNavState === NAV_STATE.RIGHT){
         r.removeClass('active transform-200').addClass('transform-300 inactive');
-        l.removeClass('inactive transform100').addClass('active transform0');
+        l.removeClass('inactive transform100 cutoff').addClass('active transform0');
         m.removeClass('transform-200').addClass('transform0');
         currentNavState = NAV_STATE.LEFT;
       }else{
         l.removeClass('active transform0').addClass('inactive transform-100');
-        m.removeClass('transform-200 inactive').addClass('active transform-100');
+        m.removeClass('transform-200 inactive cutoff').addClass('active transform-100');
         r.removeClass('transform-300').addClass('transform-100');
         currentNavState = NAV_STATE.MIDDLE;
       }
@@ -184,15 +188,15 @@ function animationFunction(direction){
       if (currentNavState === NAV_STATE.MIDDLE){
         m.removeClass('active transform-100').addClass('inactive transform0');
         r.removeClass('transform-100').addClass('transform-300');
-        l.removeClass('inactive transform-100').addClass('active transform0');
+        l.removeClass('inactive transform-100 cutoff').addClass('active transform0');
         currentNavState = NAV_STATE.LEFT;
       }else if (currentNavState === NAV_STATE.LEFT){
         l.removeClass('active transform0').addClass('inactive transform100');
-        r.removeClass('inactive transform-300').addClass('active transform-200');
+        r.removeClass('inactive transform-300 cutoff').addClass('active transform-200');
         m.removeClass('transform0').addClass('transform-200');
         currentNavState = NAV_STATE.RIGHT;
       }else{
-        m.removeClass('inactive transform-200').addClass('active transform-100');
+        m.removeClass('inactive transform-200 cutoff').addClass('active transform-100');
         r.removeClass('active transform-200').addClass('inactive transform-100');
         l.removeClass('transform100').addClass('transform-100');
         currentNavState = NAV_STATE.MIDDLE;
@@ -202,28 +206,22 @@ function animationFunction(direction){
     var leftPos = $('.icon-left').position();
     leftPos.top = leftPos.top + margin_above_initials;
     leftPos.left = leftPos.left + margin_above_initials;
-    console.log(leftPos.left, " ", leftPos.top);
 
     var rightPos = $('.icon-right').position();
     rightPos.top = rightPos.top + margin_above_initials;
     rightPos.left = rightPos.left + margin_above_initials;
 
-    console.log(rightPos.left, " ", rightPos.top);
     var activePos = $('.icon-active').position();
     activePos.top = activePos.top + margin_above_initials;
     activePos.left = activePos.left + margin_above_initials;
-
-    console.log(activePos.left, " ", activePos.top);
 
     var radius = (rightPos.left - leftPos.left)/2;
     var centerPointLeft = activePos.left;
     var centerPointTop = leftPos.top;
 
-    console.log('radius ' + radius + ' centerLeft ' + centerPointLeft + ' centerTop ' + centerPointTop);
-
     // (x - center of circle)^2 + (y-center of circle) ^2 = radius ^2;
     //use requestAnimationFrame to set the x value based on time, then find y value based on that.
-    window.requestAnimationFrame(navAnimation (centerPointLeft,
+    window.requestAnimationFrame(navAnimation(centerPointLeft,
                             centerPointTop,
                             (direction === "clockwise"),
                             leftPos,
@@ -245,7 +243,8 @@ function adjustHeight(){
   margin_above_initials = (name.css('margin-top')).split('px');
   margin_above_initials = parseInt(margin_above_initials[0]);
 
-  initialNavSize = name.height() +
+  // initialNavSize = name.height() +
+  initialNavSize = final_navbar_fontsize +
     padding_below_initials +
     padding_above_initials +
     margin_below_initials +
@@ -303,6 +302,9 @@ function scrollHandler(){
 
   }else if (scrollTop > margin_top && scrollTop < animationStoppingPoint){
 
+    //necessary so setUpNavbar doesn't get janked
+    intro_heading.css({ 'font-size': final_navbar_fontsize });
+
     if (notSetUp){
       setUpNavbar();
     }
@@ -317,13 +319,15 @@ function scrollHandler(){
 
     var offset = (lengthOfMainCircle/2) * (1 - ratio) + (lengthOfMainCircle/2) - 1;
 
-    console.log(ratio);
     icons.css({'opacity': ratio});
 
     rightPath.style.strokeDashoffset = offset;
     leftPath.style.strokeDashoffset = offset;
 
   }else if (scrollTop >= animationStoppingPoint){
+
+    //necessary so setUpNavbar doesn't get janked
+    intro_heading.css({ 'font-size': final_navbar_fontsize });
 
     if (notSetUp){
       setUpNavbar();
@@ -347,7 +351,6 @@ function setUpNavbar(){
 
   notSetUp = false;
   var constantSpaceBetweenCircleAndTop = parseInt(((intro_heading.css('margin-top')).split('px'))[0]);
-  console.log(constantSpaceBetweenCircleAndTop);
   var constantSpaceBetweenCircleAndContent = 20;
 
   intro_heading.css({'font-size': final_navbar_fontsize});
@@ -377,6 +380,8 @@ function setUpNavbar(){
   $('#nav').css({'display':'block', 'opacity':'0'});
 
   rightPath = document.querySelector('#right_half_circle');
+  leftPath = document.querySelector('#left_half_circle');
+
   if (rightPath.getTotalLength){
     lengthOfMainCircle = rightPath.getTotalLength();
   }else{
@@ -385,13 +390,6 @@ function setUpNavbar(){
 
   rightPath.style.strokeDasharray = lengthOfMainCircle + ' ' + lengthOfMainCircle;
   rightPath.style.strokeDashoffset = 0;
-
-  leftPath = document.querySelector('#left_half_circle');
-  if (leftPath.getTotalLength){
-    lengthOfMainCircle = leftPath.getTotalLength();
-  }else{
-    lengthOfMainCircle = 2 * Math.PI * leftPath.getAttribute('r');
-  }
   leftPath.style.strokeDasharray = lengthOfMainCircle + ' ' + lengthOfMainCircle;
   leftPath.style.strokeDashoffset = 0;
 
@@ -412,7 +410,6 @@ function hasScrolled(){
   }
   if (st > lastScrollTop && st > (navbarHeight/2) && st > (animationStoppingPoint+75)){
     // Scroll Down
-    console.log("hasscrolled", navbarHeight);
     $('#nav').css({'top': (-1 * navbarHeight)});
     $('#nav_sticky').css({'top': (-1 * navbarHeight)});
   } else {
