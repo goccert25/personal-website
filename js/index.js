@@ -2,7 +2,7 @@ var margin_top = 0;
 var rest_of_name_1_width = 0;
 var rest_of_name_2_width = 0;
 var intro_font_size = 0;
-var final_navbar_fontsize = 18;
+var final_navbar_fontsize = 36;
 var navbar_height = 0;
 var padding_above_initials = 0;
 var padding_below_initials = 0;
@@ -149,7 +149,7 @@ $(document).ready(function(){
 
   adjustHeight();
   populateCaptions();
-
+  scrollHandler();
 });
 
 function animationFunction(direction){
@@ -262,7 +262,8 @@ function adjustHeight(){
 
 }
 
-$(window).on('scroll', function(){
+function scrollHandler(){
+
   var midway_point = margin_top/2;
   var scrollTop = $(this).scrollTop();
 
@@ -302,15 +303,15 @@ $(window).on('scroll', function(){
 
   }else if (scrollTop > margin_top && scrollTop < animationStoppingPoint){
 
+    if (notSetUp){
+      setUpNavbar();
+    }
+
     if(currentState !== STATE.THREE){
       adjustToState3();
     }
 
     var lengthTraveledSoFar = scrollTop-margin_top;
-
-    if (notSetUp){
-      setUpNavbar();
-    }
 
     ratio = lengthTraveledSoFar/margin_top;
 
@@ -324,20 +325,21 @@ $(window).on('scroll', function(){
 
   }else if (scrollTop >= animationStoppingPoint){
 
+    if (notSetUp){
+      setUpNavbar();
+    }
 
     if(currentState !== STATE.FOUR){
       adjustToState4();
-    }
-
-    if (notSetUp){
-      setUpNavbar();
     }
 
     $(window).scroll(function(event){
       didScroll = true;
     });
   }
-});
+}
+
+$(window).on('scroll', scrollHandler);
 
 function setUpNavbar(){
 
@@ -452,9 +454,7 @@ function adjustToState2(){
   intro_background.css({ 'opacity': 0 });
   rest_of_name_1.css({ 'opacity': 0 });
   rest_of_name_2.css({ 'opacity': 0 });
-  // $('#nav_sticky').css({'background-color':'#8A432C'});
   $('#nav_sticky').css({'background-color':'#A2B6D8'});
-  // $('#nav_sticky').css({'background-color':'#F1F2F3'});
 
   $('.icon-circle').css({'opacity': 0});
   icons.css({'opacity': 0});
@@ -478,14 +478,14 @@ function adjustToState3(){
   rest_of_name_1.css({ 'width': 0, 'opacity': 0 });
   rest_of_name_2.css({ 'width': 0, 'opacity': 0 });
   intro_heading.css({'font-size': final_navbar_fontsize});
-  // $('#nav_sticky').css({'background-color':'#8A432C'});
   $('#nav_sticky').css({'background-color':'#A2B6D8'});
-  // $('#nav_sticky').css({'background-color':'#F1F2F3'});
 
   $('.icon-circle').css({'opacity': '1'});
 
   $('.icon-right').unbind('click');
   $('.icon-left').unbind('click');
+  $('.icon-right').click(animationFunction("clockwise"));
+  $('.icon-left').click(animationFunction("counter-clockwise"));
 
   $('#nav_sticky').removeClass("bottom_border");
   $('#intro_background_color').addClass('bottom_border');
@@ -495,6 +495,13 @@ function adjustToState3(){
 function adjustToState4(){
   currentState = STATE.FOUR;
 
+  intro_background.css({ 'opacity': 0 });
+  rest_of_name_1.css({ 'width': 0, 'opacity': 0 });
+  rest_of_name_2.css({ 'width': 0, 'opacity': 0 });
+  intro_heading.css({'font-size': final_navbar_fontsize});
+  $('#nav_sticky').css({'background-color':'#A2B6D8'});
+  $('.icon-circle').css({'opacity': '1'});
+
   top_intro_heading_height = 0;
   top_intro_heading.css('height', top_intro_heading_height);
   rightPath.style.strokeDashoffset = 0;
@@ -502,6 +509,10 @@ function adjustToState4(){
   icons.css({'opacity': 1});
   $('#nav_sticky').addClass("bottom_border");
   $('#intro_background_color').removeClass('bottom_border');
+
+
+  $('.icon-right').unbind('click');
+  $('.icon-left').unbind('click');
   $('.icon-right').click(animationFunction("clockwise"));
   $('.icon-left').click(animationFunction("counter-clockwise"));
 
@@ -526,7 +537,22 @@ function closeModal() {
 var slideIndex = 1;
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  if (n === 1){
+    if (slideIndex === 27){
+      slideIndex = 0;
+    }else if (slideIndex === 60){
+      slideIndex = 27;
+    }
+    showSlides(slideIndex += n);
+  }
+  else if (n === -1){
+    if (slideIndex === 28){
+      slideIndex = 61;
+    }else if (slideIndex === 1){
+      slideIndex = 28;
+    }
+    showSlides(slideIndex += n);
+  }
 }
 
 function currentSlide(n) {
@@ -561,5 +587,4 @@ function showSlides(n) {
   imgToLoad.src = images[slideIndex-1].getAttribute('data-src');
 
   slides[slideIndex-1].style.display = "flex";
-  // images[slideIndex-1].src = images[slideIndex-1].getAttribute('data-src');
 }
