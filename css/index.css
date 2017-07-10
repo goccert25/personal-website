@@ -248,7 +248,7 @@ h1{
 
 .about-me-heading{
   display: inline;
-  font-family: sans-serif;
+  font-family: 'Droid Serif', sans-serif;
   float:left;
   color: #262626;
   padding:0;
@@ -260,7 +260,7 @@ h1{
 }
 
 .section-heading{
-  font-family: sans-serif;
+  font-family: 'Droid Serif', sans-serif;
   float:left;
   width:100%;
   color: #262626;
@@ -307,13 +307,13 @@ h1{
 }
 .resume-blob-description{
   color: #434343;
-  font-family: sans-serif;
   font-weight: 400;
   line-height: 25px;
   font-size: 19px;
 }
 
 .card{
+  font-family: 'Roboto', sans-serif;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 10px;
