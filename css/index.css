@@ -340,13 +340,85 @@ h1{
 }
 
 #left_half_circle_box{
-  -webkit-transform:rotate(90deg) rotateY( -180deg );
-  transform: rotate(90deg) rotateY( -180deg );
+  -webkit-transform:rotate(90deg) rotateY( -180deg ) scale(1,1);
+  transform: rotate(90deg) rotateY( -180deg ) scale(1,1);
 }
 #right_half_circle_box{
-  -webkit-transform:rotate(270deg);
-  transform:rotate(270deg);
+  -webkit-transform:rotate(270deg) scale(1,1);
+  transform:rotate(270deg) scale(1,1);
 }
+
+@-webkit-keyframes lineshifter {
+	0% {
+		transform: scale(1,1);
+		transform-origin: 50% 50%;
+	}
+	100% {
+		transform: scale(0,1);
+		transform-origin: 50% 50%;
+	}
+}
+
+@-moz-keyframes lineshifter {
+	0% {
+		transform: scale(1,1);
+		transform-origin: 50% 50%;
+	}
+	100% {
+		transform: scale(0,1);
+		transform-origin: 50% 50%;
+	}
+}
+
+@keyframes lineshifter {
+	0% {
+		transform: scale(1,1);
+		transform-origin: 50% 50%;
+	}
+	100% {
+		transform: scale(0,1);
+		transform-origin: 50% 50%;
+	}
+}
+
+@-webkit-keyframes circleshifter {
+	0% {
+		transform: scale(0,1);
+		transform-origin: 50% 50%;
+	}
+	100% {
+		transform: scale(1,1);
+		transform-origin: 50% 50%;
+	}
+}
+@-moz-keyframes circleshifter {
+	0% {
+		transform: scale(0,1);
+		transform-origin: 50% 50%;
+	}
+	100% {
+		transform: scale(1,1);
+		transform-origin: 50% 50%;
+	}
+}
+@keyframes circleshifter {
+	0% {
+		transform: scale(0,1);
+		transform-origin: 50% 50%;
+	}
+	100% {
+		transform: scale(1,1);
+		transform-origin: 50% 50%;
+	}
+}
+
+.line{
+  animation: lineshifter .6s ease-in-out 1 both;
+}
+.circle{
+  animation: circleshifter .1s ease-in-out 1 both;
+}
+
 .icon-active{
   fill:white;
   position: absolute;
@@ -365,6 +437,7 @@ h1{
   position: absolute;
   top: 55%;
   left: 25%;
+  transition: top 0.2s ease-in-out;
   transform: translate(-50%, -50%);
   z-index: 200;
 }
@@ -379,6 +452,7 @@ h1{
   position: absolute;
   top: 55%;
   left: 75%;
+  transition: top 0.2s ease-in-out;
   transform: translate(-50%, -50%);
   z-index: 200;
 }

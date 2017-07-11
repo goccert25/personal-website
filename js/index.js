@@ -28,6 +28,7 @@ var rest_of_name_2;
 var intro_background;
 var intro_heading;
 var icons;
+var shortened = false;
 
 var NAV_STATE = {
   MIDDLE: "MIDDLE",
@@ -54,7 +55,7 @@ function navAnimation (centerPointLeft,
 
   if (clockwise){
 
-    return function step(timestamp){
+    return function step(timestamp) {
       if (!start) start = timestamp;
       var progress = timestamp - start;
       //do stuff to top and left
@@ -90,7 +91,9 @@ function navAnimation (centerPointLeft,
         });
 
         $('.icon-right').click(animationFunction("clockwise"));
+        $('.icon-right').css({"transition": "top 0.2s ease-in-out"});
         $('.icon-left').click(animationFunction("counter-clockwise"));
+        $('.icon-left').css({"transition": "top 0.2s ease-in-out"});
       }
     }
   }else{
@@ -131,7 +134,9 @@ function navAnimation (centerPointLeft,
           $(".inactive").addClass("cutoff");
         });
 
+        $('.icon-right').css({"transition": "top 0.2s ease-in-out"});
         $('.icon-right').click(animationFunction("clockwise"));
+        $('.icon-left').css({"transition": "top 0.2s ease-in-out"});
         $('.icon-left').click(animationFunction("counter-clockwise"));
       }
     }
@@ -156,78 +161,93 @@ $(document).ready(function(){
   scrollHandler();
 });
 
+function circleAnimation(direction){
+
+      $('.icon-right').unbind('click');
+      $('.icon-right').css({"transition": "none"});
+      $('.icon-left').unbind('click');
+      $('.icon-left').css({"transition": "none"});
+      $('.icon-active').unbind('click');
+      $('.icon-active').css({"transition": "none"});
+
+      var r = $('#right_content');
+      var m = $('#middle_content');
+      var l = $('#left_content');
+      if (direction === "clockwise"){
+        if (currentNavState === NAV_STATE.MIDDLE){
+          m.removeClass('active transform-100').addClass('inactive transform-200');
+          r.removeClass('inactive transform-100 cutoff').addClass('active transform-200');
+          l.removeClass('transform-100').addClass('transform100');
+          currentNavState = NAV_STATE.RIGHT;
+        }else if (currentNavState === NAV_STATE.RIGHT){
+          r.removeClass('active transform-200').addClass('transform-300 inactive');
+          l.removeClass('inactive transform100 cutoff').addClass('active transform0');
+          m.removeClass('transform-200').addClass('transform0');
+          currentNavState = NAV_STATE.LEFT;
+        }else{
+          l.removeClass('active transform0').addClass('inactive transform-100');
+          m.removeClass('transform-200 inactive cutoff').addClass('active transform-100');
+          r.removeClass('transform-300').addClass('transform-100');
+          currentNavState = NAV_STATE.MIDDLE;
+        }
+      }else{
+        if (currentNavState === NAV_STATE.MIDDLE){
+          m.removeClass('active transform-100').addClass('inactive transform0');
+          r.removeClass('transform-100').addClass('transform-300');
+          l.removeClass('inactive transform-100 cutoff').addClass('active transform0');
+          currentNavState = NAV_STATE.LEFT;
+        }else if (currentNavState === NAV_STATE.LEFT){
+          l.removeClass('active transform0').addClass('inactive transform100');
+          r.removeClass('inactive transform-300 cutoff').addClass('active transform-200');
+          m.removeClass('transform0').addClass('transform-200');
+          currentNavState = NAV_STATE.RIGHT;
+        }else{
+          m.removeClass('inactive transform-200 cutoff').addClass('active transform-100');
+          r.removeClass('active transform-200').addClass('inactive transform-100');
+          l.removeClass('transform100').addClass('transform-100');
+          currentNavState = NAV_STATE.MIDDLE;
+        }
+      }
+
+      var leftPos = $('.icon-left').position();
+      leftPos.top = leftPos.top + margin_above_initials;
+      leftPos.left = leftPos.left + margin_above_initials;
+
+      var rightPos = $('.icon-right').position();
+      rightPos.top = rightPos.top + margin_above_initials;
+      rightPos.left = rightPos.left + margin_above_initials;
+
+      var activePos = $('.icon-active').position();
+      activePos.top = activePos.top + margin_above_initials;
+      activePos.left = activePos.left + margin_above_initials;
+
+      var radius = (rightPos.left - leftPos.left)/2;
+      var centerPointLeft = activePos.left;
+      var centerPointTop = leftPos.top;
+
+      // (x - center of circle)^2 + (y-center of circle) ^2 = radius ^2;
+      //use requestAnimationFrame to set the x value based on time, then find y value based on that.
+      window.requestAnimationFrame(navAnimation(centerPointLeft,
+                              centerPointTop,
+                              (direction === "clockwise"),
+                              leftPos,
+                              rightPos,
+                              activePos,
+                              radius));
+}
+
 function animationFunction(direction){
 
   return function(){
-
-    $('.icon-right').unbind('click');
-    $('.icon-left').unbind('click');
-    $('.icon-active').unbind('click');
-
-    var r = $('#right_content');
-    var m = $('#middle_content');
-    var l = $('#left_content');
-    if (direction === "clockwise"){
-      if (currentNavState === NAV_STATE.MIDDLE){
-        m.removeClass('active transform-100').addClass('inactive transform-200');
-        r.removeClass('inactive transform-100 cutoff').addClass('active transform-200');
-        l.removeClass('transform-100').addClass('transform100');
-        currentNavState = NAV_STATE.RIGHT;
-      }else if (currentNavState === NAV_STATE.RIGHT){
-        r.removeClass('active transform-200').addClass('transform-300 inactive');
-        l.removeClass('inactive transform100 cutoff').addClass('active transform0');
-        m.removeClass('transform-200').addClass('transform0');
-        currentNavState = NAV_STATE.LEFT;
-      }else{
-        l.removeClass('active transform0').addClass('inactive transform-100');
-        m.removeClass('transform-200 inactive cutoff').addClass('active transform-100');
-        r.removeClass('transform-300').addClass('transform-100');
-        currentNavState = NAV_STATE.MIDDLE;
-      }
-    }else{
-      if (currentNavState === NAV_STATE.MIDDLE){
-        m.removeClass('active transform-100').addClass('inactive transform0');
-        r.removeClass('transform-100').addClass('transform-300');
-        l.removeClass('inactive transform-100 cutoff').addClass('active transform0');
-        currentNavState = NAV_STATE.LEFT;
-      }else if (currentNavState === NAV_STATE.LEFT){
-        l.removeClass('active transform0').addClass('inactive transform100');
-        r.removeClass('inactive transform-300 cutoff').addClass('active transform-200');
-        m.removeClass('transform0').addClass('transform-200');
-        currentNavState = NAV_STATE.RIGHT;
-      }else{
-        m.removeClass('inactive transform-200 cutoff').addClass('active transform-100');
-        r.removeClass('active transform-200').addClass('inactive transform-100');
-        l.removeClass('transform100').addClass('transform-100');
-        currentNavState = NAV_STATE.MIDDLE;
-      }
+    if (shortened){
+      unshorten();
+      setTimeout(function(){
+        circleAnimation(direction);
+      }, 200);
     }
-
-    var leftPos = $('.icon-left').position();
-    leftPos.top = leftPos.top + margin_above_initials;
-    leftPos.left = leftPos.left + margin_above_initials;
-
-    var rightPos = $('.icon-right').position();
-    rightPos.top = rightPos.top + margin_above_initials;
-    rightPos.left = rightPos.left + margin_above_initials;
-
-    var activePos = $('.icon-active').position();
-    activePos.top = activePos.top + margin_above_initials;
-    activePos.left = activePos.left + margin_above_initials;
-
-    var radius = (rightPos.left - leftPos.left)/2;
-    var centerPointLeft = activePos.left;
-    var centerPointTop = leftPos.top;
-
-    // (x - center of circle)^2 + (y-center of circle) ^2 = radius ^2;
-    //use requestAnimationFrame to set the x value based on time, then find y value based on that.
-    window.requestAnimationFrame(navAnimation(centerPointLeft,
-                            centerPointTop,
-                            (direction === "clockwise"),
-                            leftPos,
-                            rightPos,
-                            activePos,
-                            radius));
+    else{
+      circleAnimation(direction);
+    }
   }
 }
 
@@ -290,15 +310,17 @@ function scrollHandler(){
     }
 
     var scale = (1 - (scrollTop - midway_point)/midway_point);
-    var calc_one = scale * rest_of_name_1_width;
-    var calc_two = scale * rest_of_name_2_width;
-    var font_size = (scale * (intro_font_size - final_navbar_fontsize)) + final_navbar_fontsize;
-    if (font_size < final_navbar_fontsize) font_size = final_navbar_fontsize;
-    if (calc_one < 0) calc_one = 0;
-    if (calc_two < 0) calc_two = 0;
-    rest_of_name_1.css({ 'width': calc_one });
-    rest_of_name_2.css({ 'width': calc_two });
-    intro_heading.css({ 'font-size': font_size });
+    if (scale <= 1) {
+      var calc_one = scale * rest_of_name_1_width;
+      var calc_two = scale * rest_of_name_2_width;
+      var font_size = (scale * (intro_font_size - final_navbar_fontsize)) + final_navbar_fontsize;
+      if (font_size < final_navbar_fontsize) font_size = final_navbar_fontsize;
+      if (calc_one < 0) calc_one = 0;
+      if (calc_two < 0) calc_two = 0;
+      rest_of_name_1.css({ 'width': calc_one });
+      rest_of_name_2.css({ 'width': calc_two });
+      intro_heading.css({ 'font-size': font_size });
+    }
 
   }else if (scrollTop > margin_top && scrollTop < animationStoppingPoint){
 
@@ -410,17 +432,36 @@ function hasScrolled(){
   }
   if (st > lastScrollTop && st > (navbarHeight/2) && st > (animationStoppingPoint+75)){
     // Scroll Down
-    $('#nav').css({'top': (-1 * navbarHeight)});
-    $('#nav_sticky').css({'top': (-1 * navbarHeight)});
+    shorten();
   } else {
     // Scroll Up
     // If did not scroll past the document (possible on mac)...
     if(st + $(window).height() < $(document).height()) {
-      $('#nav').css({'top': 0});
-      $('#nav_sticky').css({'top': 0});
+      unshorten();
     }
   }
   lastScrollTop = st;
+}
+
+function shorten(){
+  $('#left_half_circle').addClass("line").removeClass('circle');
+  $('#right_half_circle').addClass("line").removeClass('circle');
+
+  $('#nav').css({'top': (-1 * navbarHeight/1.4)});
+  $('#nav_sticky').css({'top': (-1 * navbarHeight/1.4)});
+  $('.icon-left').css({'top' : '95.5%'});
+  $('.icon-right').css({'top':'95.5%'});
+  shortened = true;
+}
+
+function unshorten(){
+  $('#nav').css({'top': 0});
+  $('#nav_sticky').css({'top': 0});
+  $('.icon-left').css({'top' : '55%'});
+  $('.icon-right').css({'top': '55%'});
+  $('#left_half_circle').removeClass("line").addClass('circle');
+  $('#right_half_circle').removeClass("line").addClass('circle');
+  shortened = false;
 }
 
 function adjustToState1(){
