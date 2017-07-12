@@ -603,6 +603,9 @@ h1{
 
 
 @media only screen and (max-width: 650px) {
+  .card{
+    margin-bottom:40px;
+  }
   .photo{
     width:48%;
   }
