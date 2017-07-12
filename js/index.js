@@ -432,12 +432,12 @@ function hasScrolled(){
   }
   if (st > lastScrollTop && st > (navbarHeight/2) && st > (animationStoppingPoint+75)){
     // Scroll Down
-    shorten();
+    if (!shortened) shorten();
   } else {
     // Scroll Up
     // If did not scroll past the document (possible on mac)...
     if(st + $(window).height() < $(document).height()) {
-      unshorten();
+      if (shortened) unshorten();
     }
   }
   lastScrollTop = st;
