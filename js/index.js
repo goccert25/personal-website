@@ -150,14 +150,18 @@ $(document).ready(function(){
   top_intro_heading = $('#top_intro_heading');
   intro_background = $('#intro_background');
   icons = $('.icon');
-  rest_of_name_1_width = rest_of_name_1.width();
-  rest_of_name_2_width = rest_of_name_2.width();
+
   intro_font_size = (intro_heading.css('font-size')).split('px');
   intro_font_size = parseInt(intro_font_size[0]);
   currentNavState = NAV_STATE.MIDDLE;
 
   adjustHeight();
   populateCaptions();
+});
+
+$(window).load(function () {
+  rest_of_name_1_width = rest_of_name_1.width();
+  rest_of_name_2_width = rest_of_name_2.width();
   scrollHandler();
 });
 
