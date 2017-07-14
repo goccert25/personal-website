@@ -143,7 +143,8 @@ function navAnimation (centerPointLeft,
   }
 }
 
-$(document).ready(function(){
+$(window).load(function () {
+
   rest_of_name_1 = $('#rest_of_name_1');
   rest_of_name_2 = $('#rest_of_name_2');
   intro_heading = $('#intro_heading');
@@ -157,12 +158,13 @@ $(document).ready(function(){
 
   adjustHeight();
   populateCaptions();
-});
 
-$(window).load(function () {
   rest_of_name_1_width = rest_of_name_1.width();
   rest_of_name_2_width = rest_of_name_2.width();
   scrollHandler();
+
+  $(window).on('scroll', scrollHandler);
+
 });
 
 function circleAnimation(direction){
@@ -368,8 +370,6 @@ function scrollHandler(){
     });
   }
 }
-
-$(window).on('scroll', scrollHandler);
 
 function setUpNavbar(){
 
