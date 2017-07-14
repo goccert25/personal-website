@@ -143,10 +143,8 @@ function navAnimation (centerPointLeft,
   }
 }
 
-$(window).load(function () {
+$(document).ready(function () {
 
-  rest_of_name_1 = $('#rest_of_name_1');
-  rest_of_name_2 = $('#rest_of_name_2');
   intro_heading = $('#intro_heading');
   top_intro_heading = $('#top_intro_heading');
   intro_background = $('#intro_background');
@@ -158,7 +156,11 @@ $(window).load(function () {
 
   adjustHeight();
   populateCaptions();
+});
 
+$(window).load(function () {
+  rest_of_name_1 = $('#rest_of_name_1');
+  rest_of_name_2 = $('#rest_of_name_2');
   rest_of_name_1_width = rest_of_name_1.width();
   rest_of_name_2_width = rest_of_name_2.width();
   scrollHandler();
