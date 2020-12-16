@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="George Tong, George, Tong,
+    University of Maryland College Park, UMCP, Personal, Personal Website, Blog">
+  <meta name="description" content="George Tong's Personal Website">
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+
+  <title>Goose on the Loose</title>
+
+  <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="../../css/index.css">
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:light|Spectral:light|Droid+Serif" rel="stylesheet"> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+    rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+
+</head>
+
+<body>
+  <div class="body-content">
+
+    <div class="header-bar">
+      <div class="content header">
+        <a href="../../index.html" class="unformat-link"><img class="goose-logo" src='../../img/goose.png'
+            alt='goose'><span class='goose-text'>On The Loose</span></a>
+        <a href="../../index.html" class="header-links unformat-link">Posts</a>
+        <a href="../../about_me.html" class="header-links unformat-link">About Me</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1 class="blog-title">Lessons Learned in making Lookoutt Bot</h1>
+      <div class="blog-date">December 15th, 2020</div>
+      <div class="blog-body">
+        <p>
+          <b>I want to make a difference.</b> One way I tried doing so was by making a reddit bot, called <a
+            href="https://www.reddit.com/u/LookouttBot">Lookoutt</a>, that
+          regularly scanned secondhand websites and notified users on reddit when a listing matching their keywords was
+          discovered. As a regular hunter of secondhand goods, I realized that manually scrolling through various
+          secondhand websites every few hours was tedious and simply not feasible for your average user. The effort to
+          find a specific item you wanted on a secondhand market was just not worth it when you could instantly find the
+          item new on a normal retailer's website. I hoped that by creating this bot I could reduce the effort required
+          in
+          finding an item so more people would be willing to buy secondhand rather than new. Here are a few lessons I
+          learned from doing so:
+        </p>
+        <h2 class='blog-heading'>Your user interface should be as intuitive and easy as possible.</h2>
+        <p>
+          This one was a bit obvious, but this project really drove the point home for me.
+          If there's a chance for something to go wrong, it's definitely going to go wrong. Reddit's API only allowed me
+          to programmatically interact with and poll private
+          messages, which is a communication channel separate from chat. Reddit has been actively promoting chat
+          and made private messages much tougher to find and use. When I publicized Lookoutt, I posted documentation
+          that had very specific instructions on how to navigate to
+          private messages to interact with Lookoutt and repeatedly emphasized that using chat would not work. Even
+          then,
+          everytime I checked Lookoutt's reddit account, there were way more chat messages attempting to interact with
+          Lookoutt than private messages, leading to frustrated users that wanted to use Lookoutt but were unable
+          to.
+        </p>
+        <h2 class='blog-heading'>Putting yourself out there is scary!</h2>
+        <p>
+          I agonized for hours on the first post I made publicizing Lookoutt. Even when the post was prepared, edited,
+          and read over multiple
+          times, it still took me a few days to click the post button. Sometimes you just have to SEND IT.
+        </p>
+        <div class='blog-photo-container'>
+          <img src='dylan.gif' class='blog-photo'>
+          <div class='blog-photo-caption'><a href="https://www.instagram.com/p/B6k528yHiSp/">Real footage of my friend
+              Dylan sending it</a>
+          </div>
+        </div>
+        <p>
+          Also be sure to remember how hard it is to put yourself out there, and be gentle when you
+          see others doing so.
+        </p>
+        <h2 class='blog-heading'>Be sure to recognize the doubters and naysayers, but don't linger on them.</h2>
+        <p>
+          When I posted on <a href="https://www.reddit.com/r/flipping">r/Flipping</a>, there
+          were a few commenters who instantly called me out for attempting to steal the market they were targetting and
+          the items they wanted. When I posted on <a href="https://www.reddit.com/r/frugal">r/Frugal</a>, I was
+          instantly greeted by a commenter who decried my tool
+          and claimed that it was detrimental to r/Frugal users' lifestyles. Of course I had no ill intentions in
+          creating this tool, and I definitely had no interest in trying to steal other people's flipping markets.
+          However, I remembered a quote from Kevin Kelly, author of <a
+            href="https://kk.org/thetechnium/68-bits-of-unsolicited-advice/">"68 Bits of Unsolicited Advice"</a>,
+          speaking on
+          <a href="https://freakonomics.com/podcast/kevin-kelly/">Freakonomics</a>:
+        </p>
+        <p><i>
+            "There are parts of my books where I’ve written something, and somebody will say something very strong,
+            about,
+            “That’s dumb,” or it’s stupid, or wrong. And that’s pretty harsh. But my take is to say, “Let me see if
+            there’s any truth to that.” Sometimes there’s not. Sometimes there may be some sliver of something. And what
+            I’ve learned to do is to respond to that little sliver. To try to get underneath why they’re saying it and
+            where is it they’re coming from. I don’t have to necessarily always agree with them or change it, but I have
+            to pay attention to that signal. And so I’ve learned to treat these things as signals rather than as
+            insults."
+          </i></p>
+        <p>
+          (I love this quote). I paid attention to what the naysayers were saying, and I realized that what I was lacking was my story. I wasn't making it clear enough when I posted my bot where I was coming from (a
+          well intentioned fellow secondhand browser), and what my intentions were (reducing purchases of new items). On
+          later posts to other subreddits, I revised the contents of my posts to more heavily emphasize my story and
+          background so as to clarify to my audience that I had no malicious intentions.
+        </p>
+        <p>
+          Ultimately I decomissioned my little bot after maintainence became too painful and I became too busy to invest
+          further in growing the userbase. Hopefully while Lookoutt was running some people managed to find some good
+          secondhand deals! ☺️
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="credits content">Icon credits to Creative Outlet and José Hernandez from The Noun
+      Project
+    </div>
+  </div>
+
+
+</body>
+
+</html>
