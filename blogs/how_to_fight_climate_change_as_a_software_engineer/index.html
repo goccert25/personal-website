@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="keywords" content="George Tong, George, Tong,
+    University of Maryland College Park, UMCP, Personal, Personal Website, Blog" />
+  <meta name="description" content="George Tong's Personal Website" />
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+
+  <title>Goose on the Loose</title>
+
+  <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:light|Spectral:light|Droid+Serif" rel="stylesheet"> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+  <div class="body-content">
+    <div class="header-bar">
+      <div class="content header">
+        <a href="../../index.html" class="unformat-link"><img class="goose-logo" src="../../img/goose.png"
+            alt="goose" /><span class="goose-text">On The Loose</span></a>
+        <a href="../../index.html" class="header-links unformat-link">Posts</a>
+        <a href="../../about_me.html" class="header-links unformat-link">About Me</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1 class="blog-title">How to fight climate change as a software engineer</h1>
+      <div class="blog-date">November 1st, 2021</div>
+      <div class="blog-body">
+        <p>What we work on matters, and incremental improvements, no matter how small, have compounding effects. I’ve
+          decided to put my efforts towards fighting climate change, and to anyone who reads this, I hope you will too.
+          The problem is intimidatingly massive, but with that size comes incredible opportunities for impact and
+          innovation. In this article I hope to summarize what I’ve learned so far about the energy industry and the
+          current landscape of companies tackling these issues, so anybody like me, a traditional software engineer with
+          no background in energy or climate change, can get caught up to speed a bit quicker.&nbsp;</p>
+        <h2 class="blog-heading">Why the energy industry?</h2>
+        <p><a target="_blank" href="https://ourworldindata.org/emissions-by-sector" rel="noopener"
+            data-mce-href="https://ourworldindata.org/emissions-by-sector">Our World in Data</a> provides a breakdown
+          of
+          the GHG (greenhouse gas) emissions by sector for 2016:</p>
+        <div class="blog-photo-container">
+          <img src="Emissions-by-sector-–-pie-charts.png" class="blog-photo" />
+        </div>
+        <p>At first glance of the pie chart, energy comprises a wooping 73.2% of the world’s GHG emissions. The other
+          26.8% of the world’s GHG emissions comes from Agriculture, Forestry, Land Use, Waste, and Direct Industrial
+          Processes. This 26.8% slice of the pie is definitely crucial in getting to net zero GHG emissions (<a
+            target="_blank" href="https://www.breakthroughenergy.org/our-challenge/five-questions" rel="noopener"
+            data-mce-href="https://www.breakthroughenergy.org/our-challenge/five-questions">Bill Gates always asks
+            “What’s
+            your plan for cement?”</a>) but as someone with a Software Engineering background, it’s tough for me to
+          find
+          ways to contribute to reducing the size of that slice. Innovations in manufacturing, material engineering,
+          and
+          chemical engineering seem to be key towards reducing that slice’s emissions, all of which I don’t have a
+          background in (if I’m wrong, please correct me and point out opportunities for me to contribute, I would
+          love
+          to
+          hear about them). However, the 73.2% of energy is ripe for innovation, with problems that can be tackled by
+          software engineers who are patient enough to learn a bit about the energy industry.</p>
+        <p>One of the main ways that the entire 73.2% can be converted to 0% is by electrifying all of the various
+          sectors
+          of the “energy” slice and powering them with clean electricity. The transport sector is currently being
+          electrified with electric vehicle sales growing at exponential rates. Buildings are already mostly
+          electrified,
+          but they are mostly powered by dirty electricity (electricity generated by power plants that emit GHGs).
+          Fugitive emissions from energy production will naturally go down and shrink to zero as reliance on dirty
+          electricity shrinks and electrification increases. If we guesstimate that a quarter of GHGs emitted by
+          industry
+          usage of energy is due to dirty electricity, in total we have 45.5% of total GHG emissions that can be
+          mitigated
+          via electrification powered by clean electricity (17.5% from buildings, 16.2% from transport, 5.8% from
+          fugitive
+          emissions from energy production, ~6% from energy use in industry).</p>
+        <p>A software engineer interested in contributing to this effort can dive into companies that are:</p>
+        <ul>
+          <li>Accelerating the electrification of fossil fuel powered devices</li>
+          <li>Increasing the amount of clean electricity produced</li>
+          <li>Improving the electrical infrastructure that brings clean electricity to electrical devices</li>
+        </ul>
+        <p>(Note, this is <em>definitely</em> not an exhaustive list)</p>
+        <h2 class="blog-heading">Accelerating the electrification of fossil fuel powered devices</h2>
+        <p>Many companies have already contributed significantly to this effort. Electrical vehicle sales are
+          currently
+          booming right now, with <a target="_blank"
+            href="https://www.power-technology.com/news/electric-vehicle-sales-surge-in-2021/" rel="noopener"
+            data-mce-href="https://www.power-technology.com/news/electric-vehicle-sales-surge-in-2021/">sales
+            increasing
+            by 160% in the first half of 2021 from a year earlier</a>. Tesla, Rivian, and Nio are just a few companies
+          producing electrical vehicles in this space, as well as many other upstream companies producing batteries
+          (<a target="_blank" href="https://one.ai/" rel="noopener" data-mce-href="https://one.ai/">ONE</a>) and
+          electrical
+          charging stations (<a target="_blank" href="https://www.chargepoint.com/" rel="noopener"
+            data-mce-href="https://www.chargepoint.com/">ChargePoint</a>, <a target="_blank" href="https://ampup.io/"
+            rel="noopener" data-mce-href="https://ampup.io/">AmpUp</a>). One unique company is <a target="_blank"
+            href="https://www.recurrentauto.com/" rel="noopener"
+            data-mce-href="https://www.recurrentauto.com/">Recurrent</a> which is currently working on creating a
+          “CarFax”
+          for electric vehicles, tackling a used electrical vehicle market that has been neglected.</p>
+        <p>While electrical vehicles are racing ahead, airplanes and industrial machinery are lagging behind in
+          innovation. <a target="_blank" href="https://www.zeroavia.com/" rel="noopener"
+            data-mce-href="https://www.zeroavia.com/">ZeroAvia</a> and <a target="_blank"
+            href="https://heartaerospace.com/" rel="noopener" data-mce-href="https://heartaerospace.com/">Heart
+            Aerospace</a> are two examples of companies that are currently tackling electrification of airplanes. For
+          industrial machinery, some startups such as <a target="_blank" href="https://www.monarchtractor.com/"
+            rel="noopener" data-mce-href="https://www.monarchtractor.com/">Monarch</a> are electrifying tractors,
+          while
+          surprisingly well established companies like <a target="_blank"
+            href="https://www.volvoce.com/global/en/our-offer/emobility/" rel="noopener"
+            data-mce-href="https://www.volvoce.com/global/en/our-offer/emobility/">Volvo</a>, and <a target="_blank"
+            href="https://www.proterra.com/vehicles/proterra-powered-vehicles/komatsu-electric-excavator/"
+            rel="noopener"
+            data-mce-href="https://www.proterra.com/vehicles/proterra-powered-vehicles/komatsu-electric-excavator/">Proterra
+            and Komatsu</a> are tackling electric construction machinery.&nbsp;</p>
+        <h2 class="blog-heading">Increasing the amount of clean electricity produced</h2>
+        <p>Electrification won’t amount to much if the electricity being used to power devices is still generated by
+          fossil fuel generators and power plants. While the growth rate of renewable energy necessary to avoid major
+          climate change disasters is up for debate, it’s universally agreed upon that it <em>needs to significantly
+            increase</em> no matter what model is used.&nbsp;</p>
+
+        <div class="blog-photo-container">
+          <img src="21.09.07 SCurves WRI v7_RE SCurve.png" class="blog-photo" />
+          <div class="blog-photo-caption">
+            (From <a target="_blank" href="https://www.wri.org/insights/growth-renewable-energy-sector-explained"
+              rel="noopener"
+              data-mce-href="https://www.wri.org/insights/growth-renewable-energy-sector-explained">https://www.wri.org/insights/growth-renewable-energy-sector-explained</a>)
+          </div>
+
+
+        </div>
+
+        <p>The above diagram demonstrates just one possible scenario in which solar and wind successfully grow fast
+          enough
+          to keep the average temperature of the Earth from increasing above 1.5 degrees celsius. Current renewable
+          energy
+          growth rate has been steadily increasing year over year, but demand for electricity has outpaced renewable
+          energy growth, <a target="_blank"
+            href="https://www.iea.org/news/global-electricity-demand-is-growing-faster-than-renewables-driving-strong-increase-in-generation-from-fossil-fuels"
+            rel="noopener"
+            data-mce-href="https://www.iea.org/news/global-electricity-demand-is-growing-faster-than-renewables-driving-strong-increase-in-generation-from-fossil-fuels">increasing
+            demand on fossil fuel consumption</a>. In addition from 2020 to 2050 demand for electricity is <a
+            target="_blank" href="https://www.eia.gov/todayinenergy/detail.php?id=41433" rel="noopener"
+            data-mce-href="https://www.eia.gov/todayinenergy/detail.php?id=41433">projected to increase by ~46%</a>,
+          going
+          from ~6200 quadrillion British Thermal Units to 9050 quadrillion British Thermal Units. To go from the 2020
+          solar and wind energy production amount (10% of 6200 quadrillion British Thermal Units) to the 2050 solar
+          and
+          wind energy production amount (80% of 9050 quadrillion British Thermal Units), we would need to increase
+          solar
+          and wind energy production by 6620 quadrillion British Thermal Units.</p>
+        <p>There are many clean energy companies out there, some focused on increasing adoption of clean energy
+          sources
+          and others focused on innovating on the actual clean energy generation technology itself.</p>
+        <p>Tesla is an obvious leader in the space, with its Tesla battery pack and Tesla solar panels. Tesla <a
+            target="_blank" href="https://electrek.co/2021/09/21/tesla-expansion-biggest-virtual-power-plant-australia/"
+            rel="noopener"
+            data-mce-href="https://electrek.co/2021/09/21/tesla-expansion-biggest-virtual-power-plant-australia/">recently
+            piloted a VPP</a> (virtual power plant) in Australia that uses software to coalesce a large amount of
+          solar
+          panels and battery packs together to simulate an energy generating power plant.</p>
+        <p><a target="_blank" href="https://www.ojjo.com/" rel="noopener" data-mce-href="https://www.ojjo.com/">Ojjo</a>
+          is attempting to reduce the installation cost and increase the longevity of solar panels by improving the
+          foundations that solar panels are installed on.</p>
+        <p><a target="_blank" href="https://solstice.us/" rel="noopener"
+            data-mce-href="https://solstice.us/">Solstice</a>
+          takes an innovative approach to creating community solar farms, equalizing access and de-risking solar
+          projects.
+        </p>
+        <p><a target="_blank" href="https://www.solar.com/" rel="noopener"
+            data-mce-href="https://www.solar.com/">Solar.com</a> provides customers with a seamless online experience
+          for
+          comparing solar installation prices and communicating with vendors.&nbsp;</p>
+        <p>Much of the projected growth in demand for energy will come from countries that are currently undergoing
+          industrialization. As a result, companies that focus on introducing green technologies in these countries
+          have
+          the potential to be particularly impactful. <a target="_blank" href="https://shyftpower.com/" rel="noopener"
+            data-mce-href="https://shyftpower.com/">SHYFT</a> is a prime example, focusing on interoperability of
+          various
+          distributed energy sources in Nigeria.</p>
+        <h2 class="blog-heading">Improving the electrical infrastructure that brings clean electricity to electrical
+          devices</h2>
+        <p>Increasing clean electricity production and electrification won’t amount to much if our electrical
+          infrastructure is unable to support increased demand for power as well as the variable energy production
+          that
+          renewable energy introduces. The United States’ electrical grid is still in the process of modernization,
+          with
+          utilities <em>just</em> pushing out smart meters that measure energy used by a household. The current
+          reality
+          is
+          the electrical grid was built hundreds of years ago on the basis of a unidirectional flow of power (from
+          power
+          plants to homes). Currently, with the growth of “behind the meter” distributed energy resources, such as
+          solar
+          panels, sending energy back into the grid, utilities are struggling to maintain reliability and consistency,
+          as
+          the premise of unidirectional power no longer holds. In addition, the temporal nature of renewable energy
+          sources like solar messes with the supply and demand of energy production, with peak energy production
+          occurring
+          hours before humans’ peak demand for energy at night.</p>
+        <div class="blog-photo-container">
+          <img src="Screenshot from 2022-07-24 15-48-21.png" class="blog-photo" />
+          <div class="blog-photo-caption">
+            (Outage map from <a target="_blank" href="https://www.bloomenergy.com/bloom-energy-outage-map/"
+              rel="noopener"
+              data-mce-href="https://www.bloomenergy.com/bloom-energy-outage-map/">https://www.bloomenergy.com/bloom-energy-outage-map/</a>
+            demonstrating our power infrastructure’s instability)
+          </div>
+        </div>
+
+        <p>With the plethora of problems in this area come a diverse spread of companies tackling problems from
+          various
+          different angles.&nbsp;</p>
+        <p><a target="_blank" href="https://www.gridware.io/" rel="noopener"
+            data-mce-href="https://www.gridware.io/">Gridware</a> is working with utilities to add remote telemetry to
+          distribution poles that use AI to detect imminent threats real time. With this technology, utilities can
+          significantly reduce time to detection and time to remediation for any threats to their electrical
+          infrastructure. Long term, Gridware hopes to use data collected with its remote telemetry to provide
+          utilities
+          a
+          suite of tools that modernize their operations.</p>
+        <p><a target="_blank" href="https://veir.com/" rel="noopener" data-mce-href="https://veir.com/">Veir</a> is
+          increasing the power throughput of the grid by developing High Temperature Superconducting transmission
+          lines
+          that are more efficient at carrying power with minimal energy loss.</p>
+        <p><a target="_blank" href="https://leap.energy/" rel="noopener" data-mce-href="https://leap.energy/">Leap</a>
+          is
+          providing a platform where users with distributed energy resources can participate in energy markets. When
+          utilities are experiencing periods of high load, utilities can send out signals to the Leap platform to ask
+          users to reduce their consumption of electricity, allowing users to get paid for decreasing their
+          consumption
+          of
+          electricity.</p>
+        <p><a target="_blank" href="https://www.sparkmeter.io/" rel="noopener"
+            data-mce-href="https://www.sparkmeter.io/">SparkMeter</a> focuses on supporting emerging economies with
+          unstable electricity generation and unpredictable energy consumption with robust metering technology that
+          makes
+          it economically feasible for utilities to operate.</p>
+        <p><a target="_blank" href="https://www.reactive-technologies.com/" rel="noopener"
+            data-mce-href="https://www.reactive-technologies.com/">Reactive Technologies</a> targets traditional
+          utilities
+          and distributors, and builds technology that provides increased visibility and analytics for operators that
+          are
+          managing the grid everyday.</p>
+        <p><a target="_blank" href="https://heilatech.com/" rel="noopener" data-mce-href="https://heilatech.com/">Heila
+            Technologies</a> creates an innovative hardware agnostic control system that integrates with all
+          distributed
+          energy resources to allow them to efficiently operate with each other towards the united goal of optimized
+          energy use and minimized cost/maximized profit.</p>
+        <p><a target="_blank" href="https://www.axiomcloud.ai/" rel="noopener"
+            data-mce-href="https://www.axiomcloud.ai/">Axiom Cloud</a> takes an unique approach by increasing the
+          intelligence of refrigerators, a surprising source of electricity and potential innovation. By integrating
+          with
+          partner companies like Leap, Axiom Cloud is able to intelligently control refrigerators, enabling them to
+          significantly lower the temperature of freezers when energy is cheap and stop energy consumption of freezers
+          when electricity is expensive.&nbsp;</p>
+        <p><a target="_blank" href="https://science.breakthroughenergy.org/" rel="noopener"
+            data-mce-href="https://science.breakthroughenergy.org/">Breakthrough Energy Sciences</a> is the modeling
+          and
+          analytics arm of Breakthrough Energy, and focuses on developing modern open source optimization and
+          simulation
+          tools that allow users to produce replicable and transparent studies. The results of these studies can then
+          be
+          used by Breakthrough Energy Ventures (the venture capital arm of Breakthrough Energy) to quantitatively
+          evaluate
+          the impact of innovative technologies and guide the development of these technologies. The conclusions of
+          the
+          studies are also used to inform and advise politicians in Washington DC on what steps to take and the exact
+          results of those steps in order to effectively and reliably decarbonize the whole economy.</p>
+        <h2 class="blog-heading">Smaller ways to contribute</h2>
+        <p>As mentioned in the beginning of the article, small steps can have compounding effects. The previous
+          section
+          covered various startups/companies that need software engineers to successfully execute their mission.
+          However,
+          starting a job at a new company is a very large step for many people, and simply isn’t feasible due to
+          justifiable reasons such as salary differences, location, risk tolerance, or simply because you already
+          really
+          love your current job. For engineers looking for smaller ways to contribute, open source is a great option.
+        </p>
+        <p><a target="_blank" href="https://github.com/tmrowco/electricitymap-contrib" rel="noopener"
+            data-mce-href="https://github.com/tmrowco/electricitymap-contrib">Electricity Map</a> is an open source
+          web/mobile application that shows a real-time visualisation of the GHG (in terms of CO2 equivalent)
+          footprint
+          of
+          electricity consumption. The community also hosts and provides api access to data sets that power the web
+          app,
+          allowing anybody in the world to use their datasets.&nbsp;</p>
+        <p><a target="_blank" href="https://github.com/Breakthrough-Energy/REISE.jl" rel="noopener"
+            data-mce-href="https://github.com/Breakthrough-Energy/REISE.jl">Renewable Energy Integration Simulation
+            Engine</a> (REISE for short) is an open source simulator of the United States’ electrical grid maintained
+          by
+          Breakthrough Energy Sciences. Researchers and other interested parties can define hypothetical scenarios
+          that
+          have modifications to the current grid and run those scenarios through the simulator to understand how that
+          impacts the United States’ energy system.</p>
+        <p>These two projects are ones that I’ve personally had experience with and that I believe have the proper
+          backing
+          and approach to make a tangible difference. However, they are certainly not the only impactful open source
+          projects out there. <a target="_blank"
+            href="https://github.com/protontypes/open-sustainable-technology#readme" rel="noopener"
+            data-mce-href="https://github.com/protontypes/open-sustainable-technology#readme">Here</a> is
+          another fantastic list of hundreds of climate change related open source projects that would love
+          contributors.&nbsp;&nbsp;</p>
+        <h2 class="blog-heading">Additional Notes</h2>
+        <p>Ultimately this merely scratches the surface, and there’s still so much information out there that could be
+          covered. Some additional information I found noteworthy that can be better explained by other sources are:
+        </p>
+        <p><a target="_blank" href="https://www.coursera.org/learn/electric-power-systems#about" rel="noopener"
+            data-mce-href="https://www.coursera.org/learn/electric-power-systems#about">How the complicated modern
+            grid
+            works and how we need the future grid to work from generators, to poles, to substations to distributors,
+            as
+            well as ISOs and everything in between.</a><br data-mce-bogus="1"></p>
+        <p><a target="_blank" href="https://cpowerenergymanagement.com/a-primer-for-understanding-ferc-order-2222/"
+            rel="noopener"
+            data-mce-href="https://cpowerenergymanagement.com/a-primer-for-understanding-ferc-order-2222/">Order 2222
+            that
+            puts distributed energy resources on equal footing as large energy generating companies. Put in place a
+            year
+            ago, it is still slowly coming into full effect now.&nbsp;</a><br data-mce-bogus="1"></p>
+        <p><a target="_blank"
+            href="https://www.energy.gov/eere/articles/confronting-duck-curve-how-address-over-generation-solar-energy"
+            rel="noopener"
+            data-mce-href="https://www.energy.gov/eere/articles/confronting-duck-curve-how-address-over-generation-solar-energy">The
+            unique problem of solar electricity, how it generates energy in a duck curve, and how it places our grid
+            and
+            use of clean electricity at risk.</a><br data-mce-bogus="1"></p>
+        <p><a target="_blank"
+            href="https://www.investopedia.com/articles/investing/042115/understanding-world-electricity-trading.asp"
+            rel="noopener"
+            data-mce-href="https://www.investopedia.com/articles/investing/042115/understanding-world-electricity-trading.asp">Understanding
+            the complicated energy markets.</a><br data-mce-bogus="1"></p>
+        <p>Organizations investing in climate change focused startups, such as <a target="_blank"
+            href="https://greentownlabs.com/" rel="noopener" data-mce-href="https://greentownlabs.com/">Greentown
+            Labs</a>, <a target="_blank" href="https://www.breakthroughenergy.org/investing-in-innovation/bev-portfolio"
+            rel="noopener"
+            data-mce-href="https://www.breakthroughenergy.org/investing-in-innovation/bev-portfolio">Breakthrough
+            Energy
+            Ventures</a>, and <a target="_blank" href="https://www.powerhouse.fund/ventures" rel="noopener"
+            data-mce-href="https://www.powerhouse.fund/ventures">Powerhouse Ventures</a>.</p>
+        <p><a target="_blank"
+            href="https://docs.google.com/document/d/1cTbDjvv7_qw2Yc8jKImQvZW2yX7xApk6DfnxJd6JwiM/edit?usp=sharing"
+            rel="noopener"
+            data-mce-href="https://docs.google.com/document/d/1cTbDjvv7_qw2Yc8jKImQvZW2yX7xApk6DfnxJd6JwiM/edit?usp=sharing">My
+            personal rough notes on the power industry</a>.</p>
+
+      </div class="blog-body">
+
+
+
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="credits content">
+      Icon credits to Creative Outlet and José Hernandez from The Noun Project
+    </div>
+  </div>
+</body>
+
+</html>
