@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="George Tong, George, Tong,
+    University of Maryland College Park, UMCP, Personal, Personal Website, Blog">
+  <meta name="description" content="George Tong's Personal Website">
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+
+  <title>Goose on the Loose</title>
+
+  <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="../../css/index.css">
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:light|Spectral:light|Droid+Serif" rel="stylesheet"> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+    rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+
+</head>
+
+<body>
+  <div class="body-content">
+
+    <div class="header-bar">
+      <div class="content header">
+        <a href="../../index.html" class="unformat-link"><img class="goose-logo" src='../../img/goose.png'
+            alt='goose'><span class='goose-text'>On The Loose</span></a>
+        <a href="../../index.html" class="header-links unformat-link">Posts</a>
+        <a href="../../about_me.html" class="header-links unformat-link">About Me</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1 class="blog-title">Understanding ReFi from first principles</h1>
+      <div class="blog-date">July 28th, 2022</div>
+      <div class="blog-body">
+        <p>I&rsquo;ve long believed that the majority of the crypto ecosystem is a scam, and truth be told I still
+          believe that. However, in the <a href="https://workonclimate.org/" target="_blank" rel="noopener">Work on
+            Climate</a> slack there are similarly crypto-skeptic folks that are sold on the regenerative finance
+          movement (frequently referred to as ReFi), with many of them referring to Regen Network as a prime example of
+          a fantastic project. That piqued my curiosity enough to listen to the Regen Network&rsquo;s founder, Gregory
+          Landua, <a href="https://podcast.refidao.com/e/episode-9-regen-network-with-gregory-landua/" target="_blank"
+            rel="noopener">interview with the ReFi Podcast</a>. Greg&rsquo;s genuine desire to improve the world, his
+          clear track record of having done so, and his conviction in ReFi convinced me to revisit the ReFi movement
+          without any prejudices and analyze the movement from first principles.</p>
+        <p>The rest of this article first focuses on understanding our modern economic system at a basic level. Then, it
+          dives into how this economic system is driving climate change and the destruction of our natural world.
+          Finally, it discusses how the modern economic system can be tweaked and modified to combat climate change, and
+          how ReFi is attempting to redesign the modern economic system to tackle climate change.</p>
+        <h2 class='blog-heading'>Our modern economic system</h2>
+        <p>(Disclaimer, I&rsquo;m not an economics expert; the following is just my understanding. In addition, this
+          article is fairly US-centric, as that&rsquo;s the system that I have the most experience in.)</p>
+        <p>If our modern economic system could be summed up in a single word, it would be &ldquo;growth&rdquo;. The most
+          popular metric for a healthy economy is a steadily increasing GDP (Gross Domestic Product). GDP is the <a
+            href="https://www.investopedia.com/terms/g/gdp.asp" target="_blank" rel="noopener">&ldquo;total monetary or
+            market value of all the finished goods and services produced within a country&rsquo;s borders in a specific
+            time period. As a broad measure of overall domestic production, it functions as a comprehensive scorecard of
+            a given country&rsquo;s economic health.&rdquo;</a> The current way the United States government grows the
+          economy is via debt creation, with interest rate as the most powerful tool in its toolkit.</p>
+        <p>The specific flow of how this happens is as follows:</p>
+        <ul>
+          <li>The central bank of the US government gives out loans to commercial banks at X% interest rate</li>
+          <li>Commercial banks then turn around and take the loans that the US government provided, and use that money
+            to give out loans to businesses at Y% interest rate, where Y &gt; X</li>
+          <li>These businesses then create value such that they are able to pay back these loans from commercial banks
+          </li>
+        </ul>
+        <div class='blog-photo-container'>
+          <img src='government_grow_economy.jpeg' class='blog-photo'>
+          <div class='blog-photo-caption'>Photo from <a href="https://qr.ae/pvkPFI" target="_blank"
+              rel="noopener">https://qr.ae/pvkPFI</a>
+          </div>
+        </div>
+        <div class="optional-content">
+          <h3 class='blog-heading-2'>Optional Reading</h3>
+          <p>This is pretty abstract and if you&rsquo;re like me and are having a hard time wrapping your head around
+            it,
+            what helped me was working through a simple concrete example.</p>
+          <p>Let&rsquo;s take an economy of 5 farmers, each one specializing in either tofu, rice, beef, cabbage, or
+            potato. To keep it simple:</p>
+          <ul>
+            <li>All of the farmers are capable of producing enough food to sustain exactly 1.5 people over a year</li>
+            <li>The farmers trade amongst themselves daily to select what food to make to eat for the day and exchange
+              goods pound for pound</li>
+          </ul>
+          <p>Occasionally when two farmers, Jack and Jill, meet up to trade, Jack doesn&rsquo;t feel like eating
+            Jill&rsquo;s products that day, and so no trades happen. After this happens multiple times, Jill suggests
+            a
+            great idea: when Jack doesn&rsquo;t want Jill&rsquo;s goods that day, Jill can instead give Jack a rock
+            for
+            each pound of food that Jill takes from Jack. Jack can use a rock later to purchase a pound of food from
+            Jill
+            whenever Jack likes. All of the farmers like this idea as well because transactions can occur even when
+            one
+            party in the trade is not interested in the other party&rsquo;s goods. Thus, money is created!</p>
+          <p>As this idea becomes popular, the number of rocks in circulation begins to grow. Note, however, that the
+            GDP
+            of this economy stays the same, as GDP measures the<em> rate</em> of production, and all farmers can only
+            produce enough food to sustain 1.5 people for a year.</p>
+          <p>Suddenly, Jill hears from her mother that she is sending over 5 siblings to stay with Jill. Jill realizes
+            that there&rsquo;s not enough food available in the local economy (5 farmers, each producing enough for
+            1.5
+            people, means that only 2.5 extra people can be fed). Jill is running low on rocks and approaches Jack,
+            who
+            has a rather large stockpile of rocks, and asks Jack to borrow all his rocks for a few months. Jill wants
+            to
+            use the rocks to buy food from the other farmers to sustain themselves for a few months as they build a
+            machine that will allow them to farm enough produce to feed 7 people over a year. Jack agrees, on the
+            condition that Jill pays back the amount of rocks borrowed times 1.5, either via rocks or via pounds of
+            food.
+            Jill agrees, successfully makes the machine, pays back Jack over time, and is able to feed all their
+            siblings
+            when they arrive.</p>
+          <p>This simplified example touches on many basic ideas of economic growth, and using it I was able to answer
+            some of the questions I initially had:</p>
+          <p><em>How do loans grow the economy?</em></p>
+          <p>Loans can be used to grow the economy in many ways. In our particular example, the loan provided the
+            farmer
+            with additional time that they could use to invest in their business by building better tools. Other real
+            world examples include:</p>
+          <ul>
+            <li>A small business using a loan to hire additional workers to scale the company output</li>
+            <li>A student using a loan to pay for college and increase personal productivity</li>
+            <li>A clothing factory purchasing sewing machines that increase the rate of clothing production&nbsp;</li>
+          </ul>
+          <p><em>What is the point of more goods/services/products?</em></p>
+          <p>One of the driving forces of demand is population growth. When demand grows, supply must grow to meet
+            that
+            demand. This is why shrinking populations and slowing population growth is so worrisome for
+            governments&ndash;without a growing population, there isn&rsquo;t growing demand to drive increased goods
+            and
+            services. There is also a smaller work pool to run these businesses.&nbsp;</p>
+          <p><em>When the government gives out a loan, where does that money come from?</em></p>
+          <p>In the example with the 5 farmers, the money is backed by physical goods (each rock represents a pound of
+            produce). In most modern economies, the money is not backed by any physical goods, and is instead based on
+            the
+            trust in the central government that administers the money (see <a
+              href="https://www.investopedia.com/terms/f/fiatmoney.asp" target="_blank" rel="noopener">Fiat
+              Currency</a>).
+            The actual process by which the United States central bank creates money has some technicalities, like
+            buying
+            Treasury Securities that financial institutions hold to directly deposit cash into their reserves, but you
+            can
+            simply think of it as the United States printing money whenever it wants to make loans to commercial
+            banks.
+            To
+            expand on fiat currency even further, in our simple example, it would be as if the 5 farmers came together
+            and
+            collectively made a 6th person in charge of rock administration. The 6th person would create a supply of
+            rocks
+            and dictate that these rocks can be used to trade for food, and the 5 farmers would do so based on their
+            trust
+            of the 6th person.&nbsp;</p>
+        </div>
+        <h2 class='blog-heading'>How the modern economic system drives climate change</h2>
+        <p>This idea of perpetual growth comes in direct conflict with reality, with humanity reaching multiple limits
+          in our natural world. Approximately <a href="https://www.e-education.psu.edu/earth103/node/705"
+            target="_blank" rel="noopener">&ldquo;more than one billion people are estimated to lack sufficient food,
+            and more than twice that number do not receive adequate nutrition&rdquo;</a> and the <a
+            href="https://www.foodnavigator.com/Article/2017/11/10/Population-growth-a-threat-to-food-quality"
+            target="_blank" rel="noopener">&ldquo;Food and Agricultural Organization of the United Nations (FAO)
+            forecasts that global food production will need to increase by 70% if the population reaches 9.1bn by
+            2050.&rdquo;</a> Even more critical is our water supply, which at the current consumption rate <a
+            href="https://www.worldwildlife.org/threats/water-scarcity" target="_blank" rel="noopener">"by 2025,
+            two-thirds of the world&rsquo;s population may face water shortages.&ldquo;&nbsp;</a></p>
+        <p>The natural resources consumed to fuel our economic growth are also rapidly being depleted. As Kate Raworth
+          writes in <span style="text-decoration: underline;">Doughnut Economics</span>, &ldquo;from 1990 to 2007 as
+          GDP
+          grew in high-income countries, so did their global material footprints. And not just by a little bit: the
+          United States, the UK, New Zealand and Australia all saw their footprints grow by more than 30 percent over
+          that period; in Spain, Portugal and the Netherlands, they grew by over 50 percent. Japan&rsquo;s footprint,
+          meanwhile, grew by 14 percent and Germany&rsquo;s by 9 percent: impressively lower than the rest, but still
+          growing.&rdquo;</p>
+        <p>Some people argue that as countries move from manufacturing economies towards service oriented economies,
+          that this footprint plateaus and declines, with researchers pointing to some data sets that show the UK's
+          natural resources consumption starting to decline. However, Raworth states that if every country matched the
+          UK growth and fall curve, &ldquo;it would require the resources of at least three planet Earths, pushing the
+          global economy into extreme overshoot beyond planetary boundaries.&rdquo;&nbsp;</p>
+        <h2 class='blog-heading'>How to modify the current economic system to fight climate change</h2>
+        <p><strong>One of the main reasons our current economic system drives climate change is that externalities are
+            not priced into the creation of goods and services</strong>. For example, when a farmer uses heavy amounts
+          of fertilizer that ends up running off into the local water supply, the cost of cleaning up the water supply
+          and the negative impacts of polluted water on human health are not factored into the cost of the produce
+          that
+          the farmer sells. When methane leaks from natural gas power plants, the impact on the ozone layer and the
+          environment isn&rsquo;t factored into the final price of the natural gas.</p>
+        <p>To counteract this, we can factor in externalities by enacting a tax on carbon. According to the <a
+            href="https://en-roads.climateinteractive.org/scenario.html?v=22.7.0" target="_blank"
+            rel="noopener">En-ROADs simulator</a>, this could prevent an entire degree celsius of warming and is one
+          of
+          the most effective ways of combating climate change.</p>
+        <div class='blog-photo-container'>
+          <img src='Screencast from 07-24-2022 04 59 45 PM.gif' class='blog-photo'>
+        </div>
+        <p>In addition to a carbon tax, the government can use other types of incentives and disincentives to push our
+          economy towards one that is planet friendly. Governments can provide additional subsidies and grants for
+          actions they&rsquo;d like to see, such as solar power development, regenerative agriculture,
+          electrification,
+          etc. At the same time, governments can enact regulations to ban certain climate damaging actions, and use
+          economic systems like <a href="https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program" target="_blank"
+            rel="noopener">California&rsquo;s Cap and Trade program</a> to gradually phase out fossil
+          fuel reliance.</p>
+        <h2 class='blog-heading'>How ReFi can help combat climate change</h2>
+        <p>Clearly our governments have a major role to play in fighting climate change, but the odds are stacked
+          against enacting climate friendly legislation at a meaningful scale. With how much weight fossil fuel
+          interests have in politics, as well as the tough political will needed to inevitably raise prices on
+          consumer
+          goods with a carbon tax, it&rsquo;ll be a slow march to make the necessary changes. You need only look at
+          the
+          recent <a href="https://www.washingtonpost.com/us-policy/2022/07/14/manchin-climate-tax-bbb/" target="_blank"
+            rel="noopener">climate bill that Senator Joe Manchin torpedoed</a> for evidence of how
+          hard it is to pass
+          climate legislation. It&rsquo;s absolutely imperative that we continue to pressure the government and push
+          our
+          politicians in the right direction (vote vote vote!). Unfortunately, with a problem this urgent waiting for
+          politicians to do the right thing is not an option.</p>
+        <p>Supporters of the ReFi movement seek to create a new system entirely with an enticing idea: set the
+          boundaries and rules of a system such that planet friendly actions are the natural default, incentivized,
+          and
+          rewarded. Designers of the movement are creating currencies where a token is created each time ecologically
+          or
+          socially beneficial actions are taken.&nbsp;</p>
+        <p>To understand the ReFi movement, it helps to first look at <a
+            href="https://medium.com/weareco/6-examples-of-complementary-currencies-that-will-change-your-vision-of-money-4ba659814d31"
+            target="_blank" rel="noopener">some examples</a> of different times in history where alternative
+          currencies
+          have successfully been deployed for a specific purpose. One particularly interesting example is how
+          alternative currencies were used in Curitiba, Brazil to significantly reduce the local litter and pollution.
+          When Jaime Lerner took over as mayor in 1971, Curitiba was overwhelmed by trash and the local government
+          didn&rsquo;t have the money to fund clean up efforts. Lerner instead created multiple programs that rewarded
+          trash collection with complementary currencies. &ldquo;Anyone who deposited a bag full of pre-sorted garbage
+          received a bus token. Those who collected paper and cartons were given plastic chits, exchangeable for
+          parcels
+          of seasonal fresh fruits and vegetables. In addition, a school-based garbage collection program supplied
+          poorer students with notebooks.</p>
+        <p>Tens of thousands of children responded by picking the neighborhoods clean. Parents made use of the tokens
+          to
+          travel downtown, oftentimes to ﬁnd jobs. The bus tokens were soon accepted at local markets in exchange for
+          food. In one three-year period, more than 100 schools traded 200 tons of garbage for 1.9 million notebooks.
+          The paper-recycling component alone saved the equivalent of 1,200 trees&mdash;each day! Eventually, more
+          than
+          70% of Curitiban households became involved in the programs. The 62 poorer neighborhoods alone exchanged
+          11,000 tons of garbage for nearly a million bus tokens and 1,200 tons of food&rdquo; (see <a
+            href="https://www.lietaer.com/2010/09/the-story-of-curitiba-in-brazil/" target="_blank" rel="noopener">The
+            Story of Curitiba in Brazil</a>).</p>
+        <div class='blog-photo-container'>
+          <img src='trash.jpg' class='blog-photo'>
+          <div class='blog-photo-caption'>Photo from <a
+              href="https://wwf.panda.org/wwf_news/?204414/Curitiba-waste-as-resource" target="_blank"
+              rel="noopener">https://wwf.panda.org/wwf_news/?204414/Curitiba-waste-as-resource</a>
+          </div>
+        </div>
+        <p>By tying socially and environmentally beneficial actions to a currency, the government of Curitiba was able
+          to create a mutually beneficial system that strengthened local pride, uplifted the impoverished, and
+          benefited
+          the environment. If we wanted to take the learnings from the recycling programs of Curitiba and create an
+          alternative currency to tackle climate change, we would need to create a currency that is:</p>
+        <ul>
+          <li>Global (climate change is a global problem)</li>
+          <li>Scalable (climate change is absolutely massive, and this currency needs to be able to scale effectively
+            to
+            make an impact)</li>
+          <li>Tied to a tangible real world action/effect/result</li>
+        </ul>
+        <p>The ReFi movement attempts to do just that, by taking cryptocurrency (global and scalable) and attempting
+          to
+          tie the value of the cryptocurrency to a real world result, similar to how bus tokens or plastic chits were
+          earned through tangible actions that benefited the local society. Within the ReFi space there are many
+          organizations tackling the problem from various different angles. The Regen Network created a NCT (Natural
+          Carbon Token) which represents 1 ton of carbon sequestered via nature and verified by specific methodologies
+          defined by Verra, the current world leading carbon registry. The Open Forest Protocol created Open Carbon
+          Credits which map to 1 ton of carbon sequestered by trees that have been verified by a distributed network
+          of
+          verifiers. Other communities are experimenting with tokens backed by other carbon sequestration methods,
+          such
+          as ocean sequestration, mineral sequestration, direct air capture, etc. Although much of the
+          movement&rsquo;s
+          current attention is focused on carbon markets because it is an existing well established market to receive
+          revenue from, there are organizations like <a href="https://www.pivotal.earth/" target="_blank"
+            rel="noopener">Pivotal</a> that are pushing even further into unknown territory and creating economies
+          based
+          on regrowing biodiversity.</p>
+        <p>Due to how energy intensive crypto currencies like Bitcoin and Ethereum are, people may think that
+          ReFi&rsquo;s usage of crypto means that the ReFi movement is bad for the environment. However, these older
+          cryptocurrencies are only energy intensive because they use a consensus algorithm known as &ldquo;proof of
+          work&rdquo;. Newer cryptocurrencies, like the ones the ReFi movement are creating, typically use
+          &ldquo;proof
+          of stake&rdquo;, which <a
+            href="https://content.ftserussell.com/sites/default/files/education_proof_of_stake_paper_v6_0.pdf"
+            target="_blank" rel="noopener">significantly reduces the energy required by 99.95%</a>, making them much
+          more environmentally friendly.</p>
+        <h2 class='blog-heading'>Challenges for ReFi</h2>
+        <p>Some outstanding problems that I believe still need to be addressed for the ReFi movement to be successful:
+        </p>
+        <h3 class='blog-heading-2'>How do you prevent double counting and bad actors from gaming the system?</h3>
+        <p>With many ReFi tokens targeting the carbon market, one major concern is the proliferation of double
+          counting
+          opportunities, where a carbon sequestration project receives carbon credits from multiple different
+          registries. Modern cryptocurrency protocols claim that they prevent double counting, but these claims only
+          hold true once the data is actually on the chain. Currently, there is nothing stopping a forest developer
+          from
+          registering their project with the Open Forestry Protocol as well as Verra to get credits from both
+          registries. As the ecosystem gets more and more fractured with different protocols&ndash;some using
+          registries, some not, some using different blockchain protocols, some not&ndash;this will only become more
+          difficult. As John Ellison, head of growth at Toucan, states, <a
+            href="https://podcast.refidao.com/e/episode-3-scaling-forestry-with-open-forest-protocol/" target="_blank"
+            rel="noopener">&ldquo;one of the key flaws that I see &hellip; is a project going to Open Forest Protocol
+            and also going to Verra, because if all of those Verra credits and Gold Standard credits aren&rsquo;t also
+            on chain, you have this risk of double counting.&rdquo;</a></p>
+        <h3 class='blog-heading-2'>How do you make ReFi currencies useful?</h3>
+        <p>I posit that successful alternative currencies were successful because they could be used to purchase and
+          transact in almost the same way as fiat currency. In Curitiba, all the alternative currencies could be used
+          for basic necessities: food and transportation.</p>
+        <p>In order for the ReFi movement to take off, these ReFi currencies need to be able to be used to pay for
+          traditional goods and services. Until then, these currencies will only be held by die hard believers and
+          aficionados. In the words of Rebecca Mqamelo, co-founder of city3, <a
+            href="https://podcast.refidao.com/e/episode-6-on-growth-with-rebecca-mqamelo/" target="_blank"
+            rel="noopener">&ldquo;people need to feel like there&rsquo;s some value to spend that money, at the very
+            least when [they] try to go and spend this money down the road, [they] have some confidence that the shop
+            will accept it&rdquo;</a>. As evidence that this is actually possible with a cryptocurrency, one can look
+          at
+          <a href="https://www.voanews.com/a/africa_cryptocurrency-booming-among-kenyan-farmers/6208732.html"
+            target="_blank" rel="noopener">Sarafu</a>, a cryptocurrency in Kenya that has successfully supported rural
+          local economies where there is a chronic lack of traditional financial institutions.
+        </p>
+        <h2 class='blog-heading'>Conclusion</h2>
+        <p>The ReFi movement is rapidly growing in the climate space, with many supporters boldly claiming that it
+          will
+          revolutionize our modern economic system for the better. As it currently stands, ReFi ambitiously tackles a
+          real problem with an approach that has proven successful at smaller scales, but has a long road of obstacles
+          ahead that it needs to overcome to truly make a difference. Time will tell if it is successful, but this
+          crypto skeptic will be rooting it on.</p>
+        <p>Big thanks to <a href="https://www.linkedin.com/in/abe-botros/" target="_blank" rel="noopener">Abe
+            Botros</a>, <a href="https://www.linkedin.com/in/johnbogil/" target="_blank" rel="noopener">John
+            Bogil</a>,
+          and <a href="https://www.linkedin.com/in/helen-yang-875809103/" target="_blank" rel="noopener">Helen
+            Yang</a>
+          for proofreading ❤️.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="credits content">Icon credits to Creative Outlet and José Hernandez from The Noun
+      Project
+    </div>
+  </div>
+
+
+</body>
+
+</html>
