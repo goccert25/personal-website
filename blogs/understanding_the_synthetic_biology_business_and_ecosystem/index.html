@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="George Tong, George, Tong,
+    University of Maryland College Park, UMCP, Personal, Personal Website, Blog">
+    <meta name="description" content="George Tong's Personal Website">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+
+    <title>Goose on the Loose</title>
+
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../../css/index.css">
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:light|Spectral:light|Droid+Serif" rel="stylesheet"> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+    <div class="body-content">
+
+        <div class="header-bar">
+            <div class="content header">
+                <a href="../../index.html" class="unformat-link"><img class="goose-logo" src='../../img/goose.png'
+                        alt='goose'><span class='goose-text'>On The Loose</span></a>
+                <a href="../../index.html" class="header-links unformat-link">Posts</a>
+                <a href="../../about_me.html" class="header-links unformat-link">About Me</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1 class="blog-title">Understanding the synthetic biology business and ecosystem</h1>
+            <div class="blog-date">November 24th, 2023</div>
+            <div class="blog-body">
+                <p>As mentioned in my last blog post, I’ve been exploring the synthetic biology space from the
+                    perspective of “how do I make technology that can act as a lever to move this ecosystem
+                    forward?”. My hunch is that <a target="_blank"
+                        href="https://www.grandviewresearch.com/industry-analysis/synthetic-biology-market"
+                        rel="noopener"
+                        data-mce-href="https://www.grandviewresearch.com/industry-analysis/synthetic-biology-market">a
+                        space projected to go from 13.09 billion in 2022 to 55.37 billion dollars by 2030</a> will
+                    surely need picks and shovels companies to support that kind of growth.</p>
+                <p>In this blog post I break down what I understand to be the “traditional” business path a
+                    synthetic biology company takes from inception to maturity, the various problems along the way,
+                    and existing players that help solve those problems. I use a fictitious company called Mika
+                    (named after my dog) that is making bio based fabrics that can replace traditional oil based
+                    polyester. Hopefully this article gives a solid high level overview of the ecosystem for the
+                    next entrepreneur stepping into the space.</p>
+                <h2 class="blog-heading">Target Selection and Design</h2>
+                <p>To start, Mika needs to identify a promising protein that functionally performs better than
+                    polyester. In this fictitious scenario, Mika settles on spider silk. However, spider silk also
+                    has several (fictitious) downsides: spider silk doesn’t retain color well, can become slimy at
+                    high temperatures, and gives off a bad odor.</p>
+                <p>Mika uses spider silk as a starting point and begins iterating on the molecular structure to
+                    remove these undesirable traits. Historically, scientists work off of intuition built up from
+                    past experiences and existing research papers on techniques or modifications that might work.
+                    Scientists would make a series of&nbsp; educated guesses on modifications, concoct various
+                    candidates, create those molecular structures, and test to see if the new molecules actually
+                    work. This cycle is commonly known as the DBTL cycle (Design-Build-Test-Learn cycle), and is
+                    extremely expensive and time consuming, easily composing a large chunk of the R&amp;D budget.
+                    However, these days with the latest advances in ML for protein design, R&amp;D timelines are
+                    going from years to months, as ML models are able to suggest candidates that have a higher
+                    likelihood of success.</p>
+                <div class='blog-photo-container'>
+                    <img src='design-build.jpg' class='blog-photo'>
+                    <div class='blog-photo-caption'><a target="_blank" href="https://synbio-tech.com/synthetic-biology/"
+                            rel="noopener" data-mce-href="https://synbio-tech.com/synthetic-biology/">Source</a>
+                    </div>
+                </div>
+                <p>Existing companies that help with target selection and design typically do so by increasing the
+                    speed of a single DBTL iteration (automation) or reducing the number of DBTL cycles necessary
+                    (ML for protein design). Companies like <a target="_blank" href="https://automata.tech/"
+                        rel="noopener" data-mce-href="https://automata.tech/">Automata</a> and <a target="_blank"
+                        href="https://opentrons.com/" rel="noopener"
+                        data-mce-href="https://opentrons.com/">Opentrons</a> help with the former, and companies
+                    like <a target="_blank" href="https://arzeda.com/" rel="noopener"
+                        data-mce-href="https://arzeda.com/">Arzeda</a>, <a target="_blank" href="https://cradle.bio/"
+                        rel="noopener" data-mce-href="https://cradle.bio/">Cradle</a>,
+                    and <a target="_blank" href="https://www.profluent.bio/" rel="noopener"
+                        data-mce-href="https://www.profluent.bio/">Profluent</a> help with the latter.</p>
+                <p>Mika is focusing on a protein, but the range of products that can be produced from synthetic
+                    biology is huge. For example, <a target="_blank" href="https://www.zeroacre.com/" rel="noopener"
+                        data-mce-href="https://www.zeroacre.com/">Zero Acre Farms</a> and <a target="_blank"
+                        href="https://www.meltandmarble.com/" rel="noopener"
+                        data-mce-href="https://www.meltandmarble.com/">Melt and Marble</a> are targeting lipids
+                    while <a target="_blank" href="https://www.caprabiosciences.com/" rel="noopener"
+                        data-mce-href="https://www.caprabiosciences.com/">Capra Biosciences</a> is targeting
+                    vitamins.</p>
+                <h2 class="blog-heading">Strain Engineering</h2>
+                <p>After arriving at a modified spider silk that fulfills all target requirements, Mika now needs to
+                    figure out how to actually produce the silk. While there are some companies pursuing cell free
+                    manufacturing (the most notable one being <a target="_blank" href="https://solugen.com/"
+                        rel="noopener" data-mce-href="https://solugen.com/">Solugen</a>), it is more common to see
+                    companies using precision fermentation. In precision fermentation, the instructions to develop
+                    your protein of interest are inserted into a specific microbe, also known as a chassis. The
+                    microbe is then fed a steady diet of food, allowing it to duplicate while continually producing
+                    more of your protein.</p>
+                <p>In strain engineering you choose your chassis and then repeatedly modify it to improve its
+                    ability to produce your desired protein. Various types of modifications could include:</p>
+                <ul>
+                    <li>Increasing resilience to foreign bodies - maintaining a perfectly sterile environment is
+                        difficult and increased resilience can reduce risk of spoiled end product</li>
+                    <li>Making the chassis more robust to environmental variation - pH, temperature, dissolved
+                        oxygen content, and amino acid availability are all variables that can occasionally
+                        fluctuate inside of a production environment</li>
+                    <li>Removing existing metabolic cycles to optimize for target protein production - your chosen
+                        chassis could spend 50% of its resources producing your protein and the other 50% of its
+                        resources performing other metabolic functions. If other metabolic functions aren’t needed
+                        in your controlled production environment, you can genetically modify your chassis to remove
+                        them, allowing your chassis to spend more of its resources on producing your protein.</li>
+                </ul>
+                <p><a target="_blank" href="https://www.herlab.bio/" rel="noopener"
+                        data-mce-href="https://www.herlab.bio/">HERLab</a> and <a target="_blank"
+                        href="https://www.wildmicrobes.com/" rel="noopener"
+                        data-mce-href="https://www.wildmicrobes.com/">Wild Microbes</a> are two startups that
+                    specialize in helping you choose the best chassis for your needs. <a target="_blank"
+                        href="https://www.culturebiosciences.com/" rel="noopener"
+                        data-mce-href="https://www.culturebiosciences.com/">Culture Biosciences</a> is a cloud based
+                    R&amp;D platform that can improve the quality and speed of your DBTL cycles, ideally helping you
+                    reach your optimal chassis faster.</p>
+                <h2 class="blog-heading">Bioprocess Development</h2>
+                <p>Now that Mika has finished developing the protein and creating the microbe to produce the
+                    protein, it has to develop the full bioprocess. At a high level, the bioprocess can be broken
+                    down into upstream processing, fermentation, and downstream processing.</p>
+                <div class='blog-photo-container'>
+                    <img src='Simplified-flow-of-bioprocess-steps-upstream-processing-fermentation-process-and.png'
+                        class='blog-photo'>
+                    <div class='blog-photo-caption'><a target="_blank"
+                            href="https://www.researchgate.net/figure/Simplified-flow-of-bioprocess-steps-upstream-processing-fermentation-process-and_fig2_336857029"
+                            rel="noopener"
+                            data-mce-href="https://www.researchgate.net/figure/Simplified-flow-of-bioprocess-steps-upstream-processing-fermentation-process-and_fig2_336857029">Source</a>
+                    </div>
+                </div>
+
+                <p>During fermentation, your microbe that you genetically engineered to produce your target protein
+                    and the food to feed your microbe is placed inside of a special container known as a bioreactor.
+                    Upstream processing is everything prior to this step, and downstream processing is everything
+                    after this step.</p>
+                <p>Developing your upstream process could involve:</p>
+                <ul>
+                    <li>Media optimization - figuring out what the composition of “food” is best suited for the
+                        microbes. E.G. how much glucose, amino acids, oxygen, etc to feed the microbe</li>
+                    <li>Media sterilization - developing a process to sterilize the media so that minimal foreign
+                        microbes enter the bioreactor</li>
+                    <li>Seed train - cells often have various different stages during their life cycles, with likely
+                        only a subset of the stages being optimal for target protein production. Typically the
+                        genetically modified chassis is moved between various environments and containers to guide
+                        the cells through the different stages until the stage of optimal production, during which
+                        it is moved to the final production sized bioreactor. This whole process is known as a seed
+                        train.</li>
+                </ul>
+                <p>Several factors also go into the fermentation process:</p>
+                <ul>
+                    <li>Bioreactor design - there are various types of bioreactors, such as air lifted, stir tanked,
+                        and more. All designs have their trade offs and analysis needs to be done to decide which
+                        one is best suited for your chassis and target protein combination</li>
+                    <li>Fermentation type - batch, fed batch, continuous, and perfusion fermentation are all
+                        different types of fermentation that directly impact bioprocess complexity, capital
+                        expenses, and operation expenses. As far as I’m aware, the most commonly chosen type is fed
+                        batch</li>
+                </ul>
+                <p>Downstream processing can get complicated enough to warrant its own dedicated blog post. Some
+                    general high level ideas of what needs to happen are:</p>
+                <ul>
+                    <li>Separation - the target protein needs to be separated from the chassis. Depending on your
+                        choice of chassis the target protein could already be external to the cell. Otherwise the
+                        cell needs to be lysed (destroyed) to access the target protein</li>
+                    <li>Purification - After separation the target protein is likely still mixed with trace amounts
+                        of other media. Depending on the end use the mixture may need to be further purified</li>
+                    <li>Further processing - If the final product needs to be a dry powder, it will need to undergo
+                        a drying process. The final product may also be unstable or hard to transport and may need
+                        further processing to get it to an acceptable state</li>
+                </ul>
+                <p>While there are companies that can help develop bioprocesses (see Synthetic biology as a service
+                    section for more details), usually most of the bioprocess is developed in-house. Some notable
+                    companies relevant to this section are <a target="_blank" href="https://www.newwavebiotech.com/"
+                        rel="noopener" data-mce-href="https://www.newwavebiotech.com/">New Wave Biotech</a>, a
+                    company focused on downstream process optimization, and <a target="_blank"
+                        href="https://www.pow.bio/" rel="noopener" data-mce-href="https://www.pow.bio/">Pow.bio</a>,
+                    a company developing continuous fermentation as a service.&nbsp;</p>
+                <h2 class="blog-heading">It’s all interdependent</h2>
+                <p>I split target selection and design, strain engineering, and bioprocess development into separate
+                    categories for simplicity. In reality, a decision in one of these categories impacts decisions
+                    in all of the others. For example, one iteration of spider silk might be functionally perfect,
+                    but may be incredibly hard to produce in a microbe due to how complex it is. Which chassis to
+                    use directly impacts which type of fermentation is feasible and what kind of downstream
+                    processing is needed. Synthetic biology companies typically need to go through multiple strain
+                    and target selection DBTL iterations all while managing bioprocess development. This immense
+                    complexity is one of the reasons why it’s tough to succeed as a synthetic biology company.</p>
+                <div class='blog-photo-container'>
+                    <img src='graph.png' class='blog-photo'>
+                </div>
+                <h2 class="blog-heading">Other factors</h2>
+                <h3 class="blog-heading-2">Costs</h3>
+                <p>Throughout the whole journey Mika has to constantly make sure they’re trending towards
+                    profitability. If the selling price for spider silk is less than the cost of developing the
+                    spider silk Mika won’t be able to make money. In order to project and predict costs companies
+                    typically perform technoeconomic analyses (TEAs). A few companies/resources that can help with
+                    this include <a target="_blank" href="https://synonym.bio/" rel="noopener"
+                        data-mce-href="https://synonym.bio/">Synonym</a>, <a target="_blank"
+                        href="https://www.connectomix.bio/" rel="noopener"
+                        data-mce-href="https://www.connectomix.bio/">Cx Bio</a>, and <a target="_blank"
+                        href="https://www.intelligen.com/static/SPDDownloadCenter/" rel="noopener"
+                        data-mce-href="https://www.intelligen.com/static/SPDDownloadCenter/">SuperPro Designer by
+                        Intelligen</a>.&nbsp;</p>
+                <h3 class="blog-heading-2">Equipment</h3>
+                <p>All of the R&amp;D will require equipment. Mika can choose from existing pharma focused equipment
+                    manufacturers like <a target="_blank" href="https://www.thermofisher.com/us/en/home.html"
+                        rel="noopener" data-mce-href="https://www.thermofisher.com/us/en/home.html">Thermo
+                        Fisher</a>, <a target="_blank" href="https://www.sartorius.com/en" rel="noopener"
+                        data-mce-href="https://www.sartorius.com/en">Sartorius</a>, and <a target="_blank"
+                        href="https://www.hamiltoncompany.com/" rel="noopener"
+                        data-mce-href="https://www.hamiltoncompany.com/">Hamilton</a> or new startups trying to
+                    break into the space, such as <a target="_blank" href="https://www.stamm.bio/" rel="noopener"
+                        data-mce-href="https://www.stamm.bio/">Stamm</a> and <a target="_blank"
+                        href="https://www.dynacyte.com/" rel="noopener"
+                        data-mce-href="https://www.dynacyte.com/">Dynacyte Biosciences</a>.</p>
+                <h3 class="blog-heading-2">Data Management</h3>
+                <p>As Mika dives deeper into R&amp;D, it starts to gather an unmanageable amount of data and
+                    employees start to spend more time managing spreadsheets than performing research. To improve
+                    employee efficiency, Mika can partner with bio specific data management providers like <a
+                        target="_blank" href="https://invertbio.com/" rel="noopener"
+                        data-mce-href="https://invertbio.com/">Invert</a>, <a target="_blank"
+                        href="https://bioraptor.ai/" rel="noopener" data-mce-href="https://bioraptor.ai/">Bioraptor</a>,
+                    and <a target="_blank" href="https://www.benchling.com/" rel="noopener"
+                        data-mce-href="https://www.benchling.com/">Benchling</a>.&nbsp;</p>
+                <h2 class="blog-heading">Scaling</h2>
+                <p>After finally making it through a few years of R&amp;D, Mika has an amazing spider silk, many
+                    interested customers, a robust bioprocess, and a microbe that can produce the target product at
+                    high rates. Now it’s time to scale!</p>
+                <p>At this point Mika has the option of building its own biomanufacturing facility, renting space at
+                    an existing biomanufacturing facility, or a combination of both. To help with the decision
+                    making, Mika can speak to companies that specialize in helping synthetic biology companies
+                    scale, like <a target="_blank" href="https://synonym.bio/" rel="noopener"
+                        data-mce-href="https://synonym.bio/">Synonym</a> or <a target="_blank"
+                        href="https://www.facturegroup.com/" rel="noopener"
+                        data-mce-href="https://www.facturegroup.com/">Facture</a>.</p>
+                <p>If Mika chooses to rent space at an existing facility, it can approach multiple contract
+                    development and manufacturing organizations (CDMOs). <a target="_blank"
+                        href="https://liberationlabs.com/" rel="noopener"
+                        data-mce-href="https://liberationlabs.com/">Liberation Labs</a>, <a target="_blank"
+                        href="https://www.cauldronferm.com/" rel="noopener"
+                        data-mce-href="https://www.cauldronferm.com/">Cauldron</a>, <a target="_blank"
+                        href="https://www.planetarygroup.ch/technology" rel="noopener"
+                        data-mce-href="https://www.planetarygroup.ch/technology">Planetary</a>, and <a target="_blank"
+                        href="https://www.biosphere.io/" rel="noopener"
+                        data-mce-href="https://www.biosphere.io/">Biosphere</a> are all companies building their own
+                    biomanufacturing capacity with the intention of renting it out. If Mika chooses to build its own
+                    facilities, it will need to develop its own plan, find an optimal location, hire contractors,
+                    etc, all at a very large upfront capital cost. Alternatively, Mika can look for old existing
+                    facilities from adjacent industries that it could retrofit. According to GFI, <a target="_blank"
+                        href="https://gfi.org/wp-content/uploads/2023/01/SCI23024_FERM-manufacturing-capacity-analysis_Final.pdf"
+                        rel="noopener"
+                        data-mce-href="https://gfi.org/wp-content/uploads/2023/01/SCI23024_FERM-manufacturing-capacity-analysis_Final.pdf">“where
+                        technically feasible, brownfield development and retrofitting equipment have the potential
+                        to significantly reduce up-front capital expenditure (CAPEX) by more than 70 percent and
+                        shorten construction lead times to six months.”</a></p>
+                <p>Note that throughout the scaling process Mika is not finished with R&amp;D. Mika will likely have
+                    to take data from various steps in the scale up process and feed it back to the R&amp;D team to
+                    further improve the bioprocess. One common problem companies run into as they scale is their
+                    microbe producing their target product at lower rates as the size of bioreactor increases. This
+                    decrease in efficiency directly impacts the bottom line.</p>
+                <h2 class="blog-heading">Synthetic biology as a service</h2>
+                <p>Looking at everything that needs to be done to build a successful synthetic biology company can
+                    be daunting. Some companies claim to simplify this endeavor by providing a full end to end
+                    service that can help from idea inception all the way to scale up. <a target="_blank"
+                        href="https://www.ginkgobioworks.com/" rel="noopener"
+                        data-mce-href="https://www.ginkgobioworks.com/">Gingko Bioworks</a>, <a target="_blank"
+                        href="https://perfectday.com/" rel="noopener" data-mce-href="https://perfectday.com/">Perfect
+                        Day</a>, <a target="_blank" href="https://www.thecultivatedb.com/" rel="noopener"
+                        data-mce-href="https://www.thecultivatedb.com/">The Cultivated B</a>, and <a target="_blank"
+                        href="https://21st.bio/" rel="noopener" data-mce-href="https://21st.bio/">21st.bio</a> are
+                    all companies that fall into this “synthetic biology as a service” category.</p>
+                <h2 class="blog-heading">There are problems opportunities everywhere</h2>
+                <p>Hopefully this article gives the reader a better sense of the types of problems that synthetic
+                    biology companies run into as well as how the business works. There are plenty of problems to
+                    tackle when building a synthetic biology company which also means there’s plenty of opportunity
+                    for B2B innovators to improve the ecosystem as a whole.</p>
+                <p>For brevity and simplicity there were many additional aspects of the business that were skipped
+                    over. Additionally this article only covers what I personally view as a “traditional” synthetic
+                    biology company. There are plenty of other super cool companies that don’t fit into this
+                    paradigm like:</p>
+                <ul>
+                    <li><a target="_blank" href="https://www.aanikabio.com/" rel="noopener"
+                            data-mce-href="https://www.aanikabio.com/">Aanika Biosciences</a> - genetically modified
+                        organisms for supply chain safety and crop insurance</li>
+                    <li><a target="_blank" href="https://neoplants.com/" rel="noopener"
+                            data-mce-href="https://neoplants.com/">Neoplants</a> - genetically modified plants that
+                        reduce air pollution inside homes</li>
+                    <li><a target="_blank" href="https://moolecscience.com/" rel="noopener"
+                            data-mce-href="https://moolecscience.com/">Moolec</a> - animal protein grown in plants
+                    </li>
+                    <li><a target="_blank" href="https://www.pivotbio.com/" rel="noopener"
+                            data-mce-href="https://www.pivotbio.com/">Pivot Bio</a> - nitrogen fixing microbes for
+                        crops, removing the need for harmful fertilizers</li>
+                </ul>
+                <p>If you’re excited about this space too, let’s chat! Shoot me an email at <a target="_blank"
+                        href="mailto:hi.george.tong@gmail.com" rel="noopener"
+                        data-mce-href="mailto:hi.george.tong@gmail.com">hi.george.tong@gmail.com</a>.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="credits content">Icon credits to Creative Outlet and José Hernandez from The Noun
+            Project
+        </div>
+    </div>
+
+
+</body>
+
+</html>
