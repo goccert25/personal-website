@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="George Tong, George, Tong,
+    University of Maryland College Park, UMCP, Personal, Personal Website, Blog">
+    <meta name="description" content="George Tong's Personal Website">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+
+    <title>Goose on the Loose</title>
+
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../../css/index.css">
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:light|Spectral:light|Droid+Serif" rel="stylesheet"> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+    <div class="body-content">
+
+        <div class="header-bar">
+            <div class="content header">
+                <a href="../../index.html" class="unformat-link"><img class="goose-logo" src='../../img/goose.png'
+                        alt='goose'><span class='goose-text'>On The Loose</span></a>
+                <a href="../../index.html" class="header-links unformat-link">Posts</a>
+                <a href="../../about_me.html" class="header-links unformat-link">About Me</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1 class="blog-title">Mini Project: Simple Protein Visualization Web App</h1>
+            <div class="blog-date">January 23rd, 2024</div>
+            <div class="blog-body">
+                <p>
+                    I've been busy embedding myself in the intersection of biotech and climate tech for the past
+                    few months by reading, writing, and talking with as many people as I can. I've been itching to
+                    get back to my coding roots though, and so decided to hack together a quick project over the course
+                    of
+                    a few days. I wanted to
+                    work on something that would allow me to brush up on my front end development skills while also
+                    being biology related. Thus, I developed a simple protein visualization app. The app:
+                <ul>
+                    <li>
+                        Lets you type in some keywords</li>
+                    <li>
+                        Queries <a href="https://www.rcsb.org/">Protein Data Bank</a>'s API for entries that match the
+                        keywords
+                    </li>
+                    <li>
+                        Lets you choose a specific entry
+                    </li>
+                    <li>
+                        Renders the molecule via <a href="https://github.com/molstar/molstar/tree/master">molstar</a>
+                    </li>
+                </ul>
+                <br>
+                The demo website can be found <a href="https://protein-visualization-web-app.vercel.app/">here</a>, and
+                the source code can be found <a
+                    href="https://github.com/goccert25/protein_visualization_web_app">here</a>.
+
+                In case Protein Data Bank ever changes their API and the website no longer works, here's a
+                gif to prove it once worked:
+                </p>
+                <div class="blog-photo-container">
+
+                    <img src="website_flow.gif">
+                </div>
+                <h2 class='blog-heading'>Quick Personal Takeaways</h2>
+                <p>
+                <ul>
+                    <li>The React philosophy of state driven UI's is as clean as I remembered and makes React easy to
+                        pick back up even after a few years</li>
+                    <li>Molstar is definitely a bit clunky to use</li>
+                    <li>Vercel makes deploying hobby projects made with Next.js ridiculously easy</li>
+                </ul>
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="credits content">Icon credits to Creative Outlet and José Hernandez from The Noun
+            Project
+        </div>
+    </div>
+
+
+</body>
+
+</html>
