@@ -1,6 +1,5 @@
 ---
 title: 'About'
-date: 2025-01-01
 description: 'About George Tong and Goose on the Loose'
 ---
 

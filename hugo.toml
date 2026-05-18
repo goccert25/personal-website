@@ -44,16 +44,16 @@ ignoreErrors = ['additional-script-loading-error']
 
   [Languages.en-us.params]
     sitename = 'Goose on the Loose'
-    defaultColor = 'dark'
+    defaultColor = 'light'
     description = "George Tong's Personal Website"
     mainSections = ['posts']
-    toc = true
+    toc = false
     tocOpen = false
     goToTop = true
     rssFeedDescription = 'summary'
 
     [Languages.en-us.params.author]
-      avatar = 'goose.png'
+      avatar = 'about_me.JPG'
       intro = 'Goose on the Loose'
       name = 'George Tong'
       description = 'A running account of explorations in tech, climate, and life.'
@@ -73,6 +73,10 @@ ignoreErrors = ['additional-script-loading-error']
 [[params.socialIcons]]
   name = 'email'
   url = 'mailto:hi.george.tong@gmail.com'
+
+[[params.socialIcons]]
+  name = 'bluesky'
+  url = 'https://bsky.app/profile/georgetong.dev'
 
 [[params.socialIcons]]
   name = 'rss'

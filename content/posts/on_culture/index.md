@@ -3,6 +3,7 @@ title: "On Culture"
 date: 2025-10-27
 author: "George Tong"
 description: "Thoughts on building culture: values as the foundation, how to do it right vs wrong, practices to maintain culture, and why it matters even more with AI."
+featured: true
 tags:
   - culture
   - leadership
