@@ -1,3 +1,9 @@
+
+April 24th, 2026 edit
+
+I recently read "Primed to Perform" it felt like a self taught novice entering an official classroom for the first time. While reading it, I felt like an amateur home cook chef watching michelin trained chef cook for the first time. Oh so THAT's why a cleaver is shaped like that. So THAT's what that function on the food processor is for. I was stabbing at multiple different ideas, and primed to perform linked everything together and gave me the whole map. 
+
+
 _October 27th, 2025_
 
 Super early in my first full time job at Robinhood, I remember one of the operation managers changed his slack job title to be "Culture Builder". At the time, I considered a job *a job*. Clock in, get your work done, and clock out. I remember feeling a twinge of annoyance - why does this person care so much?
