@@ -22,8 +22,7 @@ The specific flow of how this happens is as follows:
 - Commercial banks then turn around and take the loans that the US government provided, and use that money to give out loans to businesses at Y% interest rate, where Y > X
 - These businesses then create value such that they are able to pay back these loans from commercial banks
 
-![government grow economy](government_grow_economy.jpeg)
-*Photo from [https://qr.ae/pvkPFI](https://qr.ae/pvkPFI)*
+{{< img src="government_grow_economy.jpeg" alt="government grow economy" caption="Photo from [https://qr.ae/pvkPFI](https://qr.ae/pvkPFI)" >}}
 
 ### Optional Reading
 
@@ -72,7 +71,7 @@ Some people argue that as countries move from manufacturing economies towards se
 
 To counteract this, we can factor in externalities by enacting a tax on carbon. According to the [En-ROADs simulator](https://en-roads.climateinteractive.org/scenario.html?v=22.7.0), this could prevent an entire degree celsius of warming and is one of the most effective ways of combating climate change.
 
-![Screencast from 07-24-2022 04 59 45 PM](Screencast from 07-24-2022 04 59 45 PM.gif)
+{{< img src="Screencast from 07-24-2022 04 59 45 PM.gif" alt="Screencast from 07-24-2022 04 59 45 PM" >}}
 
 In addition to a carbon tax, the government can use other types of incentives and disincentives to push our economy towards one that is planet friendly. Governments can provide additional subsidies and grants for actions they'd like to see, such as solar power development, regenerative agriculture, electrification, etc. At the same time, governments can enact regulations to ban certain climate damaging actions, and use economic systems like [California's Cap and Trade program](https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program) to gradually phase out fossil fuel reliance.
 
@@ -86,8 +85,7 @@ To understand the ReFi movement, it helps to first look at [some examples](https
 
 Tens of thousands of children responded by picking the neighborhoods clean. Parents made use of the tokens to travel downtown, oftentimes to find jobs. The bus tokens were soon accepted at local markets in exchange for food. In one three-year period, more than 100 schools traded 200 tons of garbage for 1.9 million notebooks. The paper-recycling component alone saved the equivalent of 1,200 trees—each day! Eventually, more than 70% of Curitiban households became involved in the programs. The 62 poorer neighborhoods alone exchanged 11,000 tons of garbage for nearly a million bus tokens and 1,200 tons of food" (see [The Story of Curitiba in Brazil](https://www.lietaer.com/2010/09/the-story-of-curitiba-in-brazil/)).
 
-![trash](trash.jpg)
-*Photo from [https://wwf.panda.org/wwf_news/?204414/Curitiba-waste-as-resource](https://wwf.panda.org/wwf_news/?204414/Curitiba-waste-as-resource)*
+{{< img src="trash.jpg" alt="trash" caption="Photo from [https://wwf.panda.org/wwf_news/?204414/Curitiba-waste-as-resource](https://wwf.panda.org/wwf_news/?204414/Curitiba-waste-as-resource)" >}}
 
 By tying socially and environmentally beneficial actions to a currency, the government of Curitiba was able to create a mutually beneficial system that strengthened local pride, uplifted the impoverished, and benefited the environment. If we wanted to take the learnings from the recycling programs of Curitiba and create an alternative currency to tackle climate change, we would need to create a currency that is:
 

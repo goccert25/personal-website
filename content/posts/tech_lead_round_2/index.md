@@ -22,8 +22,7 @@ Especially at a startup with limited resources, defaulting to the technology tha
 
 One of the first hard decisions I faced as a Tech Lead was whether we should stick with the existing tech stack (Go gRPC web backend and CockroachDB database). The codebase was still new and small enough that moving to a new backend and database was feasible. I pushed to move to Python (the entire team was more proficient in it) and PostgreSQL (we worked heavily with Geographic Information System (GIS) data and PostgreSQL with PostGIS was the most popular open source option) and the rest of the team agreed.
 
-![PostGIS_logo.png](PostGIS_logo.png)
-*You gotta admit, the logo is pretty cute*
+{{< img src="PostGIS_logo.png" alt="PostGIS_logo.png" caption="You gotta admit, the logo is pretty cute" >}}
 
 Even while transitioning though I was second guessing myself - I've heard plenty of horror stories of wasteful tech stack migrations and we were using valuable time that could be spent on feature development. In hindsight, it was obvious we made the right decision. Team velocity shot up and everyone we hired/contracted knew Python and was productive on day one. Additionally, since we moved from CockroachDB to PostgreSQL with PostGIS, we immediately gained access to a whole host of GIS focused SaaS companies and open source software that supported PostgreSQL with PostGIS out of the box.
 
@@ -45,8 +44,7 @@ It's not a revolutionary realization, but after working with people with all typ
 
 At the same time it's important to hire the right senior engineer. One who understands that context is everything, and that just because they've seen a system work a certain way in the past doesn't mean that's how the system should work now.
 
-![senior_dev.jpg](senior_dev.jpg)
-*[My favorite depiction of a Senior Engineer](https://dev.to/codenewbieteam/codenewbie-meme-monday-5703)*
+{{< img src="senior_dev.jpg" alt="senior_dev.jpg" caption="[My favorite depiction of a Senior Engineer](https://dev.to/codenewbieteam/codenewbie-meme-monday-5703)" >}}
 
 ## The larger your team, the less IC work you do
 
@@ -84,5 +82,4 @@ To anybody on a team, I'd encourage them next time they have a question or a bug
 
 Leading in general can be a lot of work. Don't forget the most important things in life.
 
-![IMG_6425.jpg](IMG_6425.jpg)
-*My dog, Mika, waiting for a walk*
+{{< img src="IMG_6425.jpg" alt="IMG_6425.jpg" caption="My dog, Mika, waiting for a walk" >}}

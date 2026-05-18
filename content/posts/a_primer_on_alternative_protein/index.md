@@ -8,8 +8,7 @@ tags: ["alternative protein", "climate tech", "food tech"]
 
 Ever since I read [this fantastic article on cultured meat](https://www.climaticthoughts.com/p/beyond-beyond-meat) half a year ago, I've been absolutely hooked on the alternative protein space. The industry is relatively nascent and very complex, with few clear beginner friendly resources to guide newcomers into the space. As someone with no biology/food science background, I have the unique opportunity to write about my learnings from a layman's perspective. This article will give the reader an overview of the alternative protein space, its incredible potential, and some of its problems. I ultimately hope this article increases the number of people working in this space, or at minimum increases readers' willingness to buy alternative protein products.
 
-![alt protein photo](alt_protein_photo.jpg)
-*Photo courtesy of Getty Images / marilyna*
+{{< img src="alt_protein_photo.jpg" alt="alt protein photo" caption="Photo courtesy of Getty Images / marilyna" >}}
 
 ## What is alternative protein?
 
@@ -29,13 +28,11 @@ Alternative protein comes from multiple different technological sources (listed 
 
 **Precision fermentation** - A less publicly known technology, but one that has been well established in the pharma/chemical production space for many decades. Precision fermentation is commonly compared to beer production. Yeast cells used to make beer have instructions in their DNA that give them the power to produce alcohol from sugar. Modern biotechnology has given us the ability to insert instructions for all kinds of different molecules into the DNA of microbes. With precision fermentation, instructions for specific proteins (like animal protein!) are inserted into a specific microbe. The microbe is then fed nutrients so the microbe is able to duplicate while producing the protein of interest. There are a [few other types of fermentation](https://blog.agthentic.com/the-future-of-fermentation-in-food-ag-bf3084ba5729), but precision fermentation is the "hottest" fermentation technology in the alternative protein space at the moment.
 
-![fermentation](fermentation.png)
-*Photo from [tenacious ventures](https://tenacious.ventures/insights/challenges-opportunities-in-scaling-precision-fermentation)*
+{{< img src="fermentation.png" alt="fermentation" caption="Photo from [tenacious ventures](https://tenacious.ventures/insights/challenges-opportunities-in-scaling-precision-fermentation)" >}}
 
 **Cultured meat** - Also referred to in media as cell based meat, lab grown meat, or cultivated meat. The process of growing cultured meat involves taking cells from an animal, placing the cells in a container that provides all of the proper nutrients that an animal's body usually would, and allowing the cell to naturally grow and duplicate. With one animal cell, one could theoretically grow infinite amounts of meat to feed the human population. While the technology is still relatively new and cost of production is much too high for your average consumer, the promise of producing real meat without all the negative externalities is worth pursuing. The US has recently made major progress, with the first cultured chicken meat sold at two fine dining establishments, one in [San Francisco](https://www.sfchronicle.com/food/restaurants/article/cultivated-meat-bar-crenn-18201704.php) and one in [DC](https://www.axios.com/local/washington-dc/2023/07/06/jose-andres-lab-grown-chicken-china-chilcano).
 
-![Lab grown meat](Lab-grown_meat-article.png)
-*Photo from the [eufic](https://www.eufic.org/en/food-production/article/lab-grown-meat-how-it-is-made-and-what-are-the-pros-and-cons)*
+{{< img src="Lab-grown_meat-article.png" alt="Lab grown meat" caption="Photo from the [eufic](https://www.eufic.org/en/food-production/article/lab-grown-meat-how-it-is-made-and-what-are-the-pros-and-cons)" >}}
 
 **Molecular farming** - The newest kid on the block. Molecular farming can be thought of as a combination of plant based and precision fermentation. Instead of inserting the instructions for a specific protein into a microbe, the instructions are inserted into a plant. The plant is then grown like any other crop and is later processed to extract the protein of interest. This new approach has the potential to be less capital intensive when compared to other techniques, and has the advantage of existing downstream processes and infrastructure.
 
@@ -49,15 +46,13 @@ Expanding the alternative protein space has all sorts of beneficial impacts, som
 
 **Mitigating greenhouse gasses** - Meat production and consumption accounts for about 13.78% of the global greenhouse gas emissions. We have to drastically cut this number down to keep our earth hospitable for future generations.
 
-![How much of GHGs come from food](How-much-of-GHGs-come-from-food.png)
-*Photo from [Our World In Data](https://ourworldindata.org/food-ghg-emissions)*
+{{< img src="How-much-of-GHGs-come-from-food.png" alt="How much of GHGs come from food" caption="Photo from [Our World In Data](https://ourworldindata.org/food-ghg-emissions)" >}}
 
 **Reducing world hunger** - Our world population is currently 7.8 billion and is projected to grow to [10 billion people by 2050.](https://www.wri.org/insights/how-sustainably-feed-10-billion-people-2050-21-charts) Meat production is incredibly calorie inefficient - [about 25 calories is required to create just 1 calorie of beef. The ratio for pork is nearer 15-to-1. Even the most efficient meat, chicken, requires 9 calories of input to produce just 1 calorie of food.](https://cbey.yale.edu/our-stories/disrupting-meat) Moving to diets powered by alternative protein allows us to sustainably feed this growing population by [reducing our land and energy use.](https://ourworldindata.org/land-use-diets) Land use reduction is particularly important as [our global soil supply is dwindling.](https://www.cnbc.com/2022/06/05/why-the-global-soil-shortage-threatens-food-medicine-and-the-climate.html)
 
 **Reducing disease risk** - Antibiotics are heavily used on farms because there are so many animals raised in close proximity. Without antibiotics, disease would make factory farming unfeasible. However, due to the heavy usage of antibiotics, the viruses and bacteria that are able to survive and evolve in that environment become "superbugs" that are resistant to antibiotics. These superbugs have the potential to wreak havoc on society if and when they jump to humans, just like how [COVID-19 did when it jumped from an animal host to humans.](https://www.niaid.nih.gov/diseases-conditions/origins-coronaviruses)
 
-![livestock antibiotics diagram](livestock-antibiotics-diagram.jpg)
-*Photo from [WOUB](https://woub.org/2017/01/20/stopping-superbug-a-new-farm-rule-targets-antibiotic-resistance/)*
+{{< img src="livestock-antibiotics-diagram.jpg" alt="livestock antibiotics diagram" caption="Photo from [WOUB](https://woub.org/2017/01/20/stopping-superbug-a-new-farm-rule-targets-antibiotic-resistance/)" >}}
 
 **Improving human health** - Studies have shown that people with high amounts of meat consumption have increased risk of heart disease due to elevated levels of saturated fat and cholesterol. With the technology behind cultured meat, companies will be able to tweak and improve nutrient profiles of meat products. As Uma Valeti, founder of Upside Foods, states, [whether that's less saturated fat and cholesterol, or more vitamins or healthy fats…imagine if we could produce a steak with the fatty acid profile of salmon.](https://www.cnn.com/2022/06/06/health/lab-grown-meat-pros-cons-life-itself-wellness-scn/index.html) If this vision holds true, we could see a future where humans become healthier without any changes to their diet.
 

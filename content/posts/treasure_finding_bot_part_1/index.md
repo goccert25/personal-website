@@ -15,15 +15,13 @@ tags:
 
 I've always heard the common adage: "one man's trash is another man's treasure". However, anyone that has gone online secondhand shopping knows that the usual reality is people think their trash is another man's treasure, and are sure to price it as such.
 
-![alt text](craigslist_steal.png)
-*an absolute [steal](https://www.ebaumsworld.com/pictures/delusional-people-of-craigslist/85525901/?view=list)*
+{{< img src="craigslist_steal.png" alt="alt text" caption="an absolute [steal](https://www.ebaumsworld.com/pictures/delusional-people-of-craigslist/85525901/?view=list)" >}}
 
 I'm a big fan of secondhand shopping: you can get premium clothes for much cheaper, be environmentally friendly, and get the thrill of finding treasures. What I DON'T like about secondhand shopping is how tedious it can be to find those rare gems. Everyday you have to slough through new listings of items you're interested in, filter out overpriced trash, and sniff out scammers.
 
 The first time I dipped my toe into secondhand shopping was buying on [Grailed](https://www.grailed.com). I had heard online about sleek, comfortable, and flattering [Reigning Champ](https://reigningchamp.com/) hoodies, but college me just couldn't justify the hefty $150 price tag at the time (however, I am all for buying full price from stores that price high so as to support ethical treatment of environment and workers--shoutout Patagonia). Naturally, I found myself browsing secondhand stores online until, after much hemming and hawwing and disapproval from my girlfriend, I purchased a Reigning Champ Tiger Fleece hoodie for $70 from Grailed. I was hooked, and started browsing Grailed every few hours to hunt for steals.
 
-![alt text](reigning_champ_hoodie.jpg)
-*The glorious hoodie. My girlfriend wears it more than me at this point...*
+{{< img src="reigning_champ_hoodie.jpg" alt="alt text" caption="The glorious hoodie. My girlfriend wears it more than me at this point..." >}}
 
 Eventually, I realized that the hours sunk into browsing Grailed just were't worth it for the off-chance of finding a steal; it was pretty much just playing a lottery. I started thinking though, everything I was doing was repetitive and automatable--visit a website, check new listings, determine worth, move on. It should be possible to have a bot to do all these things for me, and send me notifications when it found a listing that was a super good deal. I was a Computer Engineering major, I was a master at coding (cough finding things on stack overflow cough), I could do this. After a rough design sketch, I realized that the hardest thing to do would be to "determine worth", which would be impossible without data. Fantastically enough, Grailed had a great feature that showed [sold listings](https://www.grailed.com/sold/uxqLtAAA-Q) on its website. I realized that with all that data, I could compare a new listing with previously sold listings and determine if the item was over or under priced. My first challenge was ahead of me: collecting and storing all of the sold listings on Grailed.
 
@@ -33,8 +31,7 @@ Eventually, I realized that the hours sunk into browsing Grailed just were't wor
 
 At the time, Grailed had this awesome endless scrolling feature; you could visit the page that displayed sold items, and continually scroll to show older and older sold items until there were none left. Idea 1 was hatched: I would capture all of the sold items displayed on the screen, scroll, wait for the next sold items to load, capture them, rinse and repeat. I had previously used [Selenium](https://www.selenium.dev/documentation/en/webdriver/) (a framework for controlling web browsers) and Java (I know I'll get some flack for this) for a school project, so I decided to use the same stack for this project. Attempt 1 was coded up and left to run overnight. The following morning, I checked my laptop only to find less than 6500 listings downloaded and saved. How many sold listings did Grailed have at the time? 2.3 million. Assuming I had slept for 10 hours, it would take around 147 days at that rate to collect all of the data. On top of that, it was clear from observing the program that every subsequent scroll and load of older sold listings was taking exponentially longer. Clearly, the browser performance was starting to degrade as it had to support tens of thousands of listings--I was going to have to let the program run for an absurd amount of time in order to collect all of the data. Crap.
 
-![alt text](grailed_scroll.gif)
-*Grailed's infinite scroll*
+{{< img src="grailed_scroll.gif" alt="alt text" caption="Grailed&#39;s infinite scroll" >}}
 
 I killed the program, and starting thinking some more. Digging around, I noticed something interesting with how Grailed loaded their pages (Grailed no longer does this; I like to think they stopped because of my weird traffic patterns). When you scrolled and older sold listings were loaded, Grailed would actually change the current page's URL to a new url. If you opened a new window and visited the new URL, it would take you to a new page with only the older sold listings loaded and displayed, with all of the newer sold listings removed. However, you could still scroll down and load older listings. This gave me an idea: if the browser's struggling performance was because of the the sheer number of listings on the page, then I could scroll a constant number of times, grab everything on the page, visit the new URL to refresh the number of listings the browser has to handle, scroll another constant number of times, grab everything on the page, rinse and repeat.
 
@@ -48,8 +45,7 @@ The next logical conclusion was to get rid of this expensive process of grabbing
 
 Attempt 3 was coded up and run, and there was an instantaenous difference in speed. It took only seconds to process hundreds of listings, reducing the time taken to collect all 2.3 million sold listings to only **6-7 hours**. I was jumping for joy.
 
-![alt text](dancing_dog.gif)
-*Actual footage of me jumping for joy*
+{{< img src="dancing_dog.gif" alt="alt text" caption="Actual footage of me jumping for joy" >}}
 
 Finally I had all the data I wanted. Now I could do interesting things like:
 

@@ -14,8 +14,7 @@ tags:
 
 I had successfully managed to store [Grailed's](https://www.grailed.com) history of sold listings ([here if you missed it]({{< ref "/posts/treasure_finding_bot_part_1" >}})), but I still had a daunting task in front of me. How could I use the historical data to determine what was a good deal or not? There were so many factors to consider, such as clothing condition, style, brand, item type, and even purchase time: an item that is currently hot might not have necessarily been hot a few weeks ago. In an ideal world, I would be able to match an article of clothing with all the sold listings of the exact same piece, compare the sell prices with the old ones, and determine whether it was a good deal. However, because users specify the details of the items they list, the inputs are freeform and no two listings are the exact same. There was no way to reliably determine that two items were the same directly from the information available.
 
-![alt text](3sixteen_flannel.png)
-*Same title, drastically different prices*
+{{< img src="3sixteen_flannel.png" alt="alt text" caption="Same title, drastically different prices" >}}
 
 Arguably, one could use image processing and machine learning to try to analyze the images, but that would probably make more sense for iteration number 10 or 11. On top of that, what if there was a new style introduced from a high-end brand at a super low price? If there is no history of the exact item selling, one wouldn't be able to determine whether the item was a good deal. However, if you were knowledgable about the popularity of the style, the quality of the brand, and general market price for these items, then you would be able to identify if the item was a good deal.
 
@@ -23,8 +22,7 @@ Arguably, one could use image processing and machine learning to try to analyze 
 
 Before I dive further into good deal detection, I'll give a brief overview of the rest of the Treasure Finding Bot. Every 10 minutes, my [Raspberry Pi](https://www.raspberrypi.org/) executes code that uses [Selenium](https://www.selenium.dev/documentation/en/webdriver/) to check all the new listings on Grailed, performs the logic to determine if new listings are good deals or not, and sends me a text message notification of new deals via [Twilio](https://www.twilio.com/).
 
-![alt text](bot_diagram.png)
-*Drawn with [Excalidraw](https://excalidraw.com/), check them out!*
+{{< img src="bot_diagram.png" alt="alt text" caption="Drawn with [Excalidraw](https://excalidraw.com/), check them out!" >}}
 
 ## Start simple
 
@@ -64,8 +62,7 @@ and subcategory_id=(
 
 For example, the subcategory "Low-Top Sneakers" and the brand "Common Projects" have an average price of $217.89 and a standard deviation of $76.10. Common Project Canvas shoes in Florescent green selling for $125 in the Low-Top Sneaker subcategory would be marked as a steal with my logic. In reality, the inexpensive shoe material, canvas, and the very unorthodox color made demand and average price for that specific item much lower than the calculated statistics.
 
-![alt text](neon_cps.png)
-*There's a reason no one has bought this in two months...*
+{{< img src="neon_cps.png" alt="alt text" caption="There&#39;s a reason no one has bought this in two months..." >}}
 
 On the other hand, the classic Common Projects Achilles Low White showing up for $180 would typically be considered a steal and wouldn't last an hour. According to the average and standard deviation calculated though, this wouldn't be a good deal!
 
@@ -123,16 +120,12 @@ Not perfect, but much better! The $125 Common Projects Achilles Low Florescent C
 
 After improving the algorithm, the notifications become much less noisy and much more reliable. After running this for a year and actively buying and selling, I managed to make $1586.69. Unfortunately, $1480.98 of that money went to the good deals that I ended up keeping, putting me only up $105.71 🤨. All in all, I had quite a lot of fun with this project and managed to grab some great clothes for the low. My all time favorite snags that the bot found were as follows:
 
-![alt text](officine.png)
-*[Officine Generale Dario Piping Japanese Print Vacation Shirt](https://www.endclothing.com/us/officine-generale-dario-piping-japanese-print-vacation-shirt-s18mshi028.html)*
+{{< img src="officine.png" alt="alt text" caption="[Officine Generale Dario Piping Japanese Print Vacation Shirt](https://www.endclothing.com/us/officine-generale-dario-piping-japanese-print-vacation-shirt-s18mshi028.html)" >}}
 
-![alt text](apolis.png)
-*[Apolis Wool Chore Coat - Indigo](https://huckberry.com/store/apolis/category/p/18245-wool-chore-coat-indigo)*
+{{< img src="apolis.png" alt="alt text" caption="[Apolis Wool Chore Coat - Indigo](https://huckberry.com/store/apolis/category/p/18245-wool-chore-coat-indigo)" >}}
 
-![alt text](taylor.png)
-*[Taylor Stitch Yosemite Button Down (Made in Portugal)](https://www.taylorstitch.com/products/the-yosemite-shirt-in-navy)*
+{{< img src="taylor.png" alt="alt text" caption="[Taylor Stitch Yosemite Button Down (Made in Portugal)](https://www.taylorstitch.com/products/the-yosemite-shirt-in-navy)" >}}
 
-![alt text](patagonia.png)
-*Patagonia Vintage Quarter Zip*
+{{< img src="patagonia.png" alt="alt text" caption="Patagonia Vintage Quarter Zip" >}}
 
 There were many more ideas that I had for the project, such as using sell date as a factor to more heavily favor the most recently sold items when making a calculation. This could have potentially helped detect currently trending clothing or more accurately represented prices for items whose values have decayed over time. I ultimately decided to stop here and call it a wrap for this side project—I was buying way too much! Onwards to the next adventure...

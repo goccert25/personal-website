@@ -13,7 +13,7 @@ tags:
 
 I still remember the exact moment in August of 2020. I, a "tech lead" just one year out of college, had just received a meeting invite to the biweekly software platform tech lead/engineering manager meeting. The meeting was filled with Senior and Staff engineers that were revolutionizing the computer industry when I was still crawling in my diapers. I was onboarding two engineers with extensive industry experience onto my lowly team of one, and my manager that I heavily leaned on had just left the company. I remember the mixture of excitement and fear that hit when I realized, **"oh shit, I have no idea what I'm doing"**.
 
-![alt text](ihavenoideawhatimdoing.jpeg)
+{{< img src="ihavenoideawhatimdoing.jpeg" alt="alt text" >}}
 
 Since then, I've rolled up my sleeves and dug in, hitting so many "oh shit" obstacles along the way that I've lost track. A rollercoaster of a year later, I finally took some time to step out of the trenches and see how much progress I've made. The following is a nonexhaustive list of lessons I've learned from all the mistakes I've made, and ever so occasionally, some of my successes.
 
@@ -34,8 +34,7 @@ One of my rarer successes was creating a team culture where everyone felt heard 
 
 One of my biggest mistakes, and one that I still struggle with, is syncing with key stakeholders across the company. Sitting down and chatting with people across the company has innumerable benefits. Other leaders get clarity on work that you're doing and how you're impacting the firm, and are able to more easily make key decisions with you and your team in mind. At the same time, you get to toss ideas off of extremely smart people and learn from their experiences. When you finally make decisions and long term plans that have been guided by discussions with other stakeholders, you inadvertantly bring them onboard as champions of your plan who can vouch for you and support you on your endeavors.
 
-![alt text](avoiding.jpg)
-*Me avoiding sending out that email to setup a meeting with someone I've never talked to before*
+{{< img src="avoiding.jpg" alt="alt text" caption="Me avoiding sending out that email to setup a meeting with someone I've never talked to before" >}}
 
 Even with these clear benefits, it's hard to remember to do this when you have a long list of daily tasks to tackle and the additional friction of cold contacting strangers in the company. Moving forward this will definitely be an area for me to improve on.
 
@@ -43,8 +42,7 @@ Even with these clear benefits, it's hard to remember to do this when you have a
 
 When the team was in its infancy, we were filling such a big demand at the company that there were so many things to do. On top of that, there were constant external forces rocking our team, such as the latest big platform migration, the super senior engineer asking us to take on tasks, or incident response follow ups that were assigned to our team. This nonstop flow of tasks to take on had our team running back and forth all the time, and we never had opportunities to work on projects that we were responsible for delivering on. At a certain point I realized that the buck had to stop somewhere, and it was supposed to stop at me. For our team to be effective, I had to run intercept, deferring incoming work for later, negotiating stop gap solutions, and sometimes just straight up rejecting work that was hoisted upon us.
 
-![alt text](thatsanono.gif)
-*How I turned down unnecessary work*
+{{< img src="thatsanono.gif" alt="alt text" caption="How I turned down unnecessary work" >}}
 
 ## Be intentional about feedback
 
@@ -58,5 +56,4 @@ The first engineer to join my team was a documentation evangelist, and was popul
 
 This exercise of reflecting and writing down my progress so far gave me a brief moment to appreciate how far I've come. At the same time though, I, more than anyone, know how much more there still is to learn. Here's to diving back into the trenches and searching for the next "oh shit" moment. 💩
 
-![alt text](digging.jpeg)
-*A little bit of Calvin and Hobbes to close us out*
+{{< img src="digging.jpeg" alt="alt text" caption="A little bit of Calvin and Hobbes to close us out" >}}

@@ -21,8 +21,7 @@ This one was a bit obvious, but this project really drove the point home for me.
 
 I agonized for hours on the first post I made publicizing Lookoutt. Even when the post was prepared, edited, and read over multiple times, it still took me a few days to click the post button. Sometimes you just have to SEND IT.
 
-![alt text](dylan.gif)
-*[Real footage of my friend Dylan sending it](https://www.instagram.com/p/B6k528yHiSp/)*
+{{< img src="dylan.gif" alt="alt text" caption="[Real footage of my friend Dylan sending it](https://www.instagram.com/p/B6k528yHiSp/)" >}}
 
 Also be sure to remember how hard it is to put yourself out there, and be gentle when you see others doing so.
 

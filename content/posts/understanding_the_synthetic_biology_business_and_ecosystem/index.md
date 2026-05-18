@@ -20,8 +20,7 @@ To start, Mika needs to identify a promising protein that functionally performs 
 
 Mika uses spider silk as a starting point and begins iterating on the molecular structure to remove these undesirable traits. Historically, scientists work off of intuition built up from past experiences and existing research papers on techniques or modifications that might work. Scientists make a series of educated guesses on modifications, concoct various candidates, create those molecular structures, and test whether the new molecules actually work. This cycle is commonly known as the Design-Build-Test-Learn (DBTL) cycle, and is extremely expensive and time consuming, easily composing a large chunk of the R&D budget. However, with the latest advances in ML for protein design, R&D timelines are going from years to months, as ML models are able to suggest candidates that have a higher likelihood of success.
 
-![design-build.jpg](design-build.jpg)
-*[Source](https://synbio-tech.com/synthetic-biology/)*
+{{< img src="design-build.jpg" alt="design-build.jpg" caption="[Source](https://synbio-tech.com/synthetic-biology/)" >}}
 
 Existing companies that help with target selection and design typically do so by increasing the speed of a single DBTL iteration (automation) or reducing the number of DBTL cycles necessary (ML for protein design). Companies like [Automata](https://automata.tech/) and [Opentrons](https://opentrons.com/) help with the former, and companies like [Arzeda](https://arzeda.com/), [Cradle](https://cradle.bio/), and [Profluent](https://www.profluent.bio/) help with the latter.
 
@@ -43,8 +42,7 @@ In strain engineering you choose your chassis and then repeatedly modify it to i
 
 Now that Mika has finished developing the protein and creating the microbe to produce the protein, they have to develop the full bioprocess. At a high level, the bioprocess can be broken down into upstream processing, fermentation, and downstream processing.
 
-![Simplified-flow-of-bioprocess-steps-upstream-processing-fermentation-process-and.png](Simplified-flow-of-bioprocess-steps-upstream-processing-fermentation-process-and.png)
-*[Source](https://www.researchgate.net/figure/Simplified-flow-of-bioprocess-steps-upstream-processing-fermentation-process-and_fig2_336857029)*
+{{< img src="Simplified-flow-of-bioprocess-steps-upstream-processing-fermentation-process-and.png" alt="Simplified-flow-of-bioprocess-steps-upstream-processing-fermentation-process-and.png" caption="[Source](https://www.researchgate.net/figure/Simplified-flow-of-bioprocess-steps-upstream-processing-fermentation-process-and_fig2_336857029)" >}}
 
 During fermentation, the microbe that you genetically engineered to produce your target protein and the food to feed your microbe are placed inside of a special container known as a bioreactor. Upstream processing is everything prior to this step, and downstream processing is everything after this step.
 
@@ -71,7 +69,7 @@ While there are companies that can help develop bioprocesses (see Synthetic biol
 
 I split target selection and design, strain engineering, and bioprocess development into separate categories for simplicity. In reality, a decision in one of these categories impacts decisions in all of the others. For example, one iteration of spider silk might be functionally perfect, but may be incredibly hard to produce in a microbe due to how complex it is. Which chassis to use directly impacts which type of fermentation is feasible and what kind of downstream processing is needed. Synthetic biology companies typically need to go through multiple strain and target selection DBTL iterations all while managing bioprocess development. This immense complexity is one of the reasons why it's tough to succeed as a synthetic biology company.
 
-![graph.png](graph.png)
+{{< img src="graph.png" alt="graph.png" >}}
 
 ## Other factors
 

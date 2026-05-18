@@ -14,8 +14,7 @@ This simple question drove me to reevaluate my career and long term vision, conv
 
 ### Shout from the rooftops!
 
-![Screenshot from 2022-07-24 16-11-28](Screenshot from 2022-07-24 16-11-28.png)
-*Just make sure not to jump*
+{{< img src="Screenshot from 2022-07-24 16-11-28.png" alt="Screenshot from 2022-07-24 16-11-28" caption="Just make sure not to jump" >}}
 
 Let everyone know you're interested in fighting climate change. Not only will your announcement encourage people on the fence to join the movement, it will also notify your network of your future plans. Members of your network that are already tackling climate change will want to reach out and help you along, as everyone understands this existential crisis is an all hands on deck moment. As a concrete example, when I told a friend I wanted to work on climate change, she instantly connected me to [Tammy](https://www.linkedin.com/in/tammytseng/), a data scientist who recently joined [Watershed](https://watershedclimate.com/).
 
@@ -25,8 +24,7 @@ The climate tech space is big enough that you can grow your career in the way yo
 
 ### Join a community!
 
-![Screenshot from 2022-07-24 16-11-15](Screenshot from 2022-07-24 16-11-15.png)
-*Make sure you're in the right flock!*
+{{< img src="Screenshot from 2022-07-24 16-11-15.png" alt="Screenshot from 2022-07-24 16-11-15" caption="Make sure you're in the right flock!" >}}
 
 There's a reason why humans are sometimes compared to sheep. The allure of social approval and groupthink can drive humans to follow the herd. Take advantage of that internal wiring and join a community so the sheep around you naturally influence you to do the right thing. I personally joined [Breakthrough Energy Sciences](https://science.breakthroughenergy.org/) and [Work on Climate](https://workonclimate.org/), both of which are slack communities that welcome climate focused people with open arms. Along with these communities came a wealth of resources and extremely intelligent people who were willing to extend a helping hand.
 

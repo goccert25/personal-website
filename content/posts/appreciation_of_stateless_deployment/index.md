@@ -15,8 +15,7 @@ tags:
 
 As a student in college, I never really understood the value of containers and [Docker](https://www.docker.com/), technology that seemed to pervade every single company that I interned at. It's like when everyone tells you: don't eat that, it taste like crap. You take their word for it, but you never really understand until you try it and realize - oh it DOES take like crap.
 
-![alt text](docker.png)
-*Well known fact, 50% of users use Docker because of the cute logo*
+{{< img src="docker.png" alt="alt text" caption="Well known fact, 50% of users use Docker because of the cute logo" >}}
 
 This is the story of how I tasted the crap. A few months back, I was tinkering around with a side project that I wanted to deploy onto AWS EC2. Up until now, a lot of my [side projects]({{< ref "/posts/treasure_finding_bot_part_1" >}}) had been spun up on my own hardware that I could control. However, now that my Raspberry Pi and extra computers were tied up running other programs, I turned to [Amazon AWS](https://aws.amazon.com/) to take advantage of its free tier membership that let me use its [EC2](https://aws.amazon.com/ec2/) instances (basically just a computer in some Amazon data center somewhere).
 
@@ -46,8 +45,7 @@ The first deployment I made rolled out without a hitch. I checked the EC2's publ
 
 When deployed the change though, the deployment ended up failing. Puzzled, I checked the deployment logs, and noticed that my command for ApplicationStart had failed. What? I never touched that, what changed?
 
-![alt text](deploy_error.png)
-*Key part: "Port 3000 is already in use"*
+{{< img src="deploy_error.png" alt="alt text" caption="Key part: &quot;Port 3000 is already in use&quot;" >}}
 
 ## Frustration begets understanding
 

@@ -21,7 +21,7 @@ The demo website can be found [here](https://protein-visualization-web-app.verce
 
 In case Protein Data Bank ever changes their API and the website no longer works, here's a gif to prove it once worked:
 
-![website_flow.gif](website_flow.gif)
+{{< img src="website_flow.gif" alt="website_flow.gif" >}}
 
 ## Quick Personal Takeaways
 

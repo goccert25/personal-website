@@ -19,8 +19,7 @@ To understand cell free biomanufacturing, it's necessary to first understand the
 
 Cell free biomanufacturing takes the entire assembly line and pulls it out of the cell. Scientists design a carefully engineered system where the starting input is transformed step by step by the enzymes, only this time in a controlled extracellular environment.
 
-![comparison.png](comparison.png)
-*Those are crudely drawn test tubes; I apologize for my art*
+{{< img src="comparison.png" alt="comparison.png" caption="Those are crudely drawn test tubes; I apologize for my art" >}}
 
 ## Pros and cons
 
@@ -31,8 +30,7 @@ Pros of cell free biomanufacturing:
 - Higher yield: Cells need to expend resources to grow and duplicate. This means a lot of the food and nutrients you feed cells are not being used to produce your product. In contrast, in cell free biomanufacturing there is nothing to keep alive. All of the inputs are used to produce output, giving you higher yield and less waste.
 - Lower energy usage: Maintaining many of the requirements for cells to happily function, such as steady temperature and oxygen levels, is energy intensive. Similar to the previous bullet point, there's nothing to keep alive in cell free biomanufacturing so less energy is required.
 
-![cell_free_pros.png](cell_free_pros.png)
-*Infographic taken from [Solugen](https://solugen.com/how-it-works), a cell free biomanufacturing company. It still succinctly sums up the benefits despite potential bias.*
+{{< img src="cell_free_pros.png" alt="cell_free_pros.png" caption="Infographic taken from [Solugen](https://solugen.com/how-it-works), a cell free biomanufacturing company. It still succinctly sums up the benefits despite potential bias." >}}
 
 Cons of cell-free biomanufacturing:
 
@@ -49,8 +47,7 @@ Other companies either create products that are still profitable with the high c
 
 Here's a high level overview of the main types of enzyme immobilization:
 
-![tbeq-29-205-g001.jpg](tbeq-29-205-g001.jpg)
-*[Source](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4434042/figure/f0001/). Note that the graphic with polymeric material is demonstrating entrapment and the far left is demonstrating adsorption*
+{{< img src="tbeq-29-205-g001.jpg" alt="tbeq-29-205-g001.jpg" caption="[Source](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4434042/figure/f0001/). Note that the graphic with polymeric material is demonstrating entrapment and the far left is demonstrating adsorption" >}}
 
 ### Adsorption
 
@@ -70,8 +67,7 @@ Cascade Biocatalysts uses a novel covalent binding technology developed by their
 
 "Think of it like swiss cheese, and on the edges of the cheese we grow our technology. We grow this body armor…it basically looks like noodles. These noodles surround these enzymes in a way that keeps them very stable and active." (relevant section at around 27:40 in [this podcast](https://podcasts.apple.com/us/podcast/51-cell-free-problem-free-enzyme-alchemy-with-alex/id1652738714?i=1000635172579))
 
-![cascade_technology.png](cascade_technology.png)
-*Depiction of the technology. Provided by Alex Rosay*
+{{< img src="cascade_technology.png" alt="cascade_technology.png" caption="Depiction of the technology. Provided by Alex Rosay" >}}
 
 Some major takeaways from reading through Dr. Weltz's [paper](https://scholar.colorado.edu/downloads/8w32r6736) on the company's foundational technology:
 

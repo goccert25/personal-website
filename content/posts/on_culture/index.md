@@ -53,7 +53,7 @@ The flip side of the above is if you've screened hundreds of people and can't fi
 
 Do a world tour. Talk to every single person in the company. Watch how the team operates. Ask what's going well and ask what's going poorly at the company. Really listen.
 
-![Pasted image 20251027212906.png](Pasted image 20251027212906.png)
+{{< img src="Pasted image 20251027212906.png" alt="Pasted image 20251027212906.png" >}}
 
 Call your team together for an open values session. Call out the values you think are critically important. Note down whether the team is already doing them well or not. Point to key good examples and bad examples of values that show that you've been listening and understanding. This goes a long way in instilling team trust. It lets the team know that you are truly listening, watching, and trying to understand how everyone operates.
 
