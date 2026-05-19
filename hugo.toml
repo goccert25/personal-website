@@ -9,6 +9,10 @@ ignoreErrors = ['additional-script-loading-error']
   name = 'George Tong'
   email = 'hi.george.tong@gmail.com'
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [markup]
   [markup.highlight]
     noClasses = false
