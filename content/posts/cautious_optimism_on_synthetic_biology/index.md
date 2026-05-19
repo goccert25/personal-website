@@ -1,0 +1,28 @@
+---
+title: "Cautious Optimism on Synthetic Biology"
+date: 2023-11-09
+author: "George Tong"
+description: "Exploring why the next period of synthetic biology might be different from previous hype cycles, and reasons for cautious optimism."
+tags: ["synthetic biology", "climate tech", "biotechnology"]
+---
+
+In my last [blog post](https://georgetong.dev/blogs/a_primer_on_alternative_protein/index.html) I wrote about the four pillars of alternative protein technology: cultivated meat, precision fermentation, plant based protein, and molecular farming.
+
+As I researched more about precision fermentation, I stumbled into its overarching domain of **synthetic biology**, [“a field of science that involves redesigning organisms for useful purposes by engineering them to have new abilities.”](https://www.genome.gov/about-genomics/policy-issues/Synthetic-Biology)
+
+Synthetic biology has an incredible amount of potential to tackle climate change, ranging from [microbes that decompose plastic](https://news.northwestern.edu/stories/2023/02/new-external-story/), to [microbial biofuel production](https://www.frontiersin.org/articles/10.3389/fmicb.2017.00450/full), to [animal-free milk proteins production.](https://www.prnewswire.com/news-releases/new-cultures-animal-free-dairy-protein-reaches-milestone-scale-poised-to-disrupt-154-billion-global-cheese-industry-301900344.html) Just last year, BCG released a report assertively titled [“Synthetic Biology Is About to Disrupt Your Industry”](https://www.bcg.com/publications/2022/synthetic-biology-is-about-to-disrupt-your-industry). As someone focused on tackling climate change, joining or making a company that drives this entire ecosystem forward is incredibly alluring. However, synthetic biology has historically struggled to meet these high expectations, with many companies only [delivering a fraction of their promises](https://pubs.acs.org/doi/10.1021/acssynbio.3c00238). The initial synthetic biology boom and bust cycle saw big names like Zymergen and Solazyme wither away and get purchased for a fraction of their valuation. A question I've frequently been posing to existing players in the space is:
+
+*“Why will this upcoming period of synthetic biology be different? Will it just be another hype cycle with no results to show?”*
+
+Some responses that I've received that give me hope:
+
+- Large protein datasets and novel machine learning algorithms have already revolutionized the way protein design (a critical part of synthetic biology) is being performed. Scientists can now provide a series of desired traits for a target protein to a machine learning model and receive multiple promising candidates, significantly reducing the protein search space and R&D time. Technology like this simply didn't exist 5-10 years ago.
+- Increased emphasis on robotics and automation to speed up R&D and improve experiment repeatability. Cloud labs, like Emerald Cloud Labs and [CMU's upcoming cloud lab](https://www.cmu.edu/mcs/research/cloud-lab/index.html), are slowly gaining traction. Opentrons, developer of lab automation robots, has successfully established a healthy open source ecosystem to accelerate R&D.
+- Laser focus on profitability. Partially due to the macroeconomic environment and partially due to the collapse of previous synthetic biology companies, company finances and business models are under higher scrutiny. Existing and new players are making sure they can generate revenue, usually by targeting pharma with an aim to generalize towards lower margin higher volume products. As a concrete example, [Jellatech](https://www.jellatech.com/) is initially making animal free collagen and gelatin for pharma and R&D applications with a long term focus of targeting food and beverage applications. While there will always be exceptions to the rule, the upcoming slate of companies (and companies that survive the current macroeconomic environment) will be financially sustainable, allowing them to make a long term impact.
+- Declining growth in arable land, more extreme weather, and a growing world population are setting the stage for food driven humanitarian disasters. Synthetic biology is one tool humans can use to prevent these disasters, whether by genetically engineering crops to be more weather resistant, or by developing [new ways of growing food that aren't reliant on weather](https://www.pnas.org/doi/10.1073/pnas.2015025118#sec-2). Future looking governments are starting to recognize this problem and invest in biotech accordingly, with major funding coming from countries ranging from the [United States](https://www.whitehouse.gov/briefing-room/statements-releases/2022/09/14/fact-sheet-the-united-states-announces-new-investments-and-resources-to-advance-president-bidens-national-biotechnology-and-biomanufacturing-initiative/) to [Saudi Arabia](https://www.labiotech.eu/in-depth/saudi-arabia-biotech-hub/).
+
+For the past few months I've been diving into the underlying science and learning as much as I can with curiosity as my guide and impact as my goal. Maybe this next synthetic biology boom cycle will once again be a bust, but the potential societal benefits are too large to ignore and the tailwinds seem favorable. Time to send it. ⛷️
+
+If any of this resonates with you/you find yourself on a similar journey, let's chat (hi.george.tong@gmail.com)!
+
+A big thank you to all of the folks who have graciously given time out of their day to chat with me so far. The list is long, but in particular I'd like to thank everyone at [GFI](https://gfi.org/), the friendly folks at [Zymochem](https://www.zymochem.com/), and of course old faithful [Work on Climate](https://workonclimate.org/).

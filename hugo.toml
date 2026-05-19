@@ -1,0 +1,91 @@
+baseURL = 'https://georgetong.dev/'
+defaultContentLanguage = 'en-us'
+title = 'Goose on the Loose'
+theme = 'hugo-blog-awesome'
+enableEmoji = true
+ignoreErrors = ['additional-script-loading-error']
+
+[author]
+  name = 'George Tong'
+  email = 'hi.george.tong@gmail.com'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+[Languages.en-us]
+  label = 'English'
+  locale = 'en-us'
+  contentDir = 'content'
+  weight = 1
+
+  [Languages.en-us.menu]
+    [[Languages.en-us.menu.main]]
+      pageRef = '/'
+      name = 'Home'
+      url = '/'
+      weight = 10
+    [[Languages.en-us.menu.main]]
+      pageRef = '/posts'
+      name = 'Posts'
+      url = '/posts/'
+      weight = 20
+    [[Languages.en-us.menu.main]]
+      pageRef = '/about'
+      name = 'About'
+      url = '/about/'
+      weight = 30
+
+  [Languages.en-us.params]
+    sitename = 'Goose on the Loose'
+    defaultColor = 'light'
+    description = "George Tong's Personal Website"
+    mainSections = ['posts']
+    toc = false
+    tocOpen = false
+    goToTop = true
+    rssFeedDescription = 'summary'
+
+    [Languages.en-us.params.author]
+      avatar = 'about_me.JPG'
+      intro = 'Goose on the Loose'
+      name = 'George Tong'
+      description = 'A running account of explorations in tech, climate, and life.'
+
+[[params.socialIcons]]
+  name = 'github'
+  url = 'https://github.com/goccert25'
+
+[[params.socialIcons]]
+  name = 'linkedin'
+  url = 'https://www.linkedin.com/in/georgetongumd/'
+
+[[params.socialIcons]]
+  name = 'resume'
+  url = 'https://docs.google.com/document/d/1mFeAiGAnYoXsqxluXS93LSFj0_N6GAXi36WBh9rltBM/edit?tab=t.0'
+
+[[params.socialIcons]]
+  name = 'youtube'
+  url = 'https://www.youtube.com/channel/UCsU8vYs_FrVTBWLQUoJ6z6g'
+
+[[params.socialIcons]]
+  name = 'email'
+  url = 'mailto:hi.george.tong@gmail.com'
+
+[[params.socialIcons]]
+  name = 'bluesky'
+  url = 'https://bsky.app/profile/georgetong.dev'
+
+[[params.socialIcons]]
+  name = 'rss'
+  url = '/index.xml'
