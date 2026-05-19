@@ -9,7 +9,6 @@ tags:
   - leadership
   - values
 ---
-
 Super early in my first full time job at Robinhood, I remember one of the operation managers changed his slack job title to be "Culture Builder". At the time, I considered a job *a job*. Clock in, get your work done, and clock out. I remember feeling a twinge of annoyance - why does this person care so much?
 
 Since then, I dabbled at [tech leading]({{< ref "/posts/reflections_after_one_year_of_tech_leading" >}}), dove into [climate tech]({{< ref "/posts/lessons_learned_pivoting_into_climate_tech" >}}), joined a 10 person robot recycling company as a Senior SWE, and then joined a another 10 person carbon capture company again as a Tech Lead.
@@ -61,7 +60,7 @@ If you're a new incoming leader, you also have the opportunity to shake things u
 
 ### Maintaining culture
 
-Regularly celebrate when people practice company values. [Terradot](https://terradot.earth/) (where I currently work) does a great job of doing this by maintaining a kudos Slack channel and dedicated time at the end of all hands where great work by employees is publicly recognized.
+Regularly celebrate when people practice company values. [Terradot](https://terradot.earth/) (where I currently work) does a great job of doing this by maintaining a #kudos Slack channel and dedicated time at the end of all hands where great work by employees is publicly recognized.
 
 Careful what you call out though! You don't want to incentivize the wrong kind of work. A person that does 20 small tasks for 20 different people can easily rack up a bunch of kudos, but won't have made clear progress to important long term goals. On the other hand, people doing critical behind the scenes work can easily be overlooked if you're not careful.
 
@@ -78,3 +77,7 @@ I'm not sure. Thankfully I've never seen this before, but if you've seen someone
 As I was writing this piece this question popped into my head and I wasn't sure what the answer was. My [better half](https://www.linkedin.com/in/helen-yang-875809103/) gave a great response. To paraphrase her, AI makes specialized work that takes years to learn less valuable (e.g. engineer with 10 years of deep typescript knowledge). What will set people apart will instead be soft skills, human skills that AI can't replace. "Being human" is ultimately what underpins culture, making it even more important in the future.
 
 I hope she's right!
+
+## *May 18th, 2026 - Update*
+
+I recently finished [Primed to Perform](https://www.amazon.com/Primed-Perform-Performing-Cultures-Motivation/dp/0062373986) and it was incredibly enlightening seeing how the authors turned an art into an science. I'll definitely be adding [Total Motivation (ToMo)](https://slack.com/blog/productivity/tomo-today-success-tomorrow-the-key-to-unlocking-total-employee-motivation) into my lexicon and the various techniques to improve ToMo into my toolkit. However, my favorite takeaway was the authors' rationale of why culture was important. Better culture yields better *adaptive performance*. Adapative performance is a measure of how well a team is able to innovate, respond and thrive in rapidly changing environments. With the AI revolution, the fundamental ways in which we work are being upended seemingly every week. Teams with better culture will be at the forefront of this nonstop innovation. Teams with better culture will be the ones that win.
