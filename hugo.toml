@@ -67,6 +67,10 @@ ignoreErrors = ['additional-script-loading-error']
   url = 'https://www.linkedin.com/in/georgetongumd/'
 
 [[params.socialIcons]]
+  name = 'resume'
+  url = 'https://docs.google.com/document/d/1mFeAiGAnYoXsqxluXS93LSFj0_N6GAXi36WBh9rltBM/edit?tab=t.0'
+
+[[params.socialIcons]]
   name = 'youtube'
   url = 'https://www.youtube.com/channel/UCsU8vYs_FrVTBWLQUoJ6z6g'
 

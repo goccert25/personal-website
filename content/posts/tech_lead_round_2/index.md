@@ -2,6 +2,7 @@
 title: "Tech Lead - Round 2"
 date: 2024-10-03
 author: "George Tong"
+draft: true
 description: "Reflections on tech leading at a startup: technology choices, team dynamics, hiring, and leadership lessons."
 tags:
   - tech-lead

@@ -3,6 +3,7 @@ title: "How to fight climate change as a software engineer"
 date: 2021-11-01
 author: "George Tong"
 description: "A guide for software engineers on how to contribute to fighting climate change through electrification, clean energy, and grid infrastructure."
+featured: true
 tags: ["climate change", "software engineering", "clean energy", "electrification"]
 ---
 
