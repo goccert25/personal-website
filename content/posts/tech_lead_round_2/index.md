@@ -1,6 +1,6 @@
 ---
 title: "Tech Lead - Round 2"
-date: 2024-10-03
+date: 2026-5-22
 author: "George Tong"
 draft: true
 description: "Reflections on tech leading at a startup: technology choices, team dynamics, hiring, and leadership lessons."
@@ -10,56 +10,47 @@ tags:
   - startup
   - engineering
 ---
+I was recently laid off from Terradot due to budget cuts after a little more than two years as a founding engineer/tech lead. The start up world is a brutal place, and I wish the remaining team the best of luck as I cheer them on from the sidelines. This was my second time tech leading (first time here) and while I certainly did a far better job, there was still plenty to learn. As a forever student, the following are some cleaned up notes I took throughout my journey.
 
-I started working at [Terradot](https://terradot.earth/) as a Tech Lead at the end of February 2024. I recently passed my half year mark, although it has felt far longer. Now feels like a good time to reflect on everything I've learned so far, engineering related and otherwise.
+# A team is a reflection of its leader
 
-This hasn't been [my first rodeo with tech leading]({{< ref "/posts/reflections_after_one_year_of_tech_leading" >}}), but I'd be lying if I said I had it all figured out. Here are some loosely organized thoughts composed of new learnings as well as affirmations of previous convictions.
+All the good traits you bring to the table your team will excel in. All of the bad ones will be accentuated. My worst trait is I absolutely hate anything related to access controls and permissioning. While this wasn't a problem in the beginning when our team was incredibly small, this caused a few headaches as we scaled and all of a sudden more than 50 people wanted access to all of the data we were collecting. At least a few afternoons were spent trying to figure out which role had created which table so we could modify the schema (fun fact did you know that Google Cloud SQL doesn't have a superuser role customers can use? This is a massive PITA when someone creates a table and then leaves for a week and you need to update that table...). This improved towards the end of my tenure when I made a concerted effort to tackle this problem space.
 
-## Default to the more popular technology
+# Engineering at non-engineering first companies is different
 
-It's fun to use shiny new technology. However, engineering decisions shouldn't be made based on what's fun. The fun becomes un-fun once you realize you've run into a bug, are on a tight deadline, there's no resources/posts/forums about the issue online, and you're on your own.
+I've historically worked at companies that were engineering first. By engineering first I mean the company centered around the engineering team. The company success hinged on the engineering team executing properly.
 
-Especially at a startup with limited resources, defaulting to the technology that is more popular (unless there is a good reason otherwise) is extremely valuable. You can achieve an incredible amount of velocity by leveraging open source tooling, the existing ecosystem, and now AI tooling (which will be more accurate the more popular the ecosystem is due to increased training data). Additionally, using a well known tech stack makes hiring additional engineers and onboarding significantly easier by expanding the talent pool.
+Terradot was my first time in a different place. There are definitely a few differences, but the most important one to call out is **you need to be selling internally**. If leadership doesn't come from highly technical backgrounds it can be difficult to see the value of engineering sometimes. Same goes for other orgs/leaders in the company. You need to regularly be calling out benefits, connecting the dots, clarifying what the team is working on, what the team's overarching goals and motivations are, etc.
 
-One of the first hard decisions I faced as a Tech Lead was whether we should stick with the existing tech stack (Go gRPC web backend and CockroachDB database). The codebase was still new and small enough that moving to a new backend and database was feasible. I pushed to move to Python (the entire team was more proficient in it) and PostgreSQL (we worked heavily with Geographic Information System (GIS) data and PostgreSQL with PostGIS was the most popular open source option) and the rest of the team agreed.
+Looking back this was definitely something I regret not doing more of.
 
-{{< img src="PostGIS_logo.png" alt="PostGIS_logo.png" caption="You gotta admit, the logo is pretty cute" >}}
+# I underrated hackathons
 
-Even while transitioning though I was second guessing myself - I've heard plenty of horror stories of wasteful tech stack migrations and we were using valuable time that could be spent on feature development. In hindsight, it was obvious we made the right decision. Team velocity shot up and everyone we hired/contracted knew Python and was productive on day one. Additionally, since we moved from CockroachDB to PostgreSQL with PostGIS, we immediately gained access to a whole host of GIS focused SaaS companies and open source software that supported PostgreSQL with PostGIS out of the box.
+I always considered company hackathons an unproductive use of time. Thankfully when Guy joined he pushed us to have one, and it showed me the error of my ways. So many cool projects and useful tools spawned out of the hackathon. The keys to success that became apparent to me was to get buy in from leaders across the company so workers could actually buy into the hackathon and participate without distractions to fully take advantage of their creativity. Another key was to invest in and make sure the barrier to entry and participation was as low as possible. AI tooling has made it incredibly easy and awesome here for any motivated individual at the company to make a difference. The eng team made a concerted effort up front before the hackathon to reduce the barrier of entry and add guardrails that allowed the rest of the company to hack away.
 
-## A teammate is a teammate regardless of their employment status/tenure/situation
+As a culture builder (link culture doc), I now also better understand the importance of Play, the largest factor in improving total motivation. Hackathons literally provide dedicated play time and are major contributors to improving company culture. I most certainly will be evanglizing company hackathons in future places I work.
 
-I setup 1 on 1's with every teammate to keep up on how they're doing. For every teammate, I try to understand how they like to work, how they like to receive feedback, what they enjoy working on, and what their long term goals are. I also use 1 on 1's as a regular feedback cadence so feedback becomes a habitual routine rather than a scary surprise (see my "Be Intentional About Feedback" section [here]({{< ref "/posts/reflections_after_one_year_of_tech_leading" >}})).
+# Buy in, then change
 
-Terradot was my first time working with a diverse setup of coworkers (remote part timers that helped out a few hours a week, contractors from different countries, college summer interns, etc). I was often unsure whether I should set up 1 on 1's with folks that were not full time employees.
+There were plenty of processes at Terradot, a few of which I disagreed with. There was one point where I was half hearted engaging with one of them and Graeme quickly called me out. Some great direct feedback is it's not productive be a fuming/reluctant participant. Full send and commit to it, and then give guided direct feedback on where and how things should be improved. A good reminder that you have the ability to change things and you're responsible for wielding that power. Buying in also goes a long way in showing the processer administartor that you care, making them more likely to heed your feedback. Also buying in fully lets you fully understand the experience, see where the cracks are, understand better why you don't like it and why it doesn't work.
 
-Terradot was my first time working with a diverse setup of coworkers (part timers, contractors, interns, advisors, etc). In the beginning I was often found myself uncertain as to whether I should try to set up 1 on 1's with
+Honestly, very similar to general consensus/engineering decisions/anything team related decisions. Critoique and disagree beforehand, but once a decision is made don't sulk/try to sabatoge the decision and say "see it didn't work". Disagree, but commit and double down and dive in with two feet. 
 
-Many months in I realized that the understanding I try to maintain of my teammates didn't encompass the contractors and part timers on the team, and that I wasn't treating them like teammates even though they were core members contributing to our team and company success. I immediately changed my behavior, added them as optional participants in all meetings and technical discussions, and scheduled 1 on 1's to improve my understanding of how they like to work. I saw a marked increase in team camaraderie and one of the contractors even personally thanked me. I fiercely regret not realizing my mistake earlier. If someone is on your team, **they're on your team**.
+# Spend more time than you'd like making sure you're building what you're supposed to be
 
-## Hire Senior Engineers first, Juniors later
+And with AI reducing the cost of creation/coding, you should spend even more time now. Before Nick joined as PM, we certainly didn't invest sufficient time in really lasering in on what exactly we need to build, what is necessary vs what is nice to have, etc. There were several amazing projects built that ultimately just never got used because we solved a problem that didn't exist or didn't understand the actual user flow well enough, or we built something that turns our internal customer had already hacked a sufficient solution around.
 
-In the past, managing headcount and hiring have always been someone else's responsibility. Terradot is the first place where I've been expected to answer "what kind of problems are we going to have on the technical side and who do we hire to solve that?"
+# Engineers are even more becoming stewards of data models, guardrail management, safety and permission maangement, and exposing usable primitives
 
-It's not a revolutionary realization, but after working with people with all types of experience, I've realized that as new systems are developing, the earlier you hire a senior engineer the more return on investment you get. With experience, they're able to make technical decisions that navigate around pitfalls they've seen in the past. They're super useful at setting up the initial guardrails and patterns. Once those are established, junior engineers can be hired to work in a safer system that points them in the right direction.
+Context industry and company certainly matters, but this felt super apparent at Terradot. Overtime at our 2 years at Terradot, more and more the eng team was spending time making sure the data models were clean and accurate and data quality was upheld, and we were providing access to this data in a safe and permissible way to the rest of the company so the rest of the company could vibe code whatever internal tools they want on top of the data. Of course we were still building and shipping features, but over the course of my time at Terradot as AI models were improving at crazy step change paces every month, when someone came to us and ask for a feature our answers started changing from "hey don't have time right or resourcing right now" to "hey you can actually build that yourself real quick, just follow these rules/access the data here"
 
-At the same time it's important to hire the right senior engineer. One who understands that context is everything, and that just because they've seen a system work a certain way in the past doesn't mean that's how the system should work now.
+Very similar to [Code is free. Now what?](https://www.linkedin.com/pulse/code-free-now-what-david-hsu-ivhic/?trackingId=5Xi1agCVdcoVPD886utF2w%3D%3D)
 
-{{< img src="senior_dev.jpg" alt="senior_dev.jpg" caption="[My favorite depiction of a Senior Engineer](https://dev.to/codenewbieteam/codenewbie-meme-monday-5703)" >}}
+# Experiment and share
 
-## The larger your team, the less IC work you do
-
-As your team grows (or shrinks) the amount of independent contributor (IC) work you do changes and that's ok! I suspect that everyone who has held the role of "Tech Lead" has at one point felt the nagging sensation that they're not coding enough because they're too busy helping the team. Frankly, even as I write this observation and reassure you that a reduction in individual IC output is ok if your team is growing, I know for a fact that I'll have this feeling again in the future. Hopefully writing it down this time will keep that sensation at bay.
-
-Note that eliminating IC work completely is also dangerous as a Tech Lead. It's important to keep a pulse on the day to day experience of writing code on your team or else you may not be able to truly appreciate and prioritize pain points.
-
-## Pinpoint SPOFs on the team and actively work to mitigate them
-
-Single points of failure (SPOF) on a team occur when there's a part of your engineering system that only a single person has worked on and understands. If that one person goes on vacation, quits the company, or even worse, [gets hit by a bus](https://en.wikipedia.org/wiki/Bus_factor), then the team/company is screwed. One of your jobs as a tech lead (or any leader in general) is identifying and removing these SPOFs through various techniques like always having a buddy on projects, emphasizing documentation, rewarding knowledge spreading, and assigning small tasks in a system to someone unfamiliar with the system. At Terradot I've been consciously trying to spread mobile app development knowledge across more members of the team so our overworked mobile app specialist doesn't have to handle every single mobile problem.
-
-## Rollout always takes longer than you expect it to
-
-When estimating how much time a project takes ALWAYS factor in the amount of time to onboard users, and rollout. Then add a couple of days to factor in any major bugs or outages that slipped through the cracks. Then a few more for breathing room. It's embarassing how many times I've been bitten by this. Of course tight startup "get done yesterday" timelines never help.
+Even more critical with AI tools going crazy. How we work is changing nonstop. However not everyone will be able to try everything.
+Divide and conquer works great here, where everybody on the team is encouraged to experiment with different AI tools and come back to share with the team.
+Matt kicked off and led a biweekly AI dev tooling where people shared their local development workflows that was super high leverage.
 
 ## Understanding the domain your software works in is incredibly valuable
 
@@ -79,8 +70,4 @@ This is probably the aspect of my team that I'm the happiest about, and a part o
 
 To anybody on a team, I'd encourage them next time they have a question or a bug, to ask it/debug in public. To anybody leading a team I'd ask them to gauge how often they publicly recognize gaps in their knowledge. I'd also ask them how comfortable does it seem their team is at asking public questions.
 
-## Don't forget to walk your dog!
-
-Leading in general can be a lot of work. Don't forget the most important things in life.
-
-{{< img src="IMG_6425.jpg" alt="IMG_6425.jpg" caption="My dog, Mika, waiting for a walk" >}}
+## Good missions attract good people - almost all folks i worked with at Terradot were great people and will be missed

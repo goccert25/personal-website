@@ -26,8 +26,7 @@ When I first took on the role of tech lead, I struggled to efficiently assign ta
 
 ## Foster an environment where everyone has a voice
 
-*"If you want to go fast, go alone. If you want to go far, go together."  
-- African Proverb*
+*"If you want to go fast, go alone. If you want to go far, go together."  - African Proverb*
 
 One of my rarer successes was creating a team culture where everyone felt heard and empowered to bring their ideas to the table. I was well aware that even though I had the longest tenure on my team and the most context on our engineering systems, I had less working experience than many of my teammates. I deliberately made it a point to speak last so as not to bias any discussion, solicit feedback on my suggested solutions, and pointedly make space for quieter teammates to have their voices heard. This was continually called out as one of the best parts of our team in our regular anonymous feedback surveys.
 
