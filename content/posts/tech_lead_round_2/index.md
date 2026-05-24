@@ -2,7 +2,8 @@
 title: "Tech Lead - Round 2"
 date: 2026-05-22
 author: "George Tong"
-draft: true
+draft: false
+featured: true
 description: "Reflections on tech leading at a startup: technology choices, team dynamics, hiring, and leadership lessons."
 tags:
   - tech-lead
@@ -14,7 +15,7 @@ I was recently laid off from Terradot due to budget cuts after a little more tha
 
 # A team is a reflection of its leader
 
-Your team will reflect and amplify all of your traits: the good AND the bad. My worst trait is I absolutely hate anything related to access controls and permissioning. While this wasn't a problem in the beginning when our team was incredibly small, this caused a few headaches as we scaled and all of a sudden more than 50 people wanted access to all of the data we were collecting. At least a few afternoons were spent trying to figure out which role had created which table so we could modify the schema (fun fact did you know that Google Cloud SQL doesn't have a superuser role customers can use? This is a massive PITA when someone creates a table and then leaves for a week and you need to update that table...). This improved towards the end of my tenure when I made a concerted effort to tackle this problem space but now I know to be intentional about this in the future.
+Your team will reflect and amplify all of your traits: the good ones AND the bad ones. My worst trait is I absolutely hate anything related to access controls and permissioning. While this wasn't a problem in the beginning when our team was incredibly small, this caused a few headaches as we scaled and all of a sudden more than 50 people wanted access to all of the data we were collecting. At least a few afternoons were spent trying to figure out which role had created which table so we could modify the schema (fun fact did you know that Google Cloud SQL doesn't have a superuser role customers can use? This is a massive PITA when someone creates a table and then leaves for a week and you need to update that table...). This improved towards the end of my tenure when I made a concerted effort to tackle this problem space but now I know to be intentional about this in the future.
 
 # Engineering at non-engineering first companies is different
 
@@ -38,7 +39,7 @@ Honestly, Graeme's feedback was a good reminder that the engineering philosophy 
 
 # Make sure you're building the right thing
 
-Then double check that you are. Then make the smallest MVP and go to your users and triple check you are. I think every engineer has had the experience of building something that ultimately gets scrapped because it wasn't the right thing to build. Even though I had ingrained this philosophy before joining and always looked at projects with healthy skepticism, we *still* had a few instances where we built the wrong thing. With AI reducing the cost of building, the cost of these mistakes goes down, but it still incurs plenty of wasted time, dissatisfied customers, and frustrated engineers. I certainly breathed a big sigh of relief when Nick joined and took on a lot of the mental burden of prioritization and product management.
+Then double check that you are. Then make the smallest MVP and go to your users and triple check you are. I think every engineer has had the experience of building something that ultimately gets scrapped because it wasn't the right thing to build. Even though I had ingrained this philosophy before joining and always looked at projects with healthy skepticism, we *still* had a few instances where we built the wrong thing. With AI reducing the cost of building, the cost of these mistakes goes down, but it still incurs plenty of wasted time, dissatisfied customers, and frustrated engineers. I certainly breathed a big sigh of relief when [Nick](https://www.linkedin.com/in/nhalpernmanners/) joined and took on a lot of the mental burden of prioritization and product management.
 
 # Engineers working on internal tooling should focus on governance
 
@@ -52,11 +53,11 @@ With AI tooling improving leaps and bounds every week, experimentation and explo
 
 When I was at Robinhood, many of the software engineers were self studying to take the Securities Industry Essentials (SIE) exam. It was no coincidence that these engineers were also some of the most effective and respected engineers at the company. When I first joined Terradot I spent a lot of my free time studying Enhanced Rock Weathering, reading the latest papers, and understanding how ERW fits into the broader carbon capture space. This investment drastically increased my execution efficiency because cross functional communication and requirements gathering from deeply scientific partners was far easier. Understanding our positioning as a durable, reliable and high quality carbon capture product also helped me prioritize data quality during data collection when designing our engineering systems.
 
-I think at earlier stage companies some level of understanding is absolutely critical. At very large mature companies you can succeed without this.
+At earlier stage companies some level of understanding is absolutely critical, especially with how important Domain Driven Design is to software success. At very large mature companies you can definitely succeed without this.
 
 # Work in public
 
-Anybody who's worked with me as seen my "thinking out loud" public slack threads. I'll start with a question or problem that I genuinely have and as I research and learn more, regularly come back to the same thread to add comments. Often I'm the only person in the thread and I look like a crazy person talking to myself, but this has a strangely positive effect on team culture. The initial public post makes others less afraid of asking for help for fear of not seeming intelligent. The regular follow ups show others my thought process and encourages them to be autodidactic. If someone else jumps into the thread and helps me out, it creates a flywheel of teammates helping teammates. If I share my thoughts and learnings and other people learn from them, it also creates an environment of knowledge sharing. All of this from a simple slack thread.
+Anybody who's worked with me as seen my "thinking out loud" public slack threads. I'll start with a question or problem and as I research and learn more, regularly come back to the same thread to add comments. Often I'm the only person in the thread and I look like a crazy person talking to myself, but this has a strangely positive effect on team culture. The initial public post makes others less afraid of asking for help for fear of not seeming intelligent. The regular follow ups show others my thought process and encourages them to be autodidactic. If someone else jumps into the thread and helps me out, it creates a flywheel of teammates helping teammates. If I share my thoughts and learnings and other people learn from them, it also creates an environment of knowledge sharing. All of this from a simple slack thread.
 
 This is one of the many tools I use to foster an amazing team culture, and is definitely my favorite.
 

@@ -3,7 +3,6 @@ title: "Reflections after one year of Tech Leading"
 date: 2021-08-25
 author: "George Tong"
 description: "Lessons learned from a year of tech leading: delegation, fostering team voice, stakeholder management, protecting the team, feedback, and documentation."
-featured: true
 tags:
   - leadership
   - tech lead
